@@ -1,6 +1,12 @@
-# GTM Coach Pro
+# 🎯 GTM Coach Pro
 
-A conversational-intelligence sales coach for Claude Cowork / Claude Desktop.
+> A conversational-intelligence sales coach for Claude Cowork / Claude Desktop.
+
+[![Version](https://img.shields.io/badge/version-0.2.0-blue)](./CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Claude%20Cowork%20%2F%20Desktop-orange)](https://claude.ai)
+[![Skills](https://img.shields.io/badge/skills-10-purple)](#skills)
+[![Framework](https://img.shields.io/badge/methodology-SPICED-red)](https://winningbydesign.com/spiced-framework/)
 
 GTM Coach connects to whatever meeting-recording tool you already use, builds a durable
 **local memory bank** from your call summaries and transcripts, and coaches go-to-market
@@ -12,7 +18,47 @@ strategy and execution — for sales leaders and individual sellers alike. It ru
 and two-way **voice of customer** (call language + HubSpot AEO). See [`LANDSCAPE.md`](./gtm-coach-pro/LANDSCAPE.md)
 for how every CI play maps to the plugin.
 
-## What makes it work anywhere
+---
+
+## Contents
+
+- [Quick start](#quick-start)
+- [Requirements](#requirements)
+- [How it works anywhere](#how-it-works-anywhere)
+- [Connectors](#connectors)
+- [Skills](#skills)
+- [Day-to-day operation](#day-to-day-operation)
+- [The memory bank](#the-memory-bank-sales-memory)
+- [Privacy](#privacy)
+- [Repository layout](#repository-layout)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
+## Quick start
+
+1. Install the plugin (`gtm-coach-pro.plugin`) in Claude Cowork / Claude Desktop.
+2. In Claude, connect at least one meeting-recording tool via Connectors
+   (calendar, email, and CRM are optional but recommended).
+3. Say **"set up GTM coach"**. It will:
+   - discover your recording tool,
+   - show a privacy/consent note and ask you to confirm,
+   - ingest the **last 90 days** of calls into `./sales-memory/`,
+   - give you an orientation: deal counts, top at-risk deals, and emerging patterns.
+4. Backfill more history any time with **"backfill the last 12 months"**.
+
+That's it — from there, just talk to it ("prep me for my call with Acme",
+"run a pipeline review", "build battlecards").
+
+## Requirements
+
+| What | Why |
+|------|-----|
+| Claude Cowork or Claude Desktop | Runtime for the plugin |
+| One connected `~~meeting recording` MCP tool | **Required** — the source of call data |
+| `~~calendar`, `~~email`, `~~crm`, `~~enrichment`, `~~aeo` tools | Optional — unlock call prep, follow-ups, grounded briefs, voice of customer |
+| Local disk write access | The memory bank lives in `./sales-memory/` |
+
+## How it works anywhere
 
 GTM Coach is **tool-agnostic**. On setup it inspects your connected MCP tools and adapts to
 whichever recording product is present — **tl;dv, Otter, Fireflies, Fathom, Gong, Chorus,
@@ -24,7 +70,7 @@ also connected, it uses them for call prep and follow-up drafting.
 
 GTM Coach is built to be shared. It references tools by *category*, not by product, and binds
 each category to whatever you've connected — so anyone can install it and use their own stack.
-See `CONNECTORS.md` for details.
+See [`CONNECTORS.md`](./gtm-coach-pro/CONNECTORS.md) for details.
 
 | Category | Required? | Examples |
 |----------|-----------|----------|
@@ -34,17 +80,6 @@ See `CONNECTORS.md` for details.
 | `~~crm` | Optional | Salesforce, HubSpot, Close, Pipedrive |
 | `~~enrichment` | Optional | Bitscale, Clay, ZoomInfo, Apollo (falls back to built-in web OSINT) |
 | `~~aeo` | Optional | HubSpot AEO (answer-engine queries) |
-
-## Setup
-
-1. In Claude, connect at least one `~~meeting recording` tool (and optionally `~~calendar`,
-   `~~email`, `~~crm`) via Connectors.
-2. Say **"set up GTM coach"** (or "initialize the sales coach"). It will:
-   - discover your recording tool,
-   - show a privacy/consent note and ask you to confirm,
-   - ingest the **last 90 days** of calls into `./sales-memory/`,
-   - give you an orientation: deal counts, top at-risk deals, and emerging patterns.
-3. Backfill more history any time with **"backfill the last 12 months"**.
 
 ## Skills
 
@@ -61,10 +96,21 @@ See `CONNECTORS.md` for details.
 | "build battlecards" / "what objections & competitors recur" | **battlecards** | Carryable per-competitor + objection cards with exact buyer language and winning counters |
 | "voice of customer" / "combine call language with AEO" | **voice-of-customer** | Triangulates call language + HubSpot AEO queries → 3 content angles + enablement brief |
 
+## Day-to-day operation
+
+- **Keep memory fresh** — run **sync-memory** manually whenever you want, or ask GTM Coach
+  to help wire a daily scheduled agent so the bank stays current automatically.
+- **Sellers** — start each morning with "prep me for my call with …" and end each call
+  with "debrief my last call".
+- **Leaders** — weekly "run a pipeline review"; monthly "what are our win/loss themes"
+  and "score this rep's calls".
+- **Enablement** — quarterly "draft the playbook from won deals", "build battlecards",
+  and "voice of customer".
+
 ## The memory bank (`./sales-memory/`)
 
 Human-readable markdown (accounts, deals, people, calls, pattern rollups, scorecards) **plus**
-a `index.json` for fast querying. Deals are structured around SPICED. Calls are deduped by ID,
+an `index.json` for fast querying. Deals are structured around SPICED. Calls are deduped by ID,
 so syncs never create duplicates. See the bundled references for the full schema.
 
 ## Privacy
@@ -76,10 +122,28 @@ recording-consent law (e.g. all-party-consent states, GDPR). You can enable reda
 personal data, and deleting the folder erases all stored memory. **You are responsible for
 having recorded calls lawfully.**
 
-## Refresh
+## Repository layout
 
-Run **sync-memory** manually whenever you want, or ask GTM Coach to help wire a daily
-scheduled agent so the bank stays current automatically.
+```
+gtm-coach-pro/            ← plugin source (skills/, references/, .claude-plugin/)
+gtm-coach-pro.plugin      ← packaged plugin, ready to install
+demo-seed/                ← fully synthetic demo memory bank (NOT shipped in the .plugin)
+CHANGELOG.md              ← release history (semver)
+LICENSE / NOTICE          ← Apache-2.0
+```
+
+`demo-seed/` exists for live demos only — every company, person, deal, and quote in it is
+fictional. Delete it to promote the repo to production; nothing in the plugin references it.
+
+## Troubleshooting
+
+| Symptom | Likely cause / fix |
+|---------|--------------------|
+| "No recording tool found" during setup | Connect a `~~meeting recording` tool in Claude Connectors, then re-run "set up GTM coach" |
+| Briefs missing CRM/enrichment context | Those connectors are optional — connect `~~crm` / `~~enrichment`, or accept the web-OSINT fallback |
+| Duplicate-looking calls | They aren't — calls are deduped by ID; check `sales-memory/index.json` |
+| Stale pipeline numbers | Say "sync my calls", or set up the daily scheduled refresh via **sync-memory** |
+| Wrong tool got bound to a category | Delete the mapping in `sales-memory/config.json` and re-run setup to rediscover |
 
 ---
 

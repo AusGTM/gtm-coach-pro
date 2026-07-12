@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets
+.env
+.env.*
+
+# Local Claude state
+.claude/settings.local.json
+
+# Runtime memory bank — created by the plugin at run time.
+# (demo-seed/sales-memory/ is intentional demo content and stays tracked.)
+/sales-memory/
+
+# Logs & scratch
+*.log
+*.tmp
