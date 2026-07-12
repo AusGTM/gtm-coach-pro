@@ -1,0 +1,24 @@
+{
+  "name": "gtm-coach-pro",
+  "version": "0.2.0",
+  "description": "Conversational-intelligence sales coach. Discovers any connected meeting-recording tool, builds a long-horizon local memory bank from call summaries and transcripts, and coaches GTM strategy and execution using the SPICED framework. Pro adds a winning-call playbook builder, objection & competitor battlecards, and two-way voice-of-customer (call language + HubSpot AEO), plus CRM- and enrichment-grounded pre-call briefs.",
+  "author": {
+    "name": "Australia Go To Market / Dr. Robert Li"
+  },
+  "keywords": [
+    "sales",
+    "gtm",
+    "conversational-intelligence",
+    "sales-coaching",
+    "revenue",
+    "spiced",
+    "pipeline",
+    "forecast",
+    "playbook",
+    "battlecards",
+    "voice-of-customer",
+    "aeo",
+    "enablement"
+  ],
+  "license": "Apache-2.0"
+}

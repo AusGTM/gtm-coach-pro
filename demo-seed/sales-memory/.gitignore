@@ -1,0 +1,5 @@
+# Sales memory contains customer conversation data — do not commit by default.
+# (This demo-seed bank is synthetic/fictional, but the same rule applies in real use.)
+*
+!.gitignore
+!PRIVACY.md
