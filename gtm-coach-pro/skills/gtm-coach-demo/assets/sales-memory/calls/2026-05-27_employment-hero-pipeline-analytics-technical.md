@@ -16,18 +16,35 @@ talk_ratio_rep: 0.39
 **Attendees:** internal alex-rep | external Grace Kim (IT Security), Luis Romero (Head of RevOps)
 
 ## Summary
-Security intro with Grace (IT Security). Raised data-access and vendor-review requirements.
+Security introduction with Grace Kim (IT Security), brought in by Luis, who also joined. This was
+the standard mid-market vendor review kicking off: Grace wanted to understand what data Cadence
+touches, where it's processed, and what the review checklist would be before she'd let a data
+connection happen. Professional and not hostile — but clearly a gate that has to clear regardless
+of how the commercials land. Notably, still no Ananya; the CFO conversation Tom committed to at
+the demo hasn't happened, and this call went sideways into security instead of up to the buyer.
 
 ## SPICED captured this call
-- Decision: Grace must sign off on data access; standard mid-market security review.
+- **Decision:** Grace must sign off on data access; standard mid-market security review with a
+  vendor questionnaire, data-residency check, and review of how the Salesforce connection is
+  scoped. This is a hard gate — no data flows until she clears it.
+- **Situation (added):** Grace confirmed data-residency matters to them; she wants processing
+  and storage locations documented, not just described on a call.
 
 ## Signals
-- New gate: Grace/security.
-- Objection: “What data leaves our environment and where does it sit?” — partially answered, follow-up doc owed.
+- **New gate (named):** Grace / IT Security is now a required sign-off — a blocker who can stall
+  signature even if Tom and Ananya agree on price.
+- **Objection (named):** *"What data leaves our environment and where does it sit?"* — partially
+  answered live; Grace wants it in writing. Follow-up document owed.
+- **Risk:** the deal is now widening sideways (security) without advancing upward (CFO). Two
+  gates open at once, and the more important one — Ananya — is untouched.
 
 ## Commitments & next steps
-- Cadence: send security overview + data-flow diagram to Grace.
-- Employment Hero: Grace to list review requirements.
+- **Cadence (alex-rep):** send a security overview + data-flow diagram to Grace.
+- **Employment Hero (Grace):** send back the formal review requirements / vendor questionnaire.
 
 ## Coaching notes
-- Good to surface security now. Outstanding doc to Grace is an open commitment — don't drop it.
+- Right to surface security now rather than at signature — better a known gate than a surprise
+  one. Two things to hold. The doc owed to Grace is a live commitment; drop it and you hand a
+  neutral blocker a reason to go slow. And don't let security become a comfortable detour: it
+  feels like progress because someone new is engaged, but the deal doesn't move until the CFO
+  does. Chase both, but Ananya is the one that decides the outcome.

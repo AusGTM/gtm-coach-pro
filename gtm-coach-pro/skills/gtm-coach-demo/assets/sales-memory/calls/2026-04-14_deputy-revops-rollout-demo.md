@@ -16,19 +16,48 @@ talk_ratio_rep: 0.49
 **Attendees:** internal jordan-rep | external Nadia Petrov (CRO), Sam Whitfield (RevOps Manager)
 
 ## Summary
-Demo to Nadia (CRO). The Series C timeline is the compelling event; Nadia is the EB and engaged.
+Demo to Nadia Petrov (CRO) with Sam co-driving. Sam had pulled three quarters of submitted-vs-
+actual, so jordan ran the demo against Deputy's own pipeline rather than canned data — showing
+deal-level risk scores, a weighted forecast, and where the analyst spreadsheet had been
+over-calling commit. Nadia engaged hard on the risk-scoring: she wants to walk into the Series C
+process able to say not just *what* the number is but *why* she believes it. She confirmed the
+July raise is the forcing function and that she, not Sam, owns the forecast the board sees.
+Nadia also disclosed they'd looked at PipelineIQ as a point alternative.
 
 ## SPICED captured this call
-- Critical event: Series C process starts July — clean forecasting needed first.
-- Decision: Nadia is EB; Sam champions; procurement to follow.
+- **Situation:** Confirmed on their own data — the Friday analyst roll-up had commit called ~18%
+  high across the last two closed quarters, mostly from a handful of stalled late-stage deals no
+  one had risk-flagged. Nadia had suspected it but couldn't prove it off Clearwater.
+- **Pain:** Nadia: "I can defend a number to the board. What I can't defend is a number I can't
+  explain." She needs deal-level rationale, not a single weighted total.
+- **Impact:** Going into a raise, an unexplained miss reads as "the CRO doesn't have control of
+  the business." Nadia sees deal-level risk scoring as the difference between a forecast she
+  presents and one she apologises for.
+- **Critical Event:** Series C process starts July — clean forecasting needed first. Nadia wants
+  the platform live and trusted internally *before* the process opens, not mid-flight.
+- **Decision:** Nadia is the EB and is engaged; Sam champions and owns implementation;
+  procurement and legal to follow once commercials are agreed.
 
 ## Signals
-- Strong multithread + real EB engagement.
-- Competitor: evaluated PipelineIQ — “weaker on deal-level risk scoring” (Nadia).
+- Buying signal: strong multithread + real EB engagement — Nadia drove half the conversation and
+  set the internal deadline herself.
+- Competitor: evaluated PipelineIQ — "weaker on deal-level risk scoring" (Nadia). She'd demoed
+  it and felt it gave a weighted number without a defensible per-deal rationale, which is exactly
+  the gap she's trying to close for the board.
+- Competitor (status quo): Clearwater stays as the BI/reporting layer; the contest is over the
+  predictive forecast the analyst currently hand-builds, not general dashboards.
+- Buying signal: Nadia asked about rollout timeline unprompted — future-pacing to go-live.
 
 ## Commitments & next steps
-- Cadence: proposal for a 2-year term.
-- Deputy: Nadia to start procurement.
+- Cadence (jordan-rep): send a proposal for a 2-year term; include the deal-scoring methodology
+  write-up Nadia asked for so she can pressure-test it internally.
+- Deputy (Nadia): start procurement in parallel; Sam to line up a technical/integration session
+  on the CRM connector and phased rollout.
 
 ## Coaching notes
-- Great executive engagement and a genuine compelling event.
+- Great executive engagement and a genuine compelling event — demoing on their own submitted-vs-
+  actual data is what turned it from interesting to urgent. PipelineIQ is in the mix but Nadia
+  has already self-identified our wedge (deal-level risk scoring); reinforce it, don't oversell
+  it. Gap: we proposed a 2-year term without yet knowing Nadia's budget cycle or how the raise
+  affects her willingness to commit multi-year pre-close — flag that risk before the pricing
+  conversation, don't get surprised by it.

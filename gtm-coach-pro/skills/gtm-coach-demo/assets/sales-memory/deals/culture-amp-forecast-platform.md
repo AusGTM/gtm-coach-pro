@@ -13,22 +13,29 @@ updated: 2026-05-12
 
 # Culture Amp — Forecast Platform
 
+**Closed-won · $145,000 · 2-year term · signed 2026-05-20.** One of two Cadence wins this cycle (alongside SafetyCulture, $90k); Airwallex was the loss. This is the reference deal for running the security/technical persona well.
+
 ## SPICED
-- **Situation:** Enterprise people-analytics SaaS, 200 reps, existing BI tool (Clearwater) for dashboards but no deal-level signal.
-- **Pain:** Clearwater shows lagging dashboards; reps and managers can't see which deals are actually at risk.
-- **Impact:** Two 7-figure deals slipped a quarter each; CRO lost board credibility.
-- **Critical Event:** Annual planning in June forced a tooling decision before new fiscal year.
-- **Decision:** Priya (CRO) is EB; Sofia (Sales Ops) champions; Ken (Data Eng) gates on integration/security.
+- **Situation:** Enterprise people-analytics SaaS running a ~200-rep global revenue org across AU/US/EMEA. Clearwater is the incumbent BI/dashboard layer for revenue reporting, but it only shows lagging, aggregate views — there is no deal-level, forward risk signal. Reps don't act on the dashboards; forecasting is a manual, spreadsheet-driven exercise every week.
+- **Pain:** Clearwater shows what already happened. Managers can't tell which live deals are actually at risk until it's too late to intervene. Sofia estimated a full day a week lost to manually reconciling which deals were slipping. In Sofia's words: "Clearwater tells me what already happened. I need to know which deals are dying now."
+- **Impact:** Two 7-figure deals each slipped a full quarter, and Priya (CRO) "lost the room" with the board over the miss. Board-level forecast credibility — not tooling cost — was the thing on the line. Priya framed forecast confidence ahead of June planning as worth materially more than the platform price.
+- **Critical Event:** June annual planning. The new fiscal year's number and headcount plan get set in June, and Priya wanted board-ready forecast confidence in hand before that meeting — a hard, dated forcing function that compressed the cycle.
+- **Decision:** Priya (CRO) is the economic buyer and sole signer; Sofia (Sales Ops) is the internal champion driving the evaluation; Ken (Data Engineering) holds a hard gate on integration + employee-PII security. All three engaged — a genuine multithread.
 
 ## Stakeholders
 | Name | Title | Role | Sentiment | Notes |
 |---|---|---|---|---|
-| Priya Raman | CRO | economic-buyer | positive | |
-| Sofia Mendez | Sales Ops Manager | champion | positive | |
-| Ken Arai | Data Engineering Lead | technical | neutral | |
+| Priya Raman | CRO | economic-buyer | positive | Sole signer. Board-credibility pain is the core driver; forecast confidence before June planning was worth more to her than price. |
+| Sofia Mendez | Sales Ops Manager | champion | positive | Owns the pain daily; delivered the defining "deals dying now" quote. Reframed Clearwater internally as complement-then-replace so there was no rip-out fight. |
+| Ken Arai | Data Engineering Lead | technical | neutral → satisfied | Gated on employee-PII segregation. Cleared once SOC2 + data residency + DPA + SSO were shown; noted Cadence's signal is genuinely different from Clearwater. |
+
+## Signals
+- **Buying signals:** Priya leaned in hard on the demo when the two slipped deals came up ("that cannot happen again"); requested the security questionnaire and a Ken intro herself; signed a 2-year term rather than a 1-year.
+- **Objections handled:** "We already pay for Clearwater" (answered with slipped-deal cost vs dashboard cost — reframed as complement, not duplicate); "How does our employee-PII data stay segregated?" (answered with data-residency + SOC2 + DPA).
+- **Quick win:** the Clearwater-vs-deal-level comparison brief gave Sofia the internal narrative to bring Priya in without positioning it as a Clearwater rip-out.
 
 ## Risks & gaps
-- (none material)
+- (none material at close) — historically the only real risk was the Ken/security gate, which was surfaced early on the demo call and cleared on the 2026-03-18 technical call.
 
 ## Next step
 - Phase-1 rollout to 2 regions — jordan-rep — 2026-06-01

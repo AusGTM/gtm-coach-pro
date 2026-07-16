@@ -6,7 +6,7 @@
     {
       "id": "safetyculture-revenue-intelligence",
       "account": "safetyculture",
-      "name": "SafetyCulture \u2014 Revenue Intelligence",
+      "name": "SafetyCulture — Revenue Intelligence",
       "stage": "closed-won",
       "amount": 90000,
       "currency": "USD",
@@ -43,7 +43,7 @@
     {
       "id": "culture-amp-forecast-platform",
       "account": "culture-amp",
-      "name": "Culture Amp \u2014 Forecast Platform",
+      "name": "Culture Amp — Forecast Platform",
       "stage": "closed-won",
       "amount": 145000,
       "currency": "USD",
@@ -81,7 +81,7 @@
     {
       "id": "employment-hero-pipeline-analytics",
       "account": "employment-hero",
-      "name": "Employment Hero \u2014 Pipeline Analytics",
+      "name": "Employment Hero — Pipeline Analytics",
       "stage": "eval",
       "amount": 120000,
       "currency": "USD",
@@ -91,7 +91,7 @@
         "situation": "HR & payroll SaaS mid-market, 80 reps, CRM hygiene poor, RevOps team of 2 stretched thin.",
         "pain": "No reliable forecast; Tom (VP Sales) flying blind on which deals will land this quarter.",
         "impact": "Tom estimates 20-30% forecast error each quarter; CFO Ananya wants the number tightened before budget.",
-        "critical_event": "ASSUMED \u2014 budget cycle closes end of July; not yet confirmed as a hard compelling event.",
+        "critical_event": "ASSUMED — budget cycle closes end of July; not yet confirmed as a hard compelling event.",
         "decision": "Tom champions; Ananya (CFO) holds budget and is unconvinced on ROI; Grace (IT Security) must sign off on data access. Economic buyer (Ananya) has NOT been on a call."
       },
       "health": "yellow",
@@ -126,7 +126,7 @@
     {
       "id": "deputy-revops-rollout",
       "account": "deputy",
-      "name": "Deputy \u2014 RevOps Rollout",
+      "name": "Deputy — RevOps Rollout",
       "stage": "negotiation",
       "amount": 200000,
       "currency": "USD",
@@ -136,7 +136,7 @@
         "situation": "Workforce-management SaaS scale-up, 60 reps, fast growth, RevOps maturing under Sam.",
         "pain": "Nadia (CRO) can't trust the forecast as they scale toward a raise; board wants predictability.",
         "impact": "Mis-forecasting ahead of a Series C could cost them on valuation and credibility.",
-        "critical_event": "Series C process kicks off in July \u2014 board wants clean forecasting in place first.",
+        "critical_event": "Series C process kicks off in July — board wants clean forecasting in place first.",
         "decision": "Nadia (CRO) is EB and engaged; Sam champions; procurement/legal now the gating step on a 2-year term."
       },
       "health": "yellow",
@@ -166,7 +166,7 @@
     {
       "id": "airwallex-forecast-eval",
       "account": "airwallex",
-      "name": "Airwallex \u2014 Forecast Eval",
+      "name": "Airwallex — Forecast Eval",
       "stage": "closed-lost",
       "amount": 80000,
       "currency": "USD",
@@ -174,9 +174,9 @@
       "owner": "alex-rep",
       "spiced": {
         "situation": "Enterprise cross-border payments fintech, heavily regulated, existing in-house spreadsheets + analyst team.",
-        "pain": "VP Sales Rebecca felt the pain; CFO David did not \u2014 saw forecasting as an analyst job, not software.",
+        "pain": "VP Sales Rebecca felt the pain; CFO David did not — saw forecasting as an analyst job, not software.",
         "impact": "Never quantified to David's satisfaction; stayed a 'nice to have'.",
-        "critical_event": "None \u2014 no compelling event; 'maybe next budget cycle'.",
+        "critical_event": "None — no compelling event; 'maybe next budget cycle'.",
         "decision": "Rebecca championed but David (CFO/EB) was the blocker; security/compliance also raised concerns."
       },
       "health": "red",
@@ -187,7 +187,7 @@
         "competitor: in-house build"
       ],
       "next_step": {
-        "what": "Closed-lost \u2014 revisit Q4 if priorities change",
+        "what": "Closed-lost — revisit Q4 if priorities change",
         "owner": "alex-rep",
         "due": "2026-10-01"
       },
@@ -208,7 +208,7 @@
     {
       "id": "go1-discovery",
       "account": "go1",
-      "name": "Go1 \u2014 Discovery",
+      "name": "Go1 — Discovery",
       "stage": "discovery",
       "amount": 60000,
       "currency": "USD",
@@ -217,7 +217,7 @@
       "spiced": {
         "situation": "SMB corporate-learning SaaS, 25 reps, owner-led sales, light process.",
         "pain": "Owen (Head of Sales) wants to professionalise forecasting before they double headcount.",
-        "impact": "Early signal \u2014 not yet quantified.",
+        "impact": "Early signal — not yet quantified.",
         "critical_event": "Hiring plan in Q4 is the loose trigger; needs confirming.",
         "decision": "Owen is champion and likely EB given size; process simple."
       },

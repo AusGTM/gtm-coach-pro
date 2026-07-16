@@ -14,20 +14,47 @@ updated: 2026-04-22
 # SafetyCulture — Revenue Intelligence
 
 ## SPICED
-- **Situation:** 120-rep sales team at a workplace-safety & operations SaaS company, pipeline tracked in spreadsheets exported from CRM weekly.
-- **Pain:** Forecast missed 3 quarters running; leadership had no early warning on slipping deals.
-- **Impact:** ~$2.4M of slipped pipeline last year that nobody flagged until close week.
-- **Critical Event:** New CRO mandate to hit forecast within 5% by Q3 board meeting.
-- **Decision:** Dana (VP Rev) signs; Marcus (RevOps) drives eval; security review light (mid-market).
+- **Situation:** ~120-rep sales team at a workplace-safety & operations SaaS company. Pipeline lives
+  in spreadsheets exported from the CRM as a weekly CSV; no deal-level health scoring, no slip
+  signals. Forecast is assembled by hand every Friday by RevOps and rolled up to leadership.
+- **Pain:** Forecast has missed three quarters running. Leadership gets no early warning when a deal
+  starts to slip — as Marcus put it, "We find out a deal slipped the week it was supposed to close —
+  there's no early warning." The number is only ever trusted in hindsight.
+- **Impact:** ~$2.4M of pipeline slipped last year that nobody flagged until close week. Dana framed
+  it directly: "If we'd caught even half of that $2.4M slipping earlier, that's my whole gap." The
+  cost isn't just the misses — it's leadership making hiring and spend calls off a number they can't
+  rely on.
+- **Critical Event:** A newly hired CRO carries a board mandate to land the forecast within 5% by the
+  Q3 board meeting. That meeting is the hard date that converted a tolerated pain into a funded,
+  time-boxed decision.
+- **Decision:** Dana Okafor (VP Revenue) holds the budget and signs, carrying the CRO mandate. Marcus
+  Lindqvist (RevOps) drove the evaluation and the integration. Security review was light given
+  mid-market posture — no separate gate; Marcus could approve the CRM connector himself.
+
+## Alternatives considered
+- **Clearwater** — looked at earlier; Dana's verdict was "too much of a BI tool, not deal-level".
+- **In-house / analyst status quo** — keep building the forecast in spreadsheets. This was the real
+  competitor; the "we've survived on spreadsheets this long, why now?" objection was answered with
+  the quantified missed-forecast cost.
 
 ## Stakeholders
 | Name | Title | Role | Sentiment | Notes |
 |---|---|---|---|---|
-| Dana Okafor | VP Revenue | economic-buyer | positive | |
-| Marcus Lindqvist | RevOps Lead | champion | positive | |
+| Dana Okafor | VP Revenue | economic-buyer | positive | Carries the new CRO's board mandate; holds budget line; signed. |
+| Marcus Lindqvist | RevOps Lead | champion | positive | Owns the forecast process; ran eval; approved integration (no separate security gate). |
+
+## Why we won
+- Quantified the cost of undetected slippage (~$2.4M) and tied it directly to Dana's gap to number —
+  the ROI case wrote itself.
+- Structured a 1-year on-ramp term that fit inside the Q3 board timeline, letting Dana show the board
+  a committed fix before the meeting.
+- Beat the spreadsheet status quo by making early-warning, deal-level health the thing spreadsheets
+  fundamentally can't do.
 
 ## Risks & gaps
-- (none material)
+- (none material at close) — clean mid-market deal; light security; single clear economic buyer.
+- Post-sale watch item: adoption depends on Marcus's team trusting the deal-health scores over their
+  own spreadsheet instincts. Onboarding should prove the early-warning view against a known past slip.
 
 ## Next step
 - Kickoff + onboarding — alex-rep — 2026-05-05
