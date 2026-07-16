@@ -2,7 +2,8 @@
 name: voice-of-customer
 description: >-
   Triangulates voice of customer two ways — the exact words buyers use on your calls (CI) and
-  the queries they put to search/AI engines (HubSpot AEO) — into a content and enablement brief.
+  the queries they put to search/AI engines (via an AEO tool, or derived from public UGC when
+  none is connected) — into a content and enablement brief.
   Use when the user says "combine call language with the AEO queries: how do buyers describe
   this problem, draft 3 angles", "voice of customer", "what words do buyers actually use", or
   "turn our calls and AEO into content angles". Produces a brief no brainstorm can match — the
@@ -11,10 +12,11 @@ description: >-
 
 # Voice of Customer — two ways
 
-Pair conversational intelligence with HubSpot's AEO and you hear the buyer from both sides:
-what they say on your calls, and what they ask AI/search engines about your problem space when
-you're not in the room. Together that's a content and enablement brief grounded in real
-language, not guesswork.
+Pair conversational intelligence with answer-engine demand and you hear the buyer from both
+sides: what they say on your calls, and what they ask AI/search engines about your problem space
+when you're not in the room. The demand side comes from an AEO tool if one is connected, or is
+derived from public UGC when none is (see the source ladder below). Together that's a content
+and enablement brief grounded in real language, not guesswork.
 
 ## Inputs
 
@@ -29,17 +31,33 @@ use** to describe the problem, the pain, the status quo, and the desired outcome
 quotes, grouped by how buyers frame the problem (not how we market it). Note which framings
 recur across many calls vs one-offs.
 
-## Side 2 — AEO queries (HubSpot)
+## Side 2 — AEO queries (source ladder)
 
-If a `~~aeo` tool is connected (`config.json.aeo_tool`, HubSpot AEO), pull the actual
-AI/answer-engine queries buyers put to search and AI engines in this problem space — the
-questions, the phrasings, and (where available) volume/trend. This is the demand-side voice
-when you're not on the call.
+The demand-side voice: what buyers ask AI/search engines about this problem space when you're
+not on the call. Get it from the **highest available rung** — fall through in order, and label
+every claim in the brief with the rung it came from so each is traceable:
 
-**Graceful degrade:** if HubSpot AEO isn't connected at runtime, say so and accept a
-user-pasted AEO export (or a manual list of queries), then proceed CI-led. Optionally use
-Claude web search to sample how the problem is discussed publicly, clearly labelled as a proxy,
-not AEO data.
+| Rung | Source | Available when | Label in brief |
+|------|--------|----------------|----------------|
+| 1 | **`~~aeo` tool** (HubSpot AEO) | `config.json.aeo_tool` set | **AEO (measured)** |
+| 2 | **`~~websearch` tool** (Parallel, Exa, Tavily, Perplexity…) | `config.json.websearch_tool` set | **AEO proxy (derived)** |
+| 3 | **Claude's built-in web search** | always | **AEO proxy (derived)** |
+| 4 | **User-pasted export / manual query list** | user provides one | **AEO (user-supplied)** |
+
+- **Rung 1** — pull the actual answer-engine queries: questions, phrasings, and (where
+  available) volume/trend. This is measured demand.
+- **Rungs 2–3** — no AEO tool, so **reconstruct the signal from public UGC**. Follow
+  `../../references/aeo-proxy.md`: Query Fan-Out into facets → long-tail questions → multi-modal
+  UGC sweep → extract verbatim phrasings + refinement paths → simulated query set. A proxy has
+  **no volume data**; confidence comes from **cross-platform recurrence** (a phrasing seen on 3+
+  accessible platforms = high), never a fabricated number. Prefer a bound `~~websearch` tool
+  (rung 2) over built-in search (rung 3) — it may reach sources built-in search can't (e.g.
+  Reddit is blocked to Claude's crawler; see `aeo-proxy.md`).
+- **Rung 4** — if the user hands you an AEO export or query list, use it as-is (measured, but
+  user-supplied). Can supplement any rung.
+
+Whichever rung you land on, state it plainly to the user ("no AEO tool connected — deriving the
+demand side from public reviews and forums, labelled as a proxy").
 
 ## Triangulate → brief
 

@@ -8,7 +8,8 @@ or email.
 Connector categories (see `CONNECTORS.md`) are referenced with `~~` placeholders that you
 bind to the user's actual tools during discovery: `~~meeting recording` (required),
 `~~calendar` (optional), `~~email` (optional), `~~crm` (optional), `~~enrichment` (optional),
-`~~aeo` (optional). Bind once, save the mapping to `config.json`, reuse thereafter.
+`~~aeo` (optional), `~~websearch` (optional). Bind once, save the mapping to `config.json`,
+reuse thereafter.
 
 ## 1. Enumerate connected tools
 
@@ -28,6 +29,7 @@ Group the tools into these capability buckets:
 | `crm` *(optional)* | Deal/contact records: stage, amount, close date | `search_records`, `get_deal`, `get_opportunity`, `list_contacts`, `update_record` |
 | `enrichment` *(optional)* | Account/person firmographics, roles, buying/hiring signals | `enrich`, `find_people`, `company_lookup`, `bitscale`, `clay`, `zoominfo`, `apollo` |
 | `aeo` *(optional)* | AI/answer-engine query data: what buyers ask AI/search engines | `aeo`, `answer_engine`, `ai_search_queries`, `get_queries` (HubSpot AEO) |
+| `websearch` *(optional)* | General web search / research over public content | `search`, `web_search`, `parallel`, `exa`, `tavily`, `perplexity`, `research` |
 
 Known meeting-recording vendors to recognize: **tl;dv, Otter, Fireflies, Fathom, Gong,
 Chorus, Avoma, Grain, Zoom (Zoom IQ / cloud recordings), Microsoft Teams, Google Meet,
@@ -73,6 +75,7 @@ re-probing:
   "crm_tool": "<name or null>",
   "enrichment_tool": "<name or null>",
   "aeo_tool": "<name or null>",
+  "websearch_tool": "<name or null>",
   "last_sync": null
 }
 ```
@@ -80,7 +83,10 @@ re-probing:
 `~~enrichment` (e.g. Bitscale, Clay, ZoomInfo, Apollo) grounds `call-prep` with firmographics
 and signals; if none is connected, `call-prep` still enriches via Claude's built-in web search
 (OSINT) — no connector required. `~~aeo` (HubSpot AEO) supplies the answer-engine query side of
-`voice-of-customer`; if absent, that skill degrades to a user-pasted AEO export or CI-only.
+`voice-of-customer`; if absent, that skill **derives the demand side from public UGC** using a
+`~~websearch` tool or Claude's built-in web search (see `aeo-proxy.md`), or accepts a
+user-pasted export, or runs CI-only. `~~websearch` (Parallel, Exa, Tavily, Perplexity) is the
+preferred proxy engine — it can reach sources built-in search is blocked from (e.g. Reddit).
 
 ## 4. Pagination & rate discipline
 

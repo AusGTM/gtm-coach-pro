@@ -55,7 +55,7 @@ That's it — from there, just talk to it ("prep me for my call with Acme",
 |------|-----|
 | Claude Cowork or Claude Desktop | Runtime for the plugin |
 | One connected `~~meeting recording` MCP tool | **Required** — the source of call data |
-| `~~calendar`, `~~email`, `~~crm`, `~~enrichment`, `~~aeo` tools | Optional — unlock call prep, follow-ups, grounded briefs, voice of customer |
+| `~~calendar`, `~~email`, `~~crm`, `~~enrichment`, `~~aeo`, `~~websearch` tools | Optional — unlock call prep, follow-ups, grounded briefs, voice of customer |
 | Local disk write access | The memory bank lives in `./sales-memory/` |
 
 ## How it works anywhere
@@ -79,7 +79,8 @@ See [`CONNECTORS.md`](./gtm-coach-pro/CONNECTORS.md) for details.
 | `~~email` | Optional | Gmail, Microsoft 365 / Outlook |
 | `~~crm` | Optional | Salesforce, HubSpot, Close, Pipedrive |
 | `~~enrichment` | Optional | Bitscale, Clay, ZoomInfo, Apollo (falls back to built-in web OSINT) |
-| `~~aeo` | Optional | HubSpot AEO (answer-engine queries) |
+| `~~aeo` | Optional | HubSpot AEO (answer-engine queries) — falls back to the UGC-derived AEO proxy |
+| `~~websearch` | Optional | Parallel, Exa, Tavily, Perplexity (powers the AEO proxy; falls back to built-in web search) |
 
 ## Skills
 
@@ -94,7 +95,7 @@ See [`CONNECTORS.md`](./gtm-coach-pro/CONNECTORS.md) for details.
 | "score this call" / "coach this rep" | **coaching-scorecard** | Per-call/per-rep scoring + improvement plan, tracked over time |
 | "from my won deals, draft the playbook" | **playbook-builder** | Winning-call library → discovery questions, persona pains/messaging, qualification, objection handling, competitor positioning |
 | "build battlecards" / "what objections & competitors recur" | **battlecards** | Carryable per-competitor + objection cards with exact buyer language and winning counters |
-| "voice of customer" / "combine call language with AEO" | **voice-of-customer** | Triangulates call language + HubSpot AEO queries → 3 content angles + enablement brief |
+| "voice of customer" / "combine call language with AEO" | **voice-of-customer** | Triangulates call language + answer-engine demand (AEO tool, or a UGC-derived proxy via web search) → 3 content angles + enablement brief |
 
 ## Day-to-day operation
 

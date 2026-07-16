@@ -21,6 +21,7 @@ GTM Coach adapts.
 | CRM | `~~crm` | Optional | Salesforce, HubSpot, Close, Pipedrive |
 | Enrichment | `~~enrichment` | Optional | Bitscale, Clay, ZoomInfo, Apollo |
 | Answer-engine optimization (AEO) | `~~aeo` | Optional | HubSpot AEO |
+| Web search | `~~websearch` | Optional | Parallel, Exa, Tavily, Perplexity |
 
 ## What each connector unlocks
 
@@ -42,8 +43,14 @@ GTM Coach adapts.
   search (OSINT)** — public news, funding, leadership moves, hiring signals, with cited URLs —
   so the brief is never empty.
 - **`~~aeo` (optional)** — HubSpot AEO supplies the answer-engine query side of
-  `voice-of-customer`: what buyers ask AI/search engines in your problem space. If absent, that
-  skill degrades to a user-pasted AEO export or runs CI-only.
+  `voice-of-customer`: what buyers ask AI/search engines in your problem space. If absent,
+  `voice-of-customer` **derives that demand side from public UGC** via web search (see
+  `~~websearch`), or accepts a user-pasted AEO export, or runs CI-only — in that order.
+- **`~~websearch` (optional)** — a dedicated web-search tool (Parallel, Exa, Tavily, Perplexity)
+  used as the **AEO proxy** in `voice-of-customer` when no `~~aeo` tool is connected, and to
+  broaden `call-prep` OSINT. Preferred over Claude's built-in web search because it can reach
+  sources the built-in crawler is blocked from (e.g. Reddit). If absent, GTM Coach falls back to
+  Claude's built-in web search — nothing breaks. See `references/aeo-proxy.md`.
 
 ## Setup for a new user
 

@@ -38,7 +38,7 @@ Look for `./sales-memory/index.json`.
 
 Follow `mcp-discovery.md`: enumerate connected MCP tools, bucket them, and bind the connector
 categories — `~~meeting recording` (required), and `~~calendar` / `~~email` / `~~crm` /
-`~~enrichment` / `~~aeo` if present (see `CONNECTORS.md`). If no `~~meeting recording` tool is connected, stop and tell the
+`~~enrichment` / `~~aeo` / `~~websearch` if present (see `CONNECTORS.md`). If no `~~meeting recording` tool is connected, stop and tell the
 user to connect one (name examples: tl;dv, Otter, Fireflies, Fathom, Zoom, Gong). If several,
 ask which to use. Probe the chosen tool's shape (pagination, date filter, ID field,
 transcript availability).

@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-07-17
+
+AEO without an AEO tool — `voice-of-customer` now works on any stack.
+
+### Added
+- `references/aeo-proxy.md` — derives answer-engine demand from public UGC (Query Fan-Out →
+  facets → long-tail questions → multi-modal UGC sweep → simulated query set). Confidence is
+  graded by cross-platform recurrence, never fabricated volume.
+- `~~websearch` connector category (Parallel, Exa, Tavily, Perplexity) — the preferred proxy
+  engine; falls back to Claude's built-in web search when absent.
+
+### Changed
+- **voice-of-customer** — Side 2 (AEO) is now a four-rung source ladder: `~~aeo` tool
+  (measured) → `~~websearch` tool (proxy) → built-in web search (proxy) → user-pasted export.
+  Every claim in the brief is tagged with the rung it came from. No longer hard-depends on
+  HubSpot AEO.
+- `CONNECTORS.md` and `references/mcp-discovery.md` — bind and document `~~websearch`; record
+  `websearch_tool` in `config.json`. Documented that Reddit/StackExchange are blocked to the
+  built-in crawler, with review sites as the replacement UGC source.
+
 ## [0.2.0] - 2026-07-13
 
 Pro release — adds four deeper plays on top of the core coach.
@@ -47,6 +67,7 @@ Initial release — the core coach.
   recording-consent reminders, optional PII redaction.
 - Apache-2.0 license, `NOTICE`.
 
-[Unreleased]: https://github.com/AusGTM/gtm-coach-pro/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/AusGTM/gtm-coach-pro/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.3.0
 [0.2.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.2.0
 [0.1.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.1.0
