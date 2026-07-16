@@ -1,19 +1,21 @@
+> **SYNTHETIC DEMO DATA.** Company names are real Australian tech companies, used for demo realism. All people, conversations, quotes, deals, and numbers below are fictional and are not affiliated with or endorsed by these companies.
+
 # Objection & competitor battlecards (expected output, demo C)
 
 > Reference output of `battlecards` for the prompt *"Across all calls, what objections and
 > competitor mentions recur, and how did we handle the wins?"* On-stage fallback. Synthetic data.
 
 **State of play:** 3 competitors recur across 23 calls / 6 deals. The most dangerous is the
-**in-house/analyst status quo** — it killed Summit Lending and now threatens Meridian. 5 objection
+**in-house/analyst status quo** — it killed Airwallex and now threatens Employment Hero. 5 objection
 themes recur; the top two decide deals.
 
 ---
 
 ## COMPETITOR CARD — Clearwater (incumbent BI / dashboards)
-**Where:** named in 2 deals (Vantage — **won**; Helio — mentioned).
+**Where:** named in 2 deals (Culture Amp — **won**; SafetyCulture — mentioned).
 **Their claim:** established reporting; *"we already pay for it."*
-**Why buyers leave them:** lagging, deal-agnostic. *"Clearwater tells me what already happened. I need to know which deals are dying now."* (Sofia, Vantage).
-**Counters that won (Vantage):**
+**Why buyers leave them:** lagging, deal-agnostic. *"Clearwater tells me what already happened. I need to know which deals are dying now."* (Sofia, Culture Amp).
+**Counters that won (Culture Amp):**
 - Reframe: dashboards report **history**; we score **forward, deal-level risk**.
 - Compete on *"which deals are dying now"* — not chart features.
 - Quantify slipped-deal cost vs dashboard cost.
@@ -21,17 +23,17 @@ themes recur; the top two decide deals.
 **Trap-setting question:** *"When you open the dashboard, can you tell a deal is at risk — or only see what already happened?"*
 
 ## COMPETITOR CARD — In-house build / analyst team (status quo)
-**Where:** 2 deals (Summit — **lost**; Meridian — open, at risk).
-**Why it wins when it wins (Summit):** EB sees forecasting as an analyst's job; no compelling event. *"This overlaps what my analysts already deliver."* (David, CFO).
-**Counters (must-do, were NOT done at Summit):**
+**Where:** 2 deals (Airwallex — **lost**; Employment Hero — open, at risk).
+**Why it wins when it wins (Airwallex):** EB sees forecasting as an analyst's job; no compelling event. *"This overlaps what my analysts already deliver."* (David, CFO).
+**Counters (must-do, were NOT done at Airwallex):**
 - Quantify **analyst time reclaimed + accuracy gain** to the **economic buyer**, early.
 - Establish a **dated compelling event** to dislodge the status quo.
-**Landmine:** letting the champion carry the impact case while the EB never feels it. (Exactly how Summit was lost — and the live risk on Meridian, where CFO Ananya favours this path.)
+**Landmine:** letting the champion carry the impact case while the EB never feels it. (Exactly how Airwallex was lost — and the live risk on Employment Hero, where CFO Ananya favours this path.)
 **Trap-setting question:** *"If your analysts already do this, what's the cost of the deals that still slipped last year?"*
 
 ## COMPETITOR CARD — PipelineIQ (point competitor)
-**Where:** 1 deal (Orbit — winning). ⚠️ **Sample size 1 — weak signal.**
-**Why buyers prefer us:** *"weaker on deal-level risk scoring."* (Nadia, Orbit).
+**Where:** 1 deal (Deputy — winning). ⚠️ **Sample size 1 — weak signal.**
+**Why buyers prefer us:** *"weaker on deal-level risk scoring."* (Nadia, Deputy).
 **Counter:** side-by-side on risk-scoring depth and early-warning quality.
 
 ---
@@ -62,6 +64,6 @@ themes recur; the top two decide deals.
 
 **Sharpest takeaway for reps this week:** the status-quo/in-house "competitor" is the one that
 actually beats us — when the economic buyer doesn't feel the pain. Qualify the EB's view and a
-compelling event **early**, or you're walking into the Summit loss again (live on Meridian now).
+compelling event **early**, or you're walking into the Airwallex loss again (live on Employment Hero now).
 
 _Would write the cards to `sales-memory/battlecards/competitors/*.md` and `objections.md` on confirm._

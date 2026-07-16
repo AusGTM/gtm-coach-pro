@@ -29,10 +29,13 @@ Read these bundled docs (relative to this skill: `../../references/`):
 
 Look for `./sales-memory/index.json`.
 - **If it exists:** GTM Coach is already initialized. Briefly report what's stored (deal
-  count, contact count, date range of calls, last sync) and ask what the user wants to do,
-  pointing to the available capabilities (sync, prep, debrief, pipeline review, GTM
-  patterns, coaching scorecard). Do not re-initialize.
-- **If it does not exist:** run first-time initialization (Steps 2–5).
+  count, contact count, date range of calls, last sync — and note if `config.json.demo_mode` is
+  `true`, i.e. it's the synthetic demo bank) and ask what the user wants to do, pointing to the
+  available capabilities (sync, prep, debrief, pipeline review, GTM patterns, coaching
+  scorecard). Do not re-initialize.
+- **If it does not exist:** run first-time initialization (Steps 2–5). *(If the user just wants
+  to try or demo GTM Coach without connecting tools, route to the `gtm-coach-demo` skill
+  instead — it seeds a rich synthetic bank so everything works immediately.)*
 
 ## Step 2 — Discover the recording tool
 

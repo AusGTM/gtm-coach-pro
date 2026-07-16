@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-17
+
+One-command demo — GTM Coach Pro runs with zero connected tools.
+
+### Added
+- **gtm-coach-demo** skill — "set up GTM coach demo" seeds `./sales-memory/` from a bundled
+  synthetic bank and sets `demo_mode: true`, skipping tool discovery. Every other skill then
+  operates identically. The bank is bundled inside the skill
+  (`skills/gtm-coach-demo/assets/sales-memory/`) so the packaged `.plugin` is self-sufficient.
+- Demo bank rebuilt on **real, well-known Australian tech companies** (SafetyCulture, Employment
+  Hero, Deputy, Airwallex, Go1, Culture Amp) so web-OSINT and the `voice-of-customer` AEO proxy
+  return genuine content — while **all people, quotes, deals, and figures remain fictional**.
+  Every seed file carries a synthetic-data notice.
+
+### Changed
+- **sync-memory** — guards on `config.json.demo_mode`: refuses to sync a demo bank (no live
+  source) and explains how to go live instead.
+- **gtm-coach** — recognizes `demo_mode` when reporting an existing bank, and routes users who
+  just want to try/demo to `gtm-coach-demo`.
+
 ## [0.3.0] - 2026-07-17
 
 AEO without an AEO tool — `voice-of-customer` now works on any stack.
@@ -67,7 +87,8 @@ Initial release — the core coach.
   recording-consent reminders, optional PII redaction.
 - Apache-2.0 license, `NOTICE`.
 
-[Unreleased]: https://github.com/AusGTM/gtm-coach-pro/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/AusGTM/gtm-coach-pro/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.4.0
 [0.3.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.3.0
 [0.2.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.2.0
 [0.1.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.1.0

@@ -1,3 +1,5 @@
+> **SYNTHETIC DEMO DATA.** Company names are real Australian tech companies, used for demo realism. All people, conversations, quotes, deals, and numbers below are fictional and are not affiliated with or endorsed by these companies.
+
 # Voice of customer — two ways (expected output, demo D)
 
 > Reference output of `voice-of-customer` for the prompt *"Combine call language with the AEO
@@ -12,11 +14,11 @@ is going to slip."* Same problem — **deal-level slip risk, before it's too lat
 shared vocabulary across both sources.
 
 ## Side 1 — Call language (CI)
-- *"I need to know which deals are dying now."* (Sofia, Vantage)
-- *"We find out a deal slipped the week it was supposed to close — there's no early warning."* (Marcus, Helio)
-- *"I honestly guess my forecast. I'd put the error at 20-30% a quarter."* (Tom, Meridian)
-- *"I can't put a forecast in front of the board I'd bet on."* (Sam, Orbit)
-- *"This overlaps what my analysts already deliver."* (David, Summit — the doubt)
+- *"I need to know which deals are dying now."* (Sofia, Culture Amp)
+- *"We find out a deal slipped the week it was supposed to close — there's no early warning."* (Marcus, SafetyCulture)
+- *"I honestly guess my forecast. I'd put the error at 20-30% a quarter."* (Tom, Employment Hero)
+- *"I can't put a forecast in front of the board I'd bet on."* (Sam, Deputy)
+- *"This overlaps what my analysts already deliver."* (David, Airwallex — the doubt)
 
 ## Side 2 — AEO queries (HubSpot AEO; synthetic sample)
 - "how to know which deals are at risk of slipping" (880/mo ▲▲)
@@ -27,8 +29,8 @@ shared vocabulary across both sources.
 - "revenue intelligence vs BI dashboard" (380/mo ▲)
 
 **Where they agree (high confidence):** slip risk + early warning + forecast accuracy.
-**Where AEO adds signal calls don't:** *"do I need a tool or just an analyst"* (the Summit doubt,
-searched at volume) and *"forecast revenue before a Series C"* (Orbit's exact trigger, as a
+**Where AEO adds signal calls don't:** *"do I need a tool or just an analyst"* (the Airwallex doubt,
+searched at volume) and *"forecast revenue before a Series C"* (Deputy's exact trigger, as a
 public query).
 
 ## 3 content angles
@@ -36,10 +38,10 @@ public query).
    Anchored on *"which deals are dying now"* / "early warning signs a deal is going to slip."
    Persona: RevOps champion + VP Sales. Stage: top-of-funnel awareness.
 2. **"Tool or analyst? The honest answer for a 25%-forecast-error team."**
-   Anchored on *"do I need a forecasting tool or just an analyst"* + the Summit objection. Meets
+   Anchored on *"do I need a forecasting tool or just an analyst"* + the Airwallex objection. Meets
    the CFO/economic-buyer doubt head-on. Persona: CFO / economic buyer. Stage: evaluation.
 3. **"A board-ready forecast before your raise."**
-   Anchored on "how to forecast revenue before a Series C" + *"a forecast I'd bet on"* (Sam, Orbit).
+   Anchored on "how to forecast revenue before a Series C" + *"a forecast I'd bet on"* (Sam, Deputy).
    Persona: CRO at a scaling startup. Stage: consideration, financing-triggered.
 
 ## Hand-offs

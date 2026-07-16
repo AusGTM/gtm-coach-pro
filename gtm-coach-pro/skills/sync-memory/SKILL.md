@@ -21,6 +21,11 @@ to run setup first (the `gtm-coach` skill). Load `config.json` for the saved `to
 `id_field`, and `last_sync`. If the tool map is missing, re-run discovery from
 `mcp-discovery.md` and save it.
 
+**Demo bank guard:** if `config.json.demo_mode` is `true`, do **not** sync — there is no live
+recording source. Tell the user this is the synthetic demo bank (loaded by `gtm-coach-demo`) and
+that syncing/backfill don't apply; to go live, connect a `~~meeting recording` tool and run the
+real `gtm-coach` setup into a fresh directory. Stop there.
+
 ## Modes
 
 ### Incremental sync (default)

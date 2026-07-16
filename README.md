@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/badge/version-0.2.0-blue)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Claude%20Cowork%20%2F%20Desktop-orange)](https://claude.ai)
-[![Skills](https://img.shields.io/badge/skills-10-purple)](#skills)
+[![Skills](https://img.shields.io/badge/skills-11-purple)](#skills)
 [![Framework](https://img.shields.io/badge/methodology-SPICED-red)](https://winningbydesign.com/spiced-framework/)
 
 GTM Coach connects to whatever meeting-recording tool you already use, builds a durable
@@ -49,6 +49,16 @@ for how every CI play maps to the plugin.
 That's it — from there, just talk to it ("prep me for my call with Acme",
 "run a pipeline review", "build battlecards").
 
+### Just want to try it? (no tools needed)
+
+Say **"set up GTM coach demo"**. This loads a rich, fully **synthetic** memory bank so every
+skill works immediately — no meeting-recording tool, CRM, or live data required. Accounts are
+real, well-known Australian tech companies (SafetyCulture, Employment Hero, Deputy, Airwallex,
+Go1, Culture Amp) for realism — so web-OSINT and the `voice-of-customer` AEO proxy fire live —
+while **all people, quotes, deals, and figures are fictional** and not affiliated with those
+companies. See [`gtm-coach-demo`](#skills). To go live later, connect a recording tool and run
+the real setup into a fresh directory.
+
 ## Requirements
 
 | What | Why |
@@ -87,6 +97,7 @@ See [`CONNECTORS.md`](./gtm-coach-pro/CONNECTORS.md) for details.
 | Say this… | Skill | What you get |
 |-----------|-------|--------------|
 | "set up GTM coach" / "initialize sales coach" | **gtm-coach** | Discovery, privacy gate, 90-day ingest, orientation, routing |
+| "set up GTM coach demo" / "demo mode" | **gtm-coach-demo** | Loads a rich synthetic bank (real AU companies, fictional data) so every skill works instantly — no tools required |
 | "sync my calls" / "backfill 12 months" | **sync-memory** | Incremental sync (deduped) + backfill + how to schedule daily refresh |
 | "prep me for my call with Acme" | **call-prep** | Pre-call brief: SPICED gaps, stakeholders, open commitments, call plan |
 | "debrief my last call" / "draft my follow-up" | **call-debrief** | Memory update, next steps, coaching note, follow-up email draft |

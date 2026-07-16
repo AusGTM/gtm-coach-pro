@@ -1,0 +1,17 @@
+{
+  "recording_source": "tldv",
+  "tool_map": {
+    "list_calls": "tldv_list_meetings",
+    "get_summary": "tldv_get_summary",
+    "get_transcript": "tldv_get_transcript",
+    "get_call_detail": "tldv_get_meeting"
+  },
+  "id_field": "meeting_id",
+  "supports_transcripts": true,
+  "calendar_tool": "google_calendar",
+  "email_tool": "gmail",
+  "crm_tool": "hubspot",
+  "enrichment_tool": "bitscale",
+  "aeo_tool": "hubspot_aeo",
+  "last_sync": "2026-06-24T00:00:00Z"
+}

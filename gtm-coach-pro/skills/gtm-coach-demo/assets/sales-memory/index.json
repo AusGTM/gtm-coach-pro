@@ -1,0 +1,1174 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-24T00:00:00Z",
+  "_notice": "SYNTHETIC DEMO DATA — real Australian company names used for realism; all people, conversations, quotes, deals, and numbers are fictional and not affiliated with or endorsed by these companies.",
+  "deals": [
+    {
+      "id": "safetyculture-revenue-intelligence",
+      "account": "safetyculture",
+      "name": "SafetyCulture \u2014 Revenue Intelligence",
+      "stage": "closed-won",
+      "amount": 90000,
+      "currency": "USD",
+      "close_date": "2026-04-30",
+      "owner": "alex-rep",
+      "spiced": {
+        "situation": "120-rep sales team at a workplace-safety & operations SaaS company, pipeline tracked in spreadsheets exported from CRM weekly.",
+        "pain": "Forecast missed 3 quarters running; leadership had no early warning on slipping deals.",
+        "impact": "~$2.4M of slipped pipeline last year that nobody flagged until close week.",
+        "critical_event": "New CRO mandate to hit forecast within 5% by Q3 board meeting.",
+        "decision": "Dana (VP Rev) signs; Marcus (RevOps) drives eval; security review light (mid-market)."
+      },
+      "health": "green",
+      "risks": [],
+      "next_step": {
+        "what": "Kickoff + onboarding",
+        "owner": "alex-rep",
+        "due": "2026-05-05"
+      },
+      "call_ids": [
+        "tldv-9901be55b9f2",
+        "tldv-bafd87c6110e",
+        "tldv-9656c85e0b48",
+        "tldv-566f4427a4ed"
+      ],
+      "contact_ids": [
+        "dana-okafor",
+        "marcus-lindqvist"
+      ],
+      "last_touch": "2026-04-22",
+      "created_at": "2026-02-03",
+      "updated_at": "2026-04-22"
+    },
+    {
+      "id": "culture-amp-forecast-platform",
+      "account": "culture-amp",
+      "name": "Culture Amp \u2014 Forecast Platform",
+      "stage": "closed-won",
+      "amount": 145000,
+      "currency": "USD",
+      "close_date": "2026-05-20",
+      "owner": "jordan-rep",
+      "spiced": {
+        "situation": "Enterprise people-analytics SaaS, 200 reps, existing BI tool (Clearwater) for dashboards but no deal-level signal.",
+        "pain": "Clearwater shows lagging dashboards; reps and managers can't see which deals are actually at risk.",
+        "impact": "Two 7-figure deals slipped a quarter each; CRO lost board credibility.",
+        "critical_event": "Annual planning in June forced a tooling decision before new fiscal year.",
+        "decision": "Priya (CRO) is EB; Sofia (Sales Ops) champions; Ken (Data Eng) gates on integration/security."
+      },
+      "health": "green",
+      "risks": [],
+      "next_step": {
+        "what": "Phase-1 rollout to 2 regions",
+        "owner": "jordan-rep",
+        "due": "2026-06-01"
+      },
+      "call_ids": [
+        "tldv-729a28067e6a",
+        "tldv-945dba596a2f",
+        "tldv-24444042ce8b",
+        "tldv-0bdb9fe0e98f"
+      ],
+      "contact_ids": [
+        "priya-raman",
+        "sofia-mendez",
+        "ken-arai"
+      ],
+      "last_touch": "2026-05-12",
+      "created_at": "2026-02-10",
+      "updated_at": "2026-05-12"
+    },
+    {
+      "id": "employment-hero-pipeline-analytics",
+      "account": "employment-hero",
+      "name": "Employment Hero \u2014 Pipeline Analytics",
+      "stage": "eval",
+      "amount": 120000,
+      "currency": "USD",
+      "close_date": "2026-07-31",
+      "owner": "alex-rep",
+      "spiced": {
+        "situation": "HR & payroll SaaS mid-market, 80 reps, CRM hygiene poor, RevOps team of 2 stretched thin.",
+        "pain": "No reliable forecast; Tom (VP Sales) flying blind on which deals will land this quarter.",
+        "impact": "Tom estimates 20-30% forecast error each quarter; CFO Ananya wants the number tightened before budget.",
+        "critical_event": "ASSUMED \u2014 budget cycle closes end of July; not yet confirmed as a hard compelling event.",
+        "decision": "Tom champions; Ananya (CFO) holds budget and is unconvinced on ROI; Grace (IT Security) must sign off on data access. Economic buyer (Ananya) has NOT been on a call."
+      },
+      "health": "yellow",
+      "risks": [
+        "economic buyer absent",
+        "critical event unconfirmed",
+        "security review pending",
+        "single-threaded above champion"
+      ],
+      "next_step": {
+        "what": "ROI review with Tom to prep for CFO; get Ananya on next call",
+        "owner": "alex-rep",
+        "due": "2026-06-26"
+      },
+      "call_ids": [
+        "tldv-9ac4a01f7f3c",
+        "tldv-c33aa55413a1",
+        "tldv-673318793e61",
+        "tldv-e22f44aaa580",
+        "tldv-fca071e3fae8"
+      ],
+      "contact_ids": [
+        "tom-becker",
+        "ananya-iyer",
+        "luis-romero",
+        "grace-kim"
+      ],
+      "last_touch": "2026-06-10",
+      "created_at": "2026-04-08",
+      "updated_at": "2026-06-10"
+    },
+    {
+      "id": "deputy-revops-rollout",
+      "account": "deputy",
+      "name": "Deputy \u2014 RevOps Rollout",
+      "stage": "negotiation",
+      "amount": 200000,
+      "currency": "USD",
+      "close_date": "2026-06-30",
+      "owner": "jordan-rep",
+      "spiced": {
+        "situation": "Workforce-management SaaS scale-up, 60 reps, fast growth, RevOps maturing under Sam.",
+        "pain": "Nadia (CRO) can't trust the forecast as they scale toward a raise; board wants predictability.",
+        "impact": "Mis-forecasting ahead of a Series C could cost them on valuation and credibility.",
+        "critical_event": "Series C process kicks off in July \u2014 board wants clean forecasting in place first.",
+        "decision": "Nadia (CRO) is EB and engaged; Sam champions; procurement/legal now the gating step on a 2-year term."
+      },
+      "health": "yellow",
+      "risks": [
+        "price pushback on multi-year",
+        "legal redlines outstanding"
+      ],
+      "next_step": {
+        "what": "Redline turn + final pricing approval",
+        "owner": "jordan-rep",
+        "due": "2026-06-25"
+      },
+      "call_ids": [
+        "tldv-828b9ac2af36",
+        "tldv-b9aed57cc8ff",
+        "tldv-2385da3705fe",
+        "tldv-14e452a90538"
+      ],
+      "contact_ids": [
+        "nadia-petrov",
+        "sam-whitfield"
+      ],
+      "last_touch": "2026-06-09",
+      "created_at": "2026-03-25",
+      "updated_at": "2026-06-09"
+    },
+    {
+      "id": "airwallex-forecast-eval",
+      "account": "airwallex",
+      "name": "Airwallex \u2014 Forecast Eval",
+      "stage": "closed-lost",
+      "amount": 80000,
+      "currency": "USD",
+      "close_date": "2026-03-15",
+      "owner": "alex-rep",
+      "spiced": {
+        "situation": "Enterprise cross-border payments fintech, heavily regulated, existing in-house spreadsheets + analyst team.",
+        "pain": "VP Sales Rebecca felt the pain; CFO David did not \u2014 saw forecasting as an analyst job, not software.",
+        "impact": "Never quantified to David's satisfaction; stayed a 'nice to have'.",
+        "critical_event": "None \u2014 no compelling event; 'maybe next budget cycle'.",
+        "decision": "Rebecca championed but David (CFO/EB) was the blocker; security/compliance also raised concerns."
+      },
+      "health": "red",
+      "risks": [
+        "no critical event",
+        "economic buyer was a blocker",
+        "never quantified impact",
+        "competitor: in-house build"
+      ],
+      "next_step": {
+        "what": "Closed-lost \u2014 revisit Q4 if priorities change",
+        "owner": "alex-rep",
+        "due": "2026-10-01"
+      },
+      "call_ids": [
+        "tldv-01b047f875c9",
+        "tldv-90e71c88221f",
+        "tldv-24e546827ca9",
+        "tldv-1aeed3e575f6"
+      ],
+      "contact_ids": [
+        "rebecca-hall",
+        "david-nguyen"
+      ],
+      "last_touch": "2026-03-15",
+      "created_at": "2026-01-14",
+      "updated_at": "2026-03-15"
+    },
+    {
+      "id": "go1-discovery",
+      "account": "go1",
+      "name": "Go1 \u2014 Discovery",
+      "stage": "discovery",
+      "amount": 60000,
+      "currency": "USD",
+      "close_date": "2026-08-31",
+      "owner": "jordan-rep",
+      "spiced": {
+        "situation": "SMB corporate-learning SaaS, 25 reps, owner-led sales, light process.",
+        "pain": "Owen (Head of Sales) wants to professionalise forecasting before they double headcount.",
+        "impact": "Early signal \u2014 not yet quantified.",
+        "critical_event": "Hiring plan in Q4 is the loose trigger; needs confirming.",
+        "decision": "Owen is champion and likely EB given size; process simple."
+      },
+      "health": "yellow",
+      "risks": [
+        "impact not quantified",
+        "early stage"
+      ],
+      "next_step": {
+        "what": "Discovery part 2 + light ROI framing",
+        "owner": "jordan-rep",
+        "due": "2026-06-27"
+      },
+      "call_ids": [
+        "tldv-1bdea2b07a2d",
+        "tldv-95b498c925ca"
+      ],
+      "contact_ids": [
+        "owen-clarke"
+      ],
+      "last_touch": "2026-06-17",
+      "created_at": "2026-06-03",
+      "updated_at": "2026-06-17"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "dana-okafor",
+      "name": "Dana Okafor",
+      "title": "VP Revenue",
+      "account": "safetyculture",
+      "role": "economic-buyer",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-bafd87c6110e",
+        "tldv-566f4427a4ed"
+      ]
+    },
+    {
+      "id": "marcus-lindqvist",
+      "name": "Marcus Lindqvist",
+      "title": "RevOps Lead",
+      "account": "safetyculture",
+      "role": "champion",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-9901be55b9f2",
+        "tldv-bafd87c6110e",
+        "tldv-9656c85e0b48",
+        "tldv-566f4427a4ed"
+      ]
+    },
+    {
+      "id": "priya-raman",
+      "name": "Priya Raman",
+      "title": "CRO",
+      "account": "culture-amp",
+      "role": "economic-buyer",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-945dba596a2f",
+        "tldv-0bdb9fe0e98f"
+      ]
+    },
+    {
+      "id": "sofia-mendez",
+      "name": "Sofia Mendez",
+      "title": "Sales Ops Manager",
+      "account": "culture-amp",
+      "role": "champion",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-729a28067e6a",
+        "tldv-945dba596a2f",
+        "tldv-24444042ce8b",
+        "tldv-0bdb9fe0e98f"
+      ]
+    },
+    {
+      "id": "ken-arai",
+      "name": "Ken Arai",
+      "title": "Data Engineering Lead",
+      "account": "culture-amp",
+      "role": "technical",
+      "sentiment": "neutral",
+      "call_ids": [
+        "tldv-24444042ce8b"
+      ]
+    },
+    {
+      "id": "tom-becker",
+      "name": "Tom Becker",
+      "title": "VP Sales",
+      "account": "employment-hero",
+      "role": "champion",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-9ac4a01f7f3c",
+        "tldv-c33aa55413a1",
+        "tldv-673318793e61",
+        "tldv-fca071e3fae8"
+      ]
+    },
+    {
+      "id": "ananya-iyer",
+      "name": "Ananya Iyer",
+      "title": "CFO",
+      "account": "employment-hero",
+      "role": "economic-buyer",
+      "sentiment": "neutral",
+      "call_ids": []
+    },
+    {
+      "id": "luis-romero",
+      "name": "Luis Romero",
+      "title": "Head of RevOps",
+      "account": "employment-hero",
+      "role": "influencer",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-c33aa55413a1",
+        "tldv-673318793e61",
+        "tldv-e22f44aaa580",
+        "tldv-fca071e3fae8"
+      ]
+    },
+    {
+      "id": "grace-kim",
+      "name": "Grace Kim",
+      "title": "IT Security",
+      "account": "employment-hero",
+      "role": "blocker",
+      "sentiment": "neutral",
+      "call_ids": [
+        "tldv-e22f44aaa580"
+      ]
+    },
+    {
+      "id": "nadia-petrov",
+      "name": "Nadia Petrov",
+      "title": "CRO",
+      "account": "deputy",
+      "role": "economic-buyer",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-b9aed57cc8ff",
+        "tldv-14e452a90538"
+      ]
+    },
+    {
+      "id": "sam-whitfield",
+      "name": "Sam Whitfield",
+      "title": "RevOps Manager",
+      "account": "deputy",
+      "role": "champion",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-828b9ac2af36",
+        "tldv-b9aed57cc8ff",
+        "tldv-2385da3705fe",
+        "tldv-14e452a90538"
+      ]
+    },
+    {
+      "id": "rebecca-hall",
+      "name": "Rebecca Hall",
+      "title": "VP Sales",
+      "account": "airwallex",
+      "role": "champion",
+      "sentiment": "neutral",
+      "call_ids": [
+        "tldv-01b047f875c9",
+        "tldv-90e71c88221f",
+        "tldv-24e546827ca9",
+        "tldv-1aeed3e575f6"
+      ]
+    },
+    {
+      "id": "david-nguyen",
+      "name": "David Nguyen",
+      "title": "CFO",
+      "account": "airwallex",
+      "role": "economic-buyer",
+      "sentiment": "negative",
+      "call_ids": [
+        "tldv-90e71c88221f"
+      ]
+    },
+    {
+      "id": "owen-clarke",
+      "name": "Owen Clarke",
+      "title": "Head of Sales",
+      "account": "go1",
+      "role": "champion",
+      "sentiment": "positive",
+      "call_ids": [
+        "tldv-1bdea2b07a2d",
+        "tldv-95b498c925ca"
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "id": "tldv-01b047f875c9",
+      "date": "2026-01-14",
+      "title": "Airwallex discovery",
+      "account": "airwallex",
+      "deal": "airwallex-forecast-eval",
+      "type": "discovery",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "rebecca-hall"
+      ],
+      "duration_min": 37,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "991b4f6c2843",
+      "talk_ratio_rep": 0.46,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain"
+      ],
+      "file": "calls/2026-01-14_airwallex-forecast-eval-discovery.md"
+    },
+    {
+      "id": "tldv-9901be55b9f2",
+      "date": "2026-02-03",
+      "title": "SafetyCulture discovery",
+      "account": "safetyculture",
+      "deal": "safetyculture-revenue-intelligence",
+      "type": "discovery",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "marcus-lindqvist"
+      ],
+      "duration_min": 38,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "20bba68f89e6",
+      "talk_ratio_rep": 0.44,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain"
+      ],
+      "file": "calls/2026-02-03_safetyculture-revenue-intelligence-discovery.md"
+    },
+    {
+      "id": "tldv-90e71c88221f",
+      "date": "2026-02-04",
+      "title": "Airwallex demo",
+      "account": "airwallex",
+      "deal": "airwallex-forecast-eval",
+      "type": "demo",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "rebecca-hall",
+        "david-nguyen"
+      ],
+      "duration_min": 44,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "ff31dc04dcbe",
+      "talk_ratio_rep": 0.58,
+      "next_step_set": false,
+      "spiced_coverage": [
+        "pain",
+        "decision"
+      ],
+      "file": "calls/2026-02-04_airwallex-forecast-eval-demo.md"
+    },
+    {
+      "id": "tldv-729a28067e6a",
+      "date": "2026-02-10",
+      "title": "Culture Amp discovery",
+      "account": "culture-amp",
+      "deal": "culture-amp-forecast-platform",
+      "type": "discovery",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "sofia-mendez"
+      ],
+      "duration_min": 40,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "2d8d573427f1",
+      "talk_ratio_rep": 0.43,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain"
+      ],
+      "file": "calls/2026-02-10_culture-amp-forecast-platform-discovery.md"
+    },
+    {
+      "id": "tldv-bafd87c6110e",
+      "date": "2026-02-17",
+      "title": "SafetyCulture demo",
+      "account": "safetyculture",
+      "deal": "safetyculture-revenue-intelligence",
+      "type": "demo",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "dana-okafor",
+        "marcus-lindqvist"
+      ],
+      "duration_min": 45,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "656d9944087f",
+      "talk_ratio_rep": 0.52,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "pain",
+        "impact",
+        "decision"
+      ],
+      "file": "calls/2026-02-17_safetyculture-revenue-intelligence-demo.md"
+    },
+    {
+      "id": "tldv-945dba596a2f",
+      "date": "2026-02-24",
+      "title": "Culture Amp demo",
+      "account": "culture-amp",
+      "deal": "culture-amp-forecast-platform",
+      "type": "demo",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "priya-raman",
+        "sofia-mendez"
+      ],
+      "duration_min": 48,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "f990a621d8a0",
+      "talk_ratio_rep": 0.5,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "pain",
+        "impact",
+        "decision"
+      ],
+      "file": "calls/2026-02-24_culture-amp-forecast-platform-demo.md"
+    },
+    {
+      "id": "tldv-24e546827ca9",
+      "date": "2026-02-25",
+      "title": "Airwallex technical",
+      "account": "airwallex",
+      "deal": "airwallex-forecast-eval",
+      "type": "technical",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "rebecca-hall"
+      ],
+      "duration_min": 26,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "7e090585a3a6",
+      "talk_ratio_rep": 0.44,
+      "next_step_set": false,
+      "spiced_coverage": [
+        "situation"
+      ],
+      "file": "calls/2026-02-25_airwallex-forecast-eval-technical.md"
+    },
+    {
+      "id": "tldv-9656c85e0b48",
+      "date": "2026-03-10",
+      "title": "SafetyCulture technical",
+      "account": "safetyculture",
+      "deal": "safetyculture-revenue-intelligence",
+      "type": "technical",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "marcus-lindqvist"
+      ],
+      "duration_min": 30,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "902706c1432b",
+      "talk_ratio_rep": 0.4,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "decision"
+      ],
+      "file": "calls/2026-03-10_safetyculture-revenue-intelligence-technical.md"
+    },
+    {
+      "id": "tldv-1aeed3e575f6",
+      "date": "2026-03-15",
+      "title": "Airwallex other",
+      "account": "airwallex",
+      "deal": "airwallex-forecast-eval",
+      "type": "other",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "rebecca-hall"
+      ],
+      "duration_min": 18,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "8f98ad4483ae",
+      "talk_ratio_rep": 0.5,
+      "next_step_set": false,
+      "spiced_coverage": [
+        "decision",
+        "critical_event"
+      ],
+      "file": "calls/2026-03-15_airwallex-forecast-eval-other.md"
+    },
+    {
+      "id": "tldv-24444042ce8b",
+      "date": "2026-03-18",
+      "title": "Culture Amp technical",
+      "account": "culture-amp",
+      "deal": "culture-amp-forecast-platform",
+      "type": "technical",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "ken-arai",
+        "sofia-mendez"
+      ],
+      "duration_min": 55,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "c3789168be4a",
+      "talk_ratio_rep": 0.38,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "decision"
+      ],
+      "file": "calls/2026-03-18_culture-amp-forecast-platform-technical.md"
+    },
+    {
+      "id": "tldv-828b9ac2af36",
+      "date": "2026-03-25",
+      "title": "Deputy discovery",
+      "account": "deputy",
+      "deal": "deputy-revops-rollout",
+      "type": "discovery",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "sam-whitfield"
+      ],
+      "duration_min": 39,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "d9bfb56fed4c",
+      "talk_ratio_rep": 0.42,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain"
+      ],
+      "file": "calls/2026-03-25_deputy-revops-rollout-discovery.md"
+    },
+    {
+      "id": "tldv-9ac4a01f7f3c",
+      "date": "2026-04-08",
+      "title": "Employment Hero discovery",
+      "account": "employment-hero",
+      "deal": "employment-hero-pipeline-analytics",
+      "type": "discovery",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "tom-becker"
+      ],
+      "duration_min": 42,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "47190e7bd8a3",
+      "talk_ratio_rep": 0.41,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain"
+      ],
+      "file": "calls/2026-04-08_employment-hero-pipeline-analytics-discovery.md"
+    },
+    {
+      "id": "tldv-b9aed57cc8ff",
+      "date": "2026-04-14",
+      "title": "Deputy demo",
+      "account": "deputy",
+      "deal": "deputy-revops-rollout",
+      "type": "demo",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "nadia-petrov",
+        "sam-whitfield"
+      ],
+      "duration_min": 47,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "8eb4c9644749",
+      "talk_ratio_rep": 0.49,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "pain",
+        "impact",
+        "critical_event",
+        "decision"
+      ],
+      "file": "calls/2026-04-14_deputy-revops-rollout-demo.md"
+    },
+    {
+      "id": "tldv-c33aa55413a1",
+      "date": "2026-04-21",
+      "title": "Employment Hero technical",
+      "account": "employment-hero",
+      "deal": "employment-hero-pipeline-analytics",
+      "type": "technical",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "tom-becker",
+        "luis-romero"
+      ],
+      "duration_min": 44,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "2b6bc055e66a",
+      "talk_ratio_rep": 0.45,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain",
+        "impact"
+      ],
+      "file": "calls/2026-04-21_employment-hero-pipeline-analytics-technical.md"
+    },
+    {
+      "id": "tldv-566f4427a4ed",
+      "date": "2026-04-22",
+      "title": "SafetyCulture negotiation",
+      "account": "safetyculture",
+      "deal": "safetyculture-revenue-intelligence",
+      "type": "negotiation",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "dana-okafor",
+        "marcus-lindqvist"
+      ],
+      "duration_min": 28,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "53deece4e983",
+      "talk_ratio_rep": 0.46,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "decision",
+        "critical_event"
+      ],
+      "file": "calls/2026-04-22_safetyculture-revenue-intelligence-negotiation.md"
+    },
+    {
+      "id": "tldv-673318793e61",
+      "date": "2026-05-06",
+      "title": "Employment Hero demo",
+      "account": "employment-hero",
+      "deal": "employment-hero-pipeline-analytics",
+      "type": "demo",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "tom-becker",
+        "luis-romero"
+      ],
+      "duration_min": 50,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "21bf432945cb",
+      "talk_ratio_rep": 0.53,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "pain",
+        "impact",
+        "decision"
+      ],
+      "file": "calls/2026-05-06_employment-hero-pipeline-analytics-demo.md"
+    },
+    {
+      "id": "tldv-0bdb9fe0e98f",
+      "date": "2026-05-12",
+      "title": "Culture Amp negotiation",
+      "account": "culture-amp",
+      "deal": "culture-amp-forecast-platform",
+      "type": "negotiation",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "priya-raman",
+        "sofia-mendez"
+      ],
+      "duration_min": 35,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "4121f8a255ed",
+      "talk_ratio_rep": 0.47,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "decision",
+        "critical_event"
+      ],
+      "file": "calls/2026-05-12_culture-amp-forecast-platform-negotiation.md"
+    },
+    {
+      "id": "tldv-2385da3705fe",
+      "date": "2026-05-19",
+      "title": "Deputy technical",
+      "account": "deputy",
+      "deal": "deputy-revops-rollout",
+      "type": "technical",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "sam-whitfield"
+      ],
+      "duration_min": 32,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "15279fa43bdb",
+      "talk_ratio_rep": 0.41,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "decision"
+      ],
+      "file": "calls/2026-05-19_deputy-revops-rollout-technical.md"
+    },
+    {
+      "id": "tldv-e22f44aaa580",
+      "date": "2026-05-27",
+      "title": "Employment Hero technical",
+      "account": "employment-hero",
+      "deal": "employment-hero-pipeline-analytics",
+      "type": "technical",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "grace-kim",
+        "luis-romero"
+      ],
+      "duration_min": 33,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "fc85aeed6974",
+      "talk_ratio_rep": 0.39,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "decision"
+      ],
+      "file": "calls/2026-05-27_employment-hero-pipeline-analytics-technical.md"
+    },
+    {
+      "id": "tldv-1bdea2b07a2d",
+      "date": "2026-06-03",
+      "title": "Go1 discovery",
+      "account": "go1",
+      "deal": "go1-discovery",
+      "type": "discovery",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "owen-clarke"
+      ],
+      "duration_min": 35,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "6a4942e9de72",
+      "talk_ratio_rep": 0.43,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "situation",
+        "pain"
+      ],
+      "file": "calls/2026-06-03_go1-discovery-discovery.md"
+    },
+    {
+      "id": "tldv-14e452a90538",
+      "date": "2026-06-09",
+      "title": "Deputy negotiation",
+      "account": "deputy",
+      "deal": "deputy-revops-rollout",
+      "type": "negotiation",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "nadia-petrov",
+        "sam-whitfield"
+      ],
+      "duration_min": 41,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "ff48e86f1028",
+      "talk_ratio_rep": 0.55,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "decision",
+        "critical_event"
+      ],
+      "file": "calls/2026-06-09_deputy-revops-rollout-negotiation.md"
+    },
+    {
+      "id": "tldv-fca071e3fae8",
+      "date": "2026-06-10",
+      "title": "Employment Hero negotiation",
+      "account": "employment-hero",
+      "deal": "employment-hero-pipeline-analytics",
+      "type": "negotiation",
+      "attendees_internal": [
+        "alex-rep"
+      ],
+      "attendees_external": [
+        "tom-becker",
+        "luis-romero"
+      ],
+      "duration_min": 36,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "eae455123087",
+      "talk_ratio_rep": 0.48,
+      "next_step_set": false,
+      "spiced_coverage": [
+        "impact",
+        "critical_event",
+        "decision"
+      ],
+      "file": "calls/2026-06-10_employment-hero-pipeline-analytics-negotiation.md"
+    },
+    {
+      "id": "tldv-95b498c925ca",
+      "date": "2026-06-17",
+      "title": "Go1 demo",
+      "account": "go1",
+      "deal": "go1-discovery",
+      "type": "demo",
+      "attendees_internal": [
+        "jordan-rep"
+      ],
+      "attendees_external": [
+        "owen-clarke"
+      ],
+      "duration_min": 33,
+      "source": "tldv",
+      "has_transcript": true,
+      "content_hash": "c8f41adbc71e",
+      "talk_ratio_rep": 0.47,
+      "next_step_set": true,
+      "spiced_coverage": [
+        "pain",
+        "impact",
+        "critical_event"
+      ],
+      "file": "calls/2026-06-17_go1-discovery-demo.md"
+    }
+  ],
+  "metrics": {
+    "totals": {
+      "calls": 23,
+      "deals": 6,
+      "open_pipeline": 380000,
+      "weighted_pipeline": 190000
+    },
+    "by_stage": {
+      "closed-won": 2,
+      "eval": 1,
+      "negotiation": 1,
+      "closed-lost": 1,
+      "discovery": 1
+    },
+    "by_rep": {
+      "alex-rep": 3,
+      "jordan-rep": 3
+    }
+  },
+  "timeline": [
+    {
+      "date": "2026-01-14",
+      "deal": "airwallex-forecast-eval",
+      "event": "discovery call",
+      "call_id": "tldv-01b047f875c9"
+    },
+    {
+      "date": "2026-02-03",
+      "deal": "safetyculture-revenue-intelligence",
+      "event": "discovery call",
+      "call_id": "tldv-9901be55b9f2"
+    },
+    {
+      "date": "2026-02-04",
+      "deal": "airwallex-forecast-eval",
+      "event": "demo call",
+      "call_id": "tldv-90e71c88221f"
+    },
+    {
+      "date": "2026-02-10",
+      "deal": "culture-amp-forecast-platform",
+      "event": "discovery call",
+      "call_id": "tldv-729a28067e6a"
+    },
+    {
+      "date": "2026-02-17",
+      "deal": "safetyculture-revenue-intelligence",
+      "event": "demo call",
+      "call_id": "tldv-bafd87c6110e"
+    },
+    {
+      "date": "2026-02-24",
+      "deal": "culture-amp-forecast-platform",
+      "event": "demo call",
+      "call_id": "tldv-945dba596a2f"
+    },
+    {
+      "date": "2026-02-25",
+      "deal": "airwallex-forecast-eval",
+      "event": "technical call",
+      "call_id": "tldv-24e546827ca9"
+    },
+    {
+      "date": "2026-03-10",
+      "deal": "safetyculture-revenue-intelligence",
+      "event": "technical call",
+      "call_id": "tldv-9656c85e0b48"
+    },
+    {
+      "date": "2026-03-15",
+      "deal": "airwallex-forecast-eval",
+      "event": "other call",
+      "call_id": "tldv-1aeed3e575f6"
+    },
+    {
+      "date": "2026-03-18",
+      "deal": "culture-amp-forecast-platform",
+      "event": "technical call",
+      "call_id": "tldv-24444042ce8b"
+    },
+    {
+      "date": "2026-03-25",
+      "deal": "deputy-revops-rollout",
+      "event": "discovery call",
+      "call_id": "tldv-828b9ac2af36"
+    },
+    {
+      "date": "2026-04-08",
+      "deal": "employment-hero-pipeline-analytics",
+      "event": "discovery call",
+      "call_id": "tldv-9ac4a01f7f3c"
+    },
+    {
+      "date": "2026-04-14",
+      "deal": "deputy-revops-rollout",
+      "event": "demo call",
+      "call_id": "tldv-b9aed57cc8ff"
+    },
+    {
+      "date": "2026-04-21",
+      "deal": "employment-hero-pipeline-analytics",
+      "event": "technical call",
+      "call_id": "tldv-c33aa55413a1"
+    },
+    {
+      "date": "2026-04-22",
+      "deal": "safetyculture-revenue-intelligence",
+      "event": "negotiation call",
+      "call_id": "tldv-566f4427a4ed"
+    },
+    {
+      "date": "2026-05-06",
+      "deal": "employment-hero-pipeline-analytics",
+      "event": "demo call",
+      "call_id": "tldv-673318793e61"
+    },
+    {
+      "date": "2026-05-12",
+      "deal": "culture-amp-forecast-platform",
+      "event": "negotiation call",
+      "call_id": "tldv-0bdb9fe0e98f"
+    },
+    {
+      "date": "2026-05-19",
+      "deal": "deputy-revops-rollout",
+      "event": "technical call",
+      "call_id": "tldv-2385da3705fe"
+    },
+    {
+      "date": "2026-05-27",
+      "deal": "employment-hero-pipeline-analytics",
+      "event": "technical call",
+      "call_id": "tldv-e22f44aaa580"
+    },
+    {
+      "date": "2026-06-03",
+      "deal": "go1-discovery",
+      "event": "discovery call",
+      "call_id": "tldv-1bdea2b07a2d"
+    },
+    {
+      "date": "2026-06-09",
+      "deal": "deputy-revops-rollout",
+      "event": "negotiation call",
+      "call_id": "tldv-14e452a90538"
+    },
+    {
+      "date": "2026-06-10",
+      "deal": "employment-hero-pipeline-analytics",
+      "event": "negotiation call",
+      "call_id": "tldv-fca071e3fae8"
+    },
+    {
+      "date": "2026-06-17",
+      "deal": "go1-discovery",
+      "event": "demo call",
+      "call_id": "tldv-95b498c925ca"
+    }
+  ]
+}

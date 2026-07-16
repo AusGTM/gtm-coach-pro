@@ -1,17 +1,19 @@
-# Pre-call brief — Meridian Retail (expected output, demo A)
+> **SYNTHETIC DEMO DATA.** Company names are real Australian tech companies, used for demo realism. All people, conversations, quotes, deals, and numbers below are fictional and are not affiliated with or endorsed by these companies.
+
+# Pre-call brief — Employment Hero (expected output, demo A)
 
 > Reference output of `call-prep` run against the seed bank for the prompt
-> *"Prep me for my call with Meridian Retail. What do I need to know and what's the one thing to nail?"*
+> *"Prep me for my call with Employment Hero. What do I need to know and what's the one thing to nail?"*
 > Use as an on-stage fallback if live skill invocation misbehaves. All data is synthetic.
 
 ## The one thing to nail
 **Get the economic buyer in the room.** Ananya Iyer (CFO) holds the budget, is skeptical of
 ROI, and **has never been on a call** — five meetings in. This is the deal's single point of
-failure, and it's the same shape that lost Summit Lending. Today's objective: secure a working
+failure, and it's the same shape that lost Airwallex. Today's objective: secure a working
 session with Ananya, armed with a CFO-grade ROI case. Everything else is secondary.
 
 ## Snapshot
-- **Account / deal:** Meridian Retail — Pipeline Analytics · ecommerce mid-market, 80 reps
+- **Account / deal:** Employment Hero — Pipeline Analytics · HR & payroll SaaS mid-market, 80 reps
 - **Stage:** eval · **Amount:** $120,000 · **Close:** 2026-07-31 · **Owner:** alex-rep
 - **Health:** 🟡 yellow — *for access reasons, not product fit* · **Last touch:** 2026-06-10
 
@@ -43,13 +45,13 @@ session with Ananya, armed with a CFO-grade ROI case. Everything else is seconda
 - Tom "will try" to get Ananya on a call — soft; firm this up.
 
 ## Risks & watch-outs
-- 🔴 **EB absent + skeptical** — mirrors the Summit Lending loss (CFO blocker, in-house build won).
+- 🔴 **EB absent + skeptical** — mirrors the Airwallex loss (CFO blocker, in-house build won).
 - 🟠 **Critical event unconfirmed.**
 - 🟠 **Security review pending** + our doc overdue.
 - 🟠 **"Why not just fix the CRM and hire an analyst?"** — Ananya's likely objection. Pre-empt it: reclaimed analyst time + accuracy gain + speed, quantified.
 
 ## Enrichment / OSINT (label: public web, lower confidence)
-*(In a live run, `call-prep` would pull Meridian firmographics from Bitscale and recent news via
+*(In a live run, `call-prep` would pull Employment Hero firmographics from Bitscale and recent news via
 web search — e.g. funding, exec moves, hiring — and cite URLs. Synthetic bank has none; flagged
 as a gap rather than invented.)*
 
@@ -59,4 +61,4 @@ as a gap rather than invented.)*
 3. **Key questions:** the three gap questions above.
 4. **Next step to propose:** *"Can we get 30 minutes with you and Ananya on [date] to walk the ROI? I'll have security's data-flow doc to Grace by Friday."*
 
-_Sources: calls 2026-04-08, 2026-04-21, 2026-05-06, 2026-05-27, 2026-06-10; patterns/win-loss.md (Summit parallel)._
+_Sources: calls 2026-04-08, 2026-04-21, 2026-05-06, 2026-05-27, 2026-06-10; patterns/win-loss.md (Airwallex parallel)._

@@ -1,3 +1,5 @@
+> **SYNTHETIC DEMO DATA.** Company names are real Australian tech companies, used for demo realism. All people, conversations, quotes, deals, and numbers below are fictional and are not affiliated with or endorsed by these companies.
+
 # Winning-call playbook (expected output, demo B)
 
 > Reference output of `playbook-builder` for the prompt *"From my won deals, pull the discovery
@@ -5,8 +7,8 @@
 
 ## Winning-call library
 Built from deals at `stage: closed-won`:
-- **Helio Freight — Revenue Intelligence** ($90k, won 2026-04-30) — 4 calls.
-- **Vantage Health — Forecast Platform** ($145k, won 2026-05-20) — 4 calls.
+- **SafetyCulture — Revenue Intelligence** ($90k, won 2026-04-30) — 4 calls.
+- **Culture Amp — Forecast Platform** ($145k, won 2026-05-20) — 4 calls.
 
 **Sample size: 2 won deals / 8 calls.** A working draft, not statistical canon — flagged where thin.
 
@@ -15,23 +17,23 @@ Built from deals at `stage: closed-won`:
 ## 1. Discovery question sets (that surfaced pain in won deals)
 
 **Process / Situation**
-- *"Walk me through how you build the forecast today, step by step — where does the number come from?"* (Helio)
-- *"What does [incumbent] give you today, and where does it stop being useful?"* (Vantage — incumbent reframe)
-- *"How much of your week goes into manually working out which deals are slipping?"* (Vantage)
+- *"Walk me through how you build the forecast today, step by step — where does the number come from?"* (SafetyCulture)
+- *"What does [incumbent] give you today, and where does it stop being useful?"* (Culture Amp — incumbent reframe)
+- *"How much of your week goes into manually working out which deals are slipping?"* (Culture Amp)
 
 **Pain / Impact**
-- *"When a deal slips, when do you actually find out — and how do you find out?"* (Helio)
-- *"What did the last [N] missed quarters cost you that you can point to?"* (Helio)
-- *"What happened the last time a big deal slipped — walk me through it?"* (Vantage)
+- *"When a deal slips, when do you actually find out — and how do you find out?"* (SafetyCulture)
+- *"What did the last [N] missed quarters cost you that you can point to?"* (SafetyCulture)
+- *"What happened the last time a big deal slipped — walk me through it?"* (Culture Amp)
 
 **Executive / economic buyer**
-- *"What's the forecast accuracy your board expects, and where are you landing?"* (Dana, Helio)
-- *"When those deals slipped, what did that cost you with the board?"* (Priya, Vantage)
-- *"If you trusted the forecast, what would you do differently next quarter?"* (Helio)
+- *"What's the forecast accuracy your board expects, and where are you landing?"* (Dana, SafetyCulture)
+- *"When those deals slipped, what did that cost you with the board?"* (Priya, Culture Amp)
+- *"If you trusted the forecast, what would you do differently next quarter?"* (SafetyCulture)
 
 **Decision / multithread**
-- *"Who, other than you, looks at this forecast and what decisions do they make off it?"* (Helio)
-- *"Who needs to sign off besides you — and what will they each need to see?"* (Vantage)
+- *"Who, other than you, looks at this forecast and what decisions do they make off it?"* (SafetyCulture)
+- *"Who needs to sign off besides you — and what will they each need to see?"* (Culture Amp)
 
 ## 2. Pain points & messaging per persona
 
@@ -48,7 +50,7 @@ Built from deals at `stage: closed-won`:
 **Data Eng / Security (technical gate)** — *Ken Arai*
 - **Pains:** data segregation, residency, integration risk.
 - **Lands:** SOC2 + data residency + DPA + SSO, surfaced early; let them drive the call.
-- **Quote:** *"How does our PHI-adjacent data stay segregated?"* (Ken) — cleared.
+- **Quote:** *"How does our employee-PII data stay segregated?"* (Ken) — cleared.
 
 ## 3. Qualification criteria (go/no-go from won deals)
 - ✅ A **dated compelling event** (board meeting, annual planning, financing).
@@ -58,18 +60,18 @@ Built from deals at `stage: closed-won`:
 - ⚠️ If a lagging BI incumbent exists, plan the reframe (not a feature fight).
 
 ## 4. Objection handling (responses that won)
-- *"We already have a BI tool / Clearwater"* → reframe to forward deal-level risk; quantify slipped-deal cost vs dashboard cost. (won: Vantage)
-- *"No budget / price"* → tie to recoverable pipeline + compelling event; offer 1-year on-ramp if multi-year stalls. (won: Helio)
-- *"Security/compliance overhead"* → surface early, bring the gatekeeper in, lead with SOC2/residency/DPA/SSO. (won: Vantage)
+- *"We already have a BI tool / Clearwater"* → reframe to forward deal-level risk; quantify slipped-deal cost vs dashboard cost. (won: Culture Amp)
+- *"No budget / price"* → tie to recoverable pipeline + compelling event; offer 1-year on-ramp if multi-year stalls. (won: SafetyCulture)
+- *"Security/compliance overhead"* → surface early, bring the gatekeeper in, lead with SOC2/residency/DPA/SSO. (won: Culture Amp)
 - _(See `battlecards/` for the carryable cards.)_
 
 ## 5. Competitor positioning (that won)
 - **vs Clearwater (BI incumbent):** "dashboards report history; we score forward deal risk." Win on *"which deals are dying now,"* never on chart features.
-- **vs in-house/analyst build:** quantify analyst time reclaimed + accuracy gain to the EB early — the gap that lost Summit.
+- **vs in-house/analyst build:** quantify analyst time reclaimed + accuracy gain to the EB early — the gap that lost Airwallex.
 
 ---
 
-**Biggest gap in the playbook:** only the Vantage win touches the **technical/security persona** in
+**Biggest gap in the playbook:** only the Culture Amp win touches the **technical/security persona** in
 depth, and neither win covers a true SMB motion — the persona/messaging there is thin. Add wins
 in those profiles before treating those sections as canon.
 
