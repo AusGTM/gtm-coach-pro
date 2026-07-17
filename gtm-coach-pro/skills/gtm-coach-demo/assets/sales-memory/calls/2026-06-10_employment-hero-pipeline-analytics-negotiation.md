@@ -18,11 +18,13 @@ talk_ratio_rep: 0.48
 ## Summary
 Check-in with Tom and Luis to review the ROI model and talk timing. The model landed well: using
 Luis's four quarters of forecast-vs-actual, it puts ~$380k/yr of recoverable slipped pipeline on
-the table at current win rates. Tom's reaction was genuine — *"if that number holds, this pays
-for itself in a quarter"* — and Luis stands behind the inputs. But the two things that actually
-move the deal both stayed soft: Ananya still hasn't been on a call and hasn't seen or validated
-the $380k, and the July close date is Tom's assumption rather than anything he's confirmed with
-her. Ended without a firm next step. Same access problem as every prior call, now five in.
+the table at current win rates. Tom's reaction was genuine — he did the math out loud and tied it
+to deals he could name: *"That's basically the gap right there — that's the Marlow Group deal I'd
+called commit that pushed the day before quarter-end, plus the two that slipped in March."* Luis
+stands behind the inputs. But the two things that actually move the deal both stayed soft: Ananya
+still hasn't been on a call and hasn't seen or validated the $380k, and the July close date is
+Tom's assumption rather than anything he's confirmed with her. Ended without a firm next step.
+Same access problem as every prior call, now five in.
 
 ## SPICED captured this call
 - **Impact:** ROI model shows **~$380k/yr of recoverable slipped pipeline** at current win rates,

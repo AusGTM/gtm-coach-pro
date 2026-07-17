@@ -14,16 +14,18 @@ sentiment: positive
 **Head of Sales** at Go1 — role: **champion**, sentiment: **positive**.
 
 Recently promoted into the Head of Sales seat over a ~25-rep team, inheriting a motion the founder
-still runs hands-on. Owns the forecasting problem personally: rebuilds the roll-up by hand every
-weekend and wants a real process in place before the team doubles in Q4. Practical, simplicity-first
-buyer — reacted best to a light, three-screen demo and is wary of anything that looks like overkill
-for a company their size ("are we too small for this?"). Likely the economic buyer given company
-size, but says the founder "would want a look" before any spend, so EB sign-off is not yet confirmed.
+still runs hands-on. Owns the forecasting problem personally: every Friday he dumps HubSpot into a
+Google Sheet and reconciles it Sunday night, colour-coding deals by feel, and wants some kind of
+process in place before the team doubles later in the year. Practical, simplicity-first buyer —
+reacted best to a light, three-screen demo and is openly unsure whether a tool like this is even
+meant for a team their size. Likely the economic buyer given company size, but says the founder
+"would want a look" before any spend, so EB sign-off is not yet confirmed.
 
 Representative quotes:
-- "Before I double the team I want a forecast process that isn't just me in a spreadsheet on Sunday night."
-- "Right now the forecast is basically my gut plus whatever the reps tell me on Friday."
-- "This is the version of it I'd actually keep using."
+- "Are we too small for this?"
+- "Honestly I'm not even sure 'forecast' is the right word for what I do — Sunday night I've got a coffee and I'm going down the list like, okay, is this one real, is this one real."
+- "Right now the forecast is basically my gut plus whatever the reps tell me on Friday — and the reps are optimists, every single one."
+- "The last thing the founder made me trial, I think I logged into twice and then went back to the sheet."
 
 ## Involvement
 - 2026-06-03: discovery call — surfaced the forecasting pain; raised the "too small?" objection.

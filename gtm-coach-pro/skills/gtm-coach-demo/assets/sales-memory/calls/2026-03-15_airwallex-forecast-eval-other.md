@@ -23,10 +23,11 @@ was baked in weeks earlier. We logged it honestly, kept the door open for Q4, an
 the reference loss for the pattern.
 
 ## SPICED captured this call
-- **Situation:** Unchanged — the analyst team + spreadsheets + Clearwater dashboards remain the way
-  Airwallex forecasts, and David is comfortable with it.
-- **Pain:** Real for Rebecca to the end, never for David. "It was always my problem, not his — and he
-  holds the budget." (Rebecca)
+- **Situation:** Unchanged — Deepa's team, the month-end Salesforce roll-up, and the Clearwater
+  dashboards remain the way Airwallex forecasts, and David is comfortable with it.
+- **Pain:** Real for Rebecca to the end, never for David. "It landed on me every quarter, not him —
+  and he's the one holding the budget. The Marlin one still stings. But it was never going to be his
+  fire to put out." (Rebecca)
 - **Impact:** Never quantified to the CFO's satisfaction; it stayed a "nice to have" the whole way
   through and was never converted into a dollar case he accepted against the ~$80k.
 - **Critical Event:** None — the root cause. "There was never a moment where he *had* to fix this."

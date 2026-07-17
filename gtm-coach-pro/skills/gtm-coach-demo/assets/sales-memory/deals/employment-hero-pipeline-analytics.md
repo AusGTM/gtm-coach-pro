@@ -21,11 +21,13 @@ updated: 2026-06-10
 - **Pain:** No reliable forward forecast. Tom (VP Sales) is "flying blind" on which deals land
   this quarter — *"I honestly guess my forecast. I'd put the error at 20-30% a quarter."* Board
   and CFO see the miss but there's no repeatable method behind the number.
-- **Impact:** 20-30% quarterly forecast error drives over/under-hiring and bad capacity calls.
-  If error drops from ~25% to ~10%, Tom can plan hiring and quota with confidence. ROI model
-  (built 06-10 off Luis's numbers) shows **~$380k/yr of recoverable slipped pipeline** at
-  current win rates — **not yet validated by Ananya (CFO)**, so it remains a champion-side
-  figure, not a finance-owned one.
+- **Impact:** 20-30% quarterly forecast error drives over/under-hiring and bad capacity calls
+  (Tom over-hired three AEs off a bad Q3 number, then froze two reqs the next quarter). If error
+  drops from ~25% to ~10%, Tom can plan hiring and quota with confidence. ROI model (built 06-10
+  off Luis's numbers) shows **~$380k/yr of recoverable slipped pipeline** at current win rates —
+  Tom mapped it to real deals (the Marlow Group commit that pushed the day before quarter-end,
+  plus the two March slips) — but it's **not yet validated by Ananya (CFO)**, so it remains a
+  champion-side figure, not a finance-owned one.
 - **Critical Event:** ASSUMED — Tom believes the budget cycle closes end of July, but has not
   confirmed with Ananya. No hard compelling event on record; timeline could slip a quarter with
   no cost to the buyer.

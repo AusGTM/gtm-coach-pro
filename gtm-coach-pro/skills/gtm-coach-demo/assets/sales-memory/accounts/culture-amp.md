@@ -15,7 +15,7 @@ Enterprise people-analytics vendor running a ~200-rep global revenue org (AU, US
 
 ## Why we won (post-mortem)
 - **Reframe, not rip-and-replace.** We positioned Cadence as forward-looking deal-risk scoring that sits on top of the existing reporting stack rather than a Clearwater replacement — this defused the "we already pay for Clearwater" objection and let Sofia champion internally without a rip-out fight.
-- **Emotional hook was executive-level.** Two 7-figure deals had each slipped a quarter; Priya (CRO) had "lost the room" with the board. The buying energy came from her, not from a feature checklist.
+- **Emotional hook was executive-level.** Two 7-figure deals (the Coles and Qantas deals) had each slipped a quarter after Priya (CRO) carried them to the board as commit; she had "lost the room" walking the number back twice. The buying energy came from her, not from a feature checklist.
 - **Security handled early and in depth.** Ken (Data Eng) gated on employee-PII segregation; SOC2 + data residency + DPA + SSO were surfaced on the demo call and cleared on the technical call, so security never became an eleventh-hour blocker. This is the reference deal for how the security persona should be run.
 - **Multithreaded + a real compelling event.** CRO (economic buyer) + Sales Ops (champion) + Data Eng (technical gate) all engaged, with June planning as a dated forcing function.
 

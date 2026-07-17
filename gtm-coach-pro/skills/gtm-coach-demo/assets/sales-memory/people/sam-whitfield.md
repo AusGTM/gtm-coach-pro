@@ -12,9 +12,10 @@ sentiment: positive
 
 **RevOps Manager** at Deputy — role: **champion**, sentiment: **positive**.
 
-Sourced the deal and drives it day to day; runs a two-person RevOps team maturing under a
-sales org that's roughly doubled to ~60 reps in a year. Feels the forecast problem personally —
-he's the one hand-building the Friday analyst roll-up and can't stand behind it: *"We're heading
+Sourced the deal and drives it day to day; runs a two-person RevOps team — him and his analyst
+Reuben — maturing under a sales org that's roughly doubled to ~60 reps in a year. Feels the
+forecast problem personally: he and Reuben hand-rebuild the Friday roll-up every week, burn
+two-plus days a quarter on it, and he still can't stand behind the number — *"We're heading
 into a Series C and I can't put a forecast in front of the board I'd bet on."* Genuinely bought
 in and actively de-risking his own adoption — he insisted on a phased, parallel-run rollout
 because *"if the first number they see is wrong, I'll never get the reps to trust it again."*

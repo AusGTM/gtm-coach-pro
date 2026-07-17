@@ -14,9 +14,10 @@ Workforce-management & scheduling SaaS · Mid-market. Status: **open** — one a
 
 Fast-growing scale-up: ~60 reps across three regional teams (roughly doubled headcount in the
 past year), heading into a Series C process expected to open in July 2026. Runs sales on
-Salesforce; forecasting today is a manual Friday analyst roll-up layered on Clearwater
-dashboards — backward-looking, with no deal-level risk scoring. Cadence is engaged to replace
-that with a predictive, deal-scored forecast the CRO can defend to the board before the raise.
+Salesforce; forecasting today is a manual Friday roll-up that Sam's analyst Reuben rebuilds by
+hand off the Clearwater dashboards — backward-looking, with no deal-level risk scoring. Cadence
+is engaged to replace that with a predictive, deal-scored forecast the CRO can defend to the
+board before the raise.
 
 ## Active deal
 - **RevOps Rollout** — $200k, 2-year term, stage negotiation, close target 2026-06-30, owner

@@ -14,19 +14,21 @@ updated: 2026-04-22
 # SafetyCulture — Revenue Intelligence
 
 ## SPICED
-- **Situation:** ~120-rep sales team at a workplace-safety & operations SaaS company. Pipeline lives
-  in spreadsheets exported from the CRM as a weekly CSV; no deal-level health scoring, no slip
-  signals. Forecast is assembled by hand every Friday by RevOps and rolled up to leadership.
+- **Situation:** ~120-rep sales team at a workplace-safety & operations SaaS company. The forecast is
+  a weekly CSV out of Salesforce that RevOps hand-colors in a Google Sheet off gut feel — no deal
+  scoring, no slip signal. Marcus rebuilds the roll-up by hand every Friday for the Monday leadership
+  sync.
 - **Pain:** Forecast has missed three quarters running. Leadership gets no early warning when a deal
-  starts to slip — as Marcus put it, "We find out a deal slipped the week it was supposed to close —
-  there's no early warning." The number is only ever trusted in hindsight.
+  starts to slip — the ~$480k Ridgeline Freight deal sat green until the AE moved the stage in close
+  week. As Marcus put it, "We find out a deal slipped the week it was supposed to close — there's no
+  early warning." The number is only ever trusted in hindsight.
 - **Impact:** ~$2.4M of pipeline slipped last year that nobody flagged until close week. Dana framed
-  it directly: "If we'd caught even half of that $2.4M slipping earlier, that's my whole gap." The
-  cost isn't just the misses — it's leadership making hiring and spend calls off a number they can't
-  rely on.
-- **Critical Event:** A newly hired CRO carries a board mandate to land the forecast within 5% by the
-  Q3 board meeting. That meeting is the hard date that converted a tolerated pain into a funded,
-  time-boxed decision.
+  it directly: "If we'd caught even half of that $2.4M slipping earlier, that's my whole gap." She was
+  blunt that most of it moved rather than died — recoverable if seen early. The cost isn't just the
+  misses — it's leadership making hiring and spend calls off a number they can't rely on.
+- **Critical Event:** Renata Voss, a newly hired CRO, carries a board mandate to land the forecast
+  within 5% by the Q3 board meeting after the prior board came in ~14 points light. That meeting is
+  the hard date that converted a tolerated pain into a funded, time-boxed decision.
 - **Decision:** Dana Okafor (VP Revenue) holds the budget and signs, carrying the CRO mandate. Marcus
   Lindqvist (RevOps) drove the evaluation and the integration. Security review was light given
   mid-market posture — no separate gate; Marcus could approve the CRM connector himself.

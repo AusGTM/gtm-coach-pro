@@ -12,13 +12,15 @@ segment: Mid-market
 Workplace safety & operations SaaS · Mid-market. Status: **won** ($90k, closed 2026-04-30).
 
 ## Overview
-Mid-market workplace-safety and operations SaaS running a ~120-rep sales team. At first contact the
-revenue org was forecasting out of weekly CSV exports from the CRM into spreadsheets — no deal-level
-health, no early-warning on slippage. A new CRO had just been hired with a board mandate to land the
-forecast within 5% by the Q3 board meeting, which turned a long-tolerated pain into a dated,
-funded priority. Cadence won a 1-year revenue-intelligence engagement after quantifying the cost of
-undetected slippage (~$2.4M last year) and structuring a 1-year on-ramp term that fit inside the
-board timeline.
+Mid-market workplace-safety and operations SaaS running a ~120-rep sales team selling into industrial
+and field-ops accounts. At first contact the forecast was a weekly ritual: RevOps pulled a CSV out of
+Salesforce every Friday and hand-colored deals red/amber/green in a Google Sheet off gut feel. No
+deal scoring, no slip signal — deals like the ~$480k Ridgeline Freight one showed green until the AE
+moved the stage in close week. Renata Voss, a new CRO, had just been hired with a board mandate to
+land the forecast within 5% by the Q3 board meeting (the prior board had come in ~14 points light),
+which turned a long-tolerated pain into a dated, funded priority. Cadence won a 1-year
+revenue-intelligence engagement after quantifying the cost of undetected slippage (~$2.4M last year)
+and structuring a 1-year on-ramp term that fit inside the board timeline.
 
 ## Key contacts
 | Name | Title | Role | Sentiment |

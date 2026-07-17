@@ -38,8 +38,9 @@ in hand. That removed the risk objection and let the board deadline close the de
 ## Signals
 - Won. Compelling event (board meeting) was the closer.
 - Objection handled: commitment risk — "I don't want to lock in for years on something unproven."
-  Answered with the 1-year on-ramp term, turning the renewal into a data-backed decision rather than
-  a leap of faith.
+  She'd been burned before: signed a three-year sales-engagement tool and "ripped it out after 14
+  months, still paying for the other 22." Answered with the 1-year on-ramp term, turning the renewal
+  into a data-backed decision rather than a leap of faith.
 - Price held: no meaningful discount pressure because the value figure dwarfed the price.
 - Alternatives off the table: neither Clearwater nor the spreadsheet status quo resurfaced — the ROI
   case had already settled the "why not just keep doing what we do" question.

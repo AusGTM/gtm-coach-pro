@@ -30,15 +30,20 @@ first crack in the deal.
   reconciled by hand against CRM data, Clearwater BI on top. Sales org ~45 reps. Rebecca owns the
   number, not the tool or the budget.
 - **Pain:** "I feel the forecast pain, but here forecasting is seen as an analyst's job, not
-  software." (Rebecca) She described quarterly forecasts landing ~15–20% off actuals, roll-ups eating
-  three-plus days a month, and no clean rep-level pipeline hygiene view — she finds slippage after the
-  quarter, not during it. "By the time the analysts reconcile it, the quarter's already gone."
-  (Rebecca)
+  software." (Rebecca) What she actually described was all after-the-fact and specific: the Marlin
+  renewal she'd called at 90% for Q4 that Deepa's month-end reconciliation later showed had quietly
+  slipped to March; the December board meeting where she'd put up ~$14M and closed nearer $11M and had
+  to explain the gap; the last week of every month gone to her and the analysts chasing reps for
+  updates in Salesforce. "I don't even find out a deal moved until Deepa reconciles three weeks later —
+  by then the quarter's already gone." (Rebecca) Rep read: this nets to a ~15–20% quarterly forecast
+  miss, multi-day manual roll-ups, and no live rep-level pipeline view — real, quantifiable pain, but
+  sitting at the champion's level only.
 - **Impact (partial):** Framed but not yet dollarised — a blown quarter is a board-level surprise, and
   the manual roll-up burns analyst time. Rebecca believes it, but agreed the CFO would need it in his
   own terms.
-- **Critical Event:** None surfaced. No board mandate, no deadline. "There's no gun to our head on
-  this — it's a want, not a must, at least the way David will see it." (Rebecca)
+- **Critical Event:** None surfaced. No board mandate, no deadline. "Honestly, nothing's forcing this.
+  Nobody's come down and said fix the forecast. David'll look at it and file it under nice-to-have —
+  for him it's a want, not a must." (Rebecca)
 - **Decision:** Rebecca is the champion; David Nguyen (CFO) is the economic buyer and, on her read,
   the skeptic. She flagged early that he views forecasting as something his analysts already deliver.
 

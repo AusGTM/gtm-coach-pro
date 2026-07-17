@@ -12,7 +12,7 @@ segment: SMB
 Corporate learning & upskilling SaaS · SMB. Status: **open**.
 
 ~25-rep sales team, still largely owner-led — the founder is on most late-stage deals and
-forecasting is a spreadsheet the Head of Sales rebuilds by hand each weekend. Entered pipeline via
+forecasting is a HubSpot export the Head of Sales rebuilds into a Google Sheet by hand each weekend. Entered pipeline via
 an inbound webinar signup. One open deal (discovery stage): a plan to professionalise forecasting
 ahead of a Q4 headcount doubling. Genuinely early — two calls in, pain is real but unquantified,
 the compelling event is undated, and the economic buyer (the founder) hasn't been engaged directly.

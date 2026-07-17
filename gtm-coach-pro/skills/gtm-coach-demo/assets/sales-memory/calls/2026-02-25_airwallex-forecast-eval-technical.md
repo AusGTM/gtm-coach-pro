@@ -24,9 +24,10 @@ objections, no compelling event, and the economic buyer going quiet.
 
 ## SPICED captured this call
 - **Situation (new detail):** In this regulated environment any new vendor faces a heavy security and
-  compliance review — SOC 2 evidence, penetration test, AML/data-handling sign-off, and data-residency
-  confirmation across jurisdictions. Rebecca estimated the review alone would run "a couple of months,
-  minimum, and that's if David even greenlights it." (Rebecca)
+  compliance review. "Raj in InfoSec is going to want your SOC 2, a pen test, the AML data-handling
+  sign-off, data residency confirmed for every jurisdiction we move money in — Singapore, the UK, the
+  lot. That's a couple of months, minimum, and that's if David even greenlights us starting it."
+  (Rebecca)
 - **Pain:** Unchanged and still champion-only. Nothing new moved David's read that the analyst team
   covers this.
 - **Impact:** Still not quantified in David's terms; the ROI case from the demo follow-up had not been

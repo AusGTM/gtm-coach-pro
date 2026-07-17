@@ -16,27 +16,34 @@ talk_ratio_rep: 0.42
 **Attendees:** internal jordan-rep | external Sam Whitfield (RevOps Manager)
 
 ## Summary
-Discovery with Sam Whitfield, who runs RevOps at Deputy — a workforce-management and
-scheduling SaaS scaling fast toward a Series C raise. Sam reached out after seeing how Cadence
-handled deal-level risk scoring for another scale-up. The core issue is forecast trust: the
-sales org has roughly doubled headcount in twelve months, the current forecasting process is a
-weekly analyst-built spreadsheet stitched together on top of Clearwater dashboards, and Sam
-has no defensible way to tell the board what will actually close. He was candid that the number
-he submits and the number that lands have been drifting 20-30% quarter to quarter, which is
-survivable at their old size but not going into a financing process.
+Discovery with Sam Whitfield, who runs a two-person RevOps team at Deputy — a
+workforce-management and scheduling SaaS scaling fast toward a Series C raise. Sam got the intro
+after a mate of his running RevOps at another scale-up told him to call us. The core issue is
+forecast trust: the sales org has roughly doubled headcount in twelve months, forecasting is
+still a spreadsheet his analyst Reuben rebuilds every Friday off the Clearwater dashboards, and
+Sam has no defensible way to tell the board what will actually close. He was blunt that the
+number he submits and the number that lands keep drifting 20-30% quarter to quarter — last
+quarter he told the exec team they'd do "around four million" and they closed just over three —
+which was survivable at their old size but not going into a financing process.
 
 ## SPICED captured this call
-- **Situation:** ~60 reps across three regional teams, up from ~32 a year ago; RevOps is a team
-  of two maturing under Sam. Forecasting today is a manual roll-up — reps self-report commit/
-  best-case in the CRM, an analyst re-scrubs it every Friday in a spreadsheet, and leadership
-  reads it off Clearwater dashboards that "show you what happened, not what's going to happen."
-  No deal-level scoring, no historical conversion baselines applied.
+- **Situation:** ~60 reps across three regional teams, up from ~32 a year ago; RevOps is Sam
+  plus one analyst, Reuben. Reps self-report commit/best-case in Salesforce, Reuben re-scrubs
+  the lot every Friday into a spreadsheet, and leadership reads it off Clearwater. Sam: "Half my
+  Friday is Reuben and me arguing about whether a rep's 'commit' is actually real, and I've got
+  no way to settle it except gut feel." No deal-level scoring, no historical conversion
+  baselines — rep read: it's backward-looking BI standing in for a forecast.
 - **Pain:** "We're heading into a Series C and I can't put a forecast in front of the board I'd
-  bet on." (Sam) The roll-up swings 20-30% between submission and actuals; Sam spends two-plus
-  days a quarter rebuilding the model by hand and still can't explain the variance when asked.
+  bet on." (Sam) The gap between what he submits and what lands runs 20-30%; last quarter he
+  called ~$4M and closed just over $3M. He named the culprits without prompting — three deals,
+  "Meridian, Coastline, and the Talbot retail thing," parked at 90% since February that the reps
+  swore were closing and mostly haven't moved. Sam spends two-plus days a quarter rebuilding the
+  model by hand and still can't explain the variance when Nadia asks.
 - **Impact:** Every point of forecast error going into a raise is a point of credibility with
-  the board and, downstream, on valuation. Sam framed it as "I'd rather be boringly accurate
-  than optimistic and wrong in front of these people."
+  the board and, downstream, on valuation — rep's framing. Sam put it plainer: "I'd rather be
+  boringly accurate than stand up there optimistic and wrong in front of these people." He
+  described the last board meeting, where Nadia got asked why they missed and "just had the
+  spreadsheet, no story to go with it."
 - **Critical Event:** A Series C process expected to kick off in July. The board wants clean,
   trustworthy forecasting in place before the process opens — that's the deadline that makes
   this real rather than a someday project.

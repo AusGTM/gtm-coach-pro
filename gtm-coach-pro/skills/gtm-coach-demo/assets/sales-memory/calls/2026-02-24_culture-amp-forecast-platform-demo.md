@@ -17,12 +17,16 @@ talk_ratio_rep: 0.5
 
 ## Summary
 Executive demo with Priya Raman (CRO), with Sofia co-driving. Rather than a feature tour, the
-demo opened on the two slipped 7-figure deals Sofia had surfaced and walked Priya through how
-deal-level risk scoring would have flagged both weeks earlier. Priya leaned in the moment the
-board-credibility angle came up — that, not the feature set, was the emotional hook. She was
-explicit that a repeat miss is not acceptable and tied the decision to June planning. She also
-introduced the one gate she cares about: Ken (Data Eng) has to clear integration and security
-before anything moves, because the underlying data is employee PII.
+demo opened on the two slipped 7-figure deals Sofia had surfaced — the Coles and Qantas deals —
+and walked Priya through the point in each where the deal had actually gone quiet, weeks before
+either rep changed the forecast. Priya didn't care about the screen; she got animated the moment
+it landed on the board. She talked over the demo about the readout last year where she'd carried
+both deals as commit into the room and then had to walk them back the next quarter — "I sat there
+telling the board a number I'd already told them once, and it was wrong the same way twice." She
+was blunt that she is not doing that again, and pinned it to June planning without being asked.
+Then she put the one condition on the table herself: Ken, her data eng lead, has to be happy with
+how the thing touches their data before she'll sign, "because we sit on other people's employee
+data and I'm not the one explaining a leak to a customer."
 
 ## Discovery questions asked
 - *"Priya, when those two deals slipped, what did that cost you with the board?"*
@@ -31,14 +35,19 @@ before anything moves, because the underlying data is employee PII.
 
 ## SPICED captured this call
 - **Impact:** "I lost the room with the board when those two slipped. That cannot happen
-  again." (Priya) — the pain is credibility with the board, not tooling cost. Priya said forecast
-  confidence going into June planning is worth "well more than the price of the platform."
-- **Critical Event:** Priya confirmed the June annual-planning meeting as the deadline — she
-  wants board-ready forecast confidence in hand before that room, which dates and compresses the
-  cycle.
-- **Decision:** Priya is the economic buyer and sole signer. The one hard gate is Ken (Data
-  Engineering) on integration + security — Priya will not move until Ken is satisfied that
-  employee-PII data is handled correctly.
+  again." (Priya) — the pain is credibility with the board, not tooling cost. She was concrete
+  about it: she'd committed Coles and Qantas to the board, both slid a quarter, and she "spent
+  the next meeting getting asked why I'd put my name on a number twice." When Sofia mentioned
+  price, Priya waved it off — "I don't care what it costs, I care that I can walk into that room
+  in June and not get caught out again." Rep read: forecast confidence going into June planning
+  is worth well more than the platform price to her.
+- **Critical Event:** Priya confirmed the June annual-planning board meeting as the deadline —
+  she wants the forecast to hold up before she's back in that room, which dates and compresses
+  the cycle.
+- **Decision:** Priya is the economic buyer and sole signer. The one hard gate she named herself
+  is Ken (Data Engineering) on how it touches their data — "we hold employee data for half our
+  customers, so if my data guy isn't comfortable, this doesn't happen." She won't move until Ken
+  is satisfied; rep read this as the classic technical/security gate to sequence early.
 
 ## Signals
 - **Strong buying signal from Priya:** she reframed the evaluation herself from "should we do

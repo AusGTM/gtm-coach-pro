@@ -13,13 +13,15 @@ sentiment: positive
 **CRO** at Deputy — role: **economic-buyer**, sentiment: **positive**.
 
 Owns the forecast the board sees and is walking into a Series C process in July, which is why
-this is urgent for her rather than a nice-to-have. Her buying criterion is defensibility, not
-just accuracy — *"I can defend a number to the board. What I can't defend is a number I can't
-explain."* That framing is exactly why she rated **PipelineIQ** *"weaker on deal-level risk
-scoring"* after demoing it: it gave a weighted total without a per-deal rationale she could
-stand behind. Engaged and wants the platform. Her one hesitation is commercial: committing to a
-2-year term with the raise still unclosed — hence the *"two years is a big commit pre-raise —
-what's the 1-year option?"* push. The objection is term risk, not value.
+this is urgent for her rather than a nice-to-have. What she keeps coming back to is a moment: in
+the March board meeting a Series B investor asked her to walk through why two deals slipped, and
+she had a spreadsheet number and no story behind it — *"I just sat there."* Read across her
+calls, her buying criterion is defensibility over raw accuracy. That's why she rated
+**PipelineIQ** *"weaker on deal-level risk scoring"* after demoing it: it handed her a weighted
+total without a per-deal rationale she could stand behind. Engaged and wants the platform. Her
+one hesitation is commercial: committing to a 2-year term with the raise unclosed and her CFO
+Grant watching the balance sheet — hence the *"two years is a big commit pre-raise — what's the
+1-year option?"* push. The objection is term risk, not value.
 
 ## Involvement
 - 2026-04-14: demo — confirmed she's the EB and the July raise is the forcing event; disclosed

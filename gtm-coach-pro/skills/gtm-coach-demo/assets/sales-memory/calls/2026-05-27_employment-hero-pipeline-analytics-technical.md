@@ -17,24 +17,28 @@ talk_ratio_rep: 0.39
 
 ## Summary
 Security introduction with Grace Kim (IT Security), brought in by Luis, who also joined. This was
-the standard mid-market vendor review kicking off: Grace wanted to understand what data Cadence
-touches, where it's processed, and what the review checklist would be before she'd let a data
-connection happen. Professional and not hostile — but clearly a gate that has to clear regardless
-of how the commercials land. Notably, still no Ananya; the CFO conversation Tom committed to at
-the demo hasn't happened, and this call went sideways into security instead of up to the buyer.
+the standard mid-market vendor review kicking off, and Grace ran it by the book — as a payroll
+company sitting on tax file numbers and bank details, she said the bar for anything touching their
+systems is high, and she'd been burned before by a vendor that turned out to be processing in a
+US region nobody had signed off on. Professional and not hostile, but clearly a gate that has to
+clear regardless of how the commercials land. Notably, still no Ananya; the CFO conversation Tom
+committed to at the demo hasn't happened, and this call went sideways into security instead of up
+to the buyer.
 
 ## SPICED captured this call
 - **Decision:** Grace must sign off on data access; standard mid-market security review with a
   vendor questionnaire, data-residency check, and review of how the Salesforce connection is
-  scoped. This is a hard gate — no data flows until she clears it.
-- **Situation (added):** Grace confirmed data-residency matters to them; she wants processing
-  and storage locations documented, not just described on a call.
+  scoped. This is a hard gate — no data flows until she clears it. She named her checklist out
+  loud: SOC 2 report, sub-processor list, and confirmation everything stays in-region.
+- **Situation (added):** Data-residency is non-negotiable for them — *"our stuff lives in Sydney
+  and it stays in Sydney"* — and she wants processing and storage locations documented, not just
+  described on a call.
 
 ## Signals
 - **New gate (named):** Grace / IT Security is now a required sign-off — a blocker who can stall
   signature even if Tom and Ananya agree on price.
 - **Objection (named):** *"What data leaves our environment and where does it sit?"* — partially
-  answered live; Grace wants it in writing. Follow-up document owed.
+  answered live; Grace wants it in writing, mapped field by field. Follow-up document owed.
 - **Risk:** the deal is now widening sideways (security) without advancing upward (CFO). Two
   gates open at once, and the more important one — Ananya — is untouched.
 

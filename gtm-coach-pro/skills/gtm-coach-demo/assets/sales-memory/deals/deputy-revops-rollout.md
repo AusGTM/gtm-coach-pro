@@ -22,9 +22,11 @@ open items are commercial term length and legal redlines, against a July Series 
   Friday analyst roll-up on top of Clearwater dashboards — backward-looking, no deal-level risk
   scoring. Runs on Salesforce.
 - **Pain:** Nadia (CRO) can't trust the forecast as they scale toward a raise; board wants
-  predictability. Submitted-vs-actual has swung 20-30% quarter to quarter; on their own data the
-  analyst roll-up was calling commit ~18% high, driven by unflagged stalled late-stage deals.
-  Sam: "I can't put a forecast in front of the board I'd bet on."
+  predictability. Submitted-vs-actual has swung 20-30% quarter to quarter (last quarter ~$4M
+  called, just over $3M closed); on their own data the analyst roll-up was calling commit ~18%
+  high, driven by unflagged stalled late-stage deals — Meridian, Coastline and the Talbot retail
+  rollout all parked at 90% since February. Sam: "I can't put a forecast in front of the board
+  I'd bet on."
 - **Impact:** Mis-forecasting ahead of a Series C could cost them on valuation and credibility.
   Nadia's framing: she can defend a number she can explain, not one she can't. The wedge is
   deal-level rationale, not a single weighted total.

@@ -14,10 +14,12 @@ sentiment: negative
 **CFO** at Airwallex — role: **economic-buyer**, sentiment: **negative**.
 
 The economic buyer and, ultimately, the blocker on the ~$80k forecast-eval deal. Runs a finance-led
-culture where forecasting is a finance analyst deliverable, not a software category: a ~6-person
-analyst team builds the monthly forecast in spreadsheets and a Clearwater BI layer covers exec/board
-reporting. He was comfortable with that status quo and never felt the pain Rebecca felt — "we're not
-flying blind today; the analysts give me a number every month."
+culture where forecasting is a finance analyst deliverable, not a software category: Deepa's ~6-person
+analyst team builds the monthly forecast in spreadsheets off Salesforce and a Clearwater BI layer
+covers exec/board reporting. He was comfortable with that status quo and never felt the pain Rebecca
+felt — "we're not flying blind here; Deepa's team hands me a number the first week of every month."
+Carried a burned-tool bias too: pointed to an Anaplan seat bought ~2 years ago that nobody logged into
+after onboarding as reason not to sign up for another one.
 
 Engaged late (first joined at the 2026-02-04 demo) with his frame already formed, and never moved off
 it. His two objections defined the deal and were never overcome: **"This overlaps what my analysts

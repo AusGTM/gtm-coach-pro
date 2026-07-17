@@ -17,20 +17,25 @@ talk_ratio_rep: 0.45
 
 ## Summary
 Working session with Tom and Luis Romero (Head of RevOps) to scope the data cleanup and start
-putting numbers on the pain. Luis walked through the Salesforce setup: stage definitions exist
-on paper but aren't enforced, and close dates get pushed rather than lost, which is what makes
-Tom's forecast drift. Luis's read is that the hygiene work is real but doable — a few weeks of
-field normalization, not a rebuild. The two of them landed on a shared way to frame the value:
-tightening forecast error. Good energy; Luis is clearly becoming a second internal supporter.
+putting numbers on the pain. Luis walked through the Salesforce setup with obvious frustration:
+they've got "Stage 4 – Proposal" defined in the org but reps drop deals into it to look busy, and
+close dates get bulk-pushed a month at a time before every board pack — he keeps a manual
+reconciliation tab on the side because he doesn't trust the native reports. His read is that the
+hygiene work is real but doable — a few weeks of field normalization, not a rebuild. Tom vented
+about what the drift costs him in headcount decisions. Good energy; Luis is clearly becoming a
+second internal supporter. Rep read: both are now anchoring value on tightening forecast error.
 
 ## SPICED captured this call
 - **Situation:** Luis confirmed hygiene work is needed but doable — inconsistent stage usage and
-  pushed (not missing) close dates are the main offenders across ~30% of open opps. They already
-  license Clearwater for historical reporting, so the gap is specifically the forward forecast.
-- **Impact (partial):** if forecast error drops from ~25% to ~10%, Tom can plan hiring and
-  capacity with confidence instead of padding both ways. Tom: *"If I could trust the number to
-  ten percent, I'd stop hedging every hiring decision."* Not yet converted to a dollar figure —
-  that's the next artefact.
+  pushed (not missing) close dates are the main offenders across ~30% of open opps. Luis: *"Half
+  my week is making the pipeline look like it means something before Tom takes it upstairs."*
+  They already license Clearwater for historical reporting, so the gap is specifically the forward
+  forecast.
+- **Impact (partial):** Tom put the cost in headcount terms — *"Last year I signed off three new
+  AEs off a Q3 number that turned out to be air, then had to sit on two open reqs the next quarter
+  because I'd already spent the budget."* Rep interpretation: if forecast error drops from ~25% to
+  ~10%, that over/under-hiring whipsaw goes away — the headline value framing, not yet converted to
+  a dollar figure. That's the next artefact.
 
 ## Signals
 - **Champion strengthening:** Luis is bought in and volunteered to pull the raw history — a

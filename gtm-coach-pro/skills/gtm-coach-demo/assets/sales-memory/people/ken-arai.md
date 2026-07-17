@@ -13,17 +13,24 @@ sentiment: neutral
 
 **Data Engineering Lead** at Culture Amp — role: **technical**, sentiment: **neutral** (moved to satisfied by close).
 
-The hard technical gate Priya named on the demo. Because Culture Amp's revenue data sits next to
-employee PII, his bar was higher than a routine connector review — he wanted concrete answers on
-data segregation, residency, SOC2, DPA, and SSO before clearing anything. He drove the 2026-03-18
-technical call through his own checklist; each item was answered directly rather than deferred.
-By the end he'd moved from a blocker to a supporter, and — notably — was the one to point out
-that Cadence's forward, deal-level signal is genuinely different from Clearwater's reporting.
+The hard technical gate Priya named on the demo. Culture Amp's Salesforce org sits in the same
+AWS account as the engagement and performance data they hold for their own customers, so his bar
+was higher than a routine connector review — his framing was that a bad answer here ends up in
+someone else's incident writeup with their logo on it. He came in burned: a connector they
+trialled a couple of years back "said read-only and then showed up in the audit log touching
+objects it had no business in," so he wanted actual OAuth scopes, the real SOC2 Type II, and
+AU-only residency, not assurances. He drove the 2026-03-18 call through his own concerns and each
+got a concrete answer rather than a deferral. By the end he'd thawed from blocker to supporter,
+and — grudgingly — was the one who said this was "at least doing something Clearwater doesn't."
+Rep read that as the forward, deal-level signal displacing Clearwater's reporting, now voiced by
+the technical owner.
 
 ## What he cares about
-- Employee-PII segregation and in-region data residency.
-- Current SOC2 report and a DPA — contractual handling, not verbal assurances.
-- Integration through existing SSO and a clearly scoped, read-only CRM connector.
+- How their employee-PII data actually stays segregated — the tenancy model, not "it's secure."
+- AU/Sydney-only residency — some of their own customer contracts are literally AU-only.
+- The current SOC2 Type II *with* its exception list, and a DPA so it's contractual, not verbal.
+- Everything through Okta (no new standing credential to forget) and a connector whose real
+  read-only scopes match what it claims — because the last one didn't.
 
 ## Notable quote
 - "How does our employee-PII data stay segregated?" (technical, 2026-03-18)

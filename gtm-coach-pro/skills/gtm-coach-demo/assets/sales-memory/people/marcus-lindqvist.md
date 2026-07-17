@@ -12,16 +12,18 @@ sentiment: positive
 
 **RevOps Lead** at SafetyCulture — role: **champion**, sentiment: **positive**.
 
-Owns the forecast process end to end — the weekly CSV export from the CRM and the hand-built
-spreadsheet roll-up that leadership has been forecasting off. He felt the pain most directly and was
-the internal champion from the first discovery call, volunteering to bring Dana (VP Revenue) in
-without being pushed. Being mid-market, he also had authority to approve the CRM integration himself,
-so there was no separate security gate to clear. Notably adoption-minded: he raised what his reps
-would need to trust the deal-health scores before the plumbing was even finished, which is the one
-real risk on an otherwise clean deal.
+Owns the forecast process end to end — every Friday he pulls a CSV out of Salesforce, pastes it into
+the same Google Sheet he's kept for two years, and hand-colors each deal red/amber/green off gut feel
+for the Monday leadership sync. He felt the pain most directly (the ~$480k Ridgeline Freight deal
+that sat green until close week is his go-to example) and was the internal champion from the first
+discovery call, volunteering to bring Dana (VP Revenue) in without being pushed. Being mid-market, he
+also had authority to approve the Salesforce integration himself, so there was no separate security
+gate to clear. Notably adoption-minded: he raised what his reps would need to trust the deal-health
+scores before the plumbing was even finished, which is the one real risk on an otherwise clean deal.
 
 ## Notable quotes
 - "We find out a deal slipped the week it was supposed to close — there's no early warning." (2026-02-03 discovery)
+- "The colors are basically me guessing which AEs are sandbagging." (2026-02-03 discovery)
 - "This is the easy part — I don't need to loop anyone else in for the connector." (2026-03-10 technical)
 
 ## Involvement

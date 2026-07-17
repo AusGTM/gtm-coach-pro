@@ -28,11 +28,15 @@ Nadia also disclosed they'd looked at PipelineIQ as a point alternative.
 - **Situation:** Confirmed on their own data — the Friday analyst roll-up had commit called ~18%
   high across the last two closed quarters, mostly from a handful of stalled late-stage deals no
   one had risk-flagged. Nadia had suspected it but couldn't prove it off Clearwater.
-- **Pain:** Nadia: "I can defend a number to the board. What I can't defend is a number I can't
-  explain." She needs deal-level rationale, not a single weighted total.
-- **Impact:** Going into a raise, an unexplained miss reads as "the CRO doesn't have control of
-  the business." Nadia sees deal-level risk scoring as the difference between a forecast she
-  presents and one she apologises for.
+- **Pain:** Nadia told the story behind it: in the March board meeting one of their Series B
+  investors — "the Kestrel partner" — asked her to walk through why two specific deals slipped,
+  "and I had a number off a spreadsheet and literally nothing behind it. I just sat there." She's
+  not doing that in a raise. Rep read: her buying criterion isn't accuracy, it's defensibility —
+  deal-level rationale she can stand behind, not a single weighted total.
+- **Impact:** Going into a raise, an unexplained miss reads to investors as the CRO not having
+  control of the business. Nadia: "If I miss and I can tell you exactly which three deals and
+  why, that's a bad quarter. If I miss and I'm guessing, that's me." Rep read: she sees
+  deal-level risk scoring as the line between a forecast she presents and one she apologises for.
 - **Critical Event:** Series C process starts July — clean forecasting needed first. Nadia wants
   the platform live and trusted internally *before* the process opens, not mid-flight.
 - **Decision:** Nadia is the EB and is engaged; Sam champions and owns implementation;
@@ -41,9 +45,11 @@ Nadia also disclosed they'd looked at PipelineIQ as a point alternative.
 ## Signals
 - Buying signal: strong multithread + real EB engagement — Nadia drove half the conversation and
   set the internal deadline herself.
-- Competitor: evaluated PipelineIQ — "weaker on deal-level risk scoring" (Nadia). She'd demoed
-  it and felt it gave a weighted number without a defensible per-deal rationale, which is exactly
-  the gap she's trying to close for the board.
+- Competitor: they'd had PipelineIQ in back in March — someone on the exec team had pushed for a
+  look. Nadia demoed it herself and her verdict was "weaker on deal-level risk scoring": "I asked
+  it why one deal was risky and it just handed me a percentage. That's the exact problem I already
+  have." Rep read: she's self-identified our wedge — defensible per-deal rationale, not a weighted
+  total.
 - Competitor (status quo): Clearwater stays as the BI/reporting layer; the contest is over the
   predictive forecast the analyst currently hand-builds, not general dashboards.
 - Buying signal: Nadia asked about rollout timeline unprompted — future-pacing to go-live.

@@ -13,9 +13,10 @@ HR, payroll & benefits SaaS · Mid-market. Status: **open** (deal in eval).
 
 Employment Hero runs an 80-rep sales org on Salesforce with poor CRM hygiene — roughly a
 third of open opportunities are missing close dates and stage definitions are applied
-inconsistently rep-to-rep. Forecasting today is a manual, spreadsheet-and-gut exercise owned by
-VP Sales Tom Becker, who puts his quarterly error at 20-30%. A two-person RevOps team (Luis
-Romero plus one analyst) is stretched thin keeping the pipeline reportable at all.
+inconsistently rep-to-rep. Forecasting today is a Friday spreadsheet that VP Sales Tom Becker
+rebuilds by hand, overriding rep-entered win-probabilities on gut; he puts his quarterly error at
+20-30% (told the board four-two last quarter, closed just over three). A two-person RevOps team
+(Luis Romero plus one analyst) is stretched thin keeping the pipeline reportable at all.
 
 The account already has a BI footprint: **Clearwater** dashboards give leadership historical
 reporting but no forward-looking forecast. The status-quo alternative Cadence is really competing against is the

@@ -23,31 +23,36 @@ Still early: impact is only loosely quantified and the compelling event isn't da
 not on the call.
 
 ## SPICED captured this call
-- **Situation (updated):** Loaded Owen's real spreadsheet into a demo instance. Confirmed ~25 reps,
-  no defined stage exits, and that Owen spends "a couple of hours most weekends" rebuilding the
-  roll-up — the first time-cost number we've got, though Owen offered it casually, not as a
-  measured figure.
-- **Pain:** Reinforced from call 1. Seeing his own deals in a weighted view, Owen said "okay, that's
-  the thing I do by hand every Friday, just… done." The manual reconciliation is the sharpest pain;
-  he trusts the roll-up less as rep count grows.
-- **Impact (early):** A trustworthy forecast de-risks the headcount doubling in Q4 — Owen's framing:
-  "if I'm going to bet on hiring 20 people I need to actually believe the number I'm showing the
-  founder." Still not converted to dollars or a forecast-accuracy target; ASSUMED benefit, not
-  yet a quantified case.
-- **Critical Event (loose):** Q4 hiring plan — needs confirming as a hard date. Owen expects to know
-  more "after the next leadership offsite" but couldn't commit a date. Budget likely rides on the
-  same approval.
-- **Decision:** Owen still champion and likely EB; reaffirmed the founder "would want a look" before
-  sign-off. No other stakeholders surfaced. Simple process holds.
+- **Situation (updated):** Loaded Owen's real Google Sheet (exported from HubSpot) into a demo
+  instance. Confirmed ~25 reps, no defined stage exits, and that Owen spends "a couple of hours
+  most weekends, more if a big renewal's in the mix" rebuilding the roll-up — the first time-cost
+  number we've got, though he offered it casually, not as a measured figure.
+- **Pain:** Reinforced from call 1. Seeing his own deals in a weighted view, Owen said "okay,
+  that's the thing I do by hand every Friday, just… done. That's a bit annoying actually, how long
+  I've been doing that manually." The manual reconciliation is the sharpest pain; he trusts the
+  roll-up less as rep count grows.
+- **Impact (early):** A trustworthy forecast de-risks the headcount doubling later in the year —
+  Owen's framing: "if I'm going to sit in front of the founder and say we should hire twenty
+  people, I need to actually believe the number, and right now I don't fully, if I'm honest."
+  Still not converted to dollars or a forecast-accuracy target; ASSUMED benefit, not yet a
+  quantified case.
+- **Critical Event (loose):** Q4 hiring plan — needs confirming as a hard date. Owen expects to
+  know more "after the offsite, that's where the whole hiring thing gets decided" but couldn't
+  commit a date. Budget likely rides on the same approval.
+- **Decision:** Owen still champion and likely EB; reaffirmed the founder "would want a look"
+  before sign-off. Aside: "the last thing the founder made me trial, I think I logged into twice
+  and then went back to the sheet." No other stakeholders surfaced. Simple process holds.
 
 ## Signals
-- Buying signal: simplicity resonated strongly for SMB — "this is the version of it I'd actually
-  keep using" (Owen). Low-friction setup is the wedge against the spreadsheet.
+- Buying signal: simplicity resonated strongly for SMB. Owen, on the three-screen view: "Yeah —
+  okay. I could actually see myself opening this." Rep read (interpretation): low-friction setup is
+  the real wedge against the spreadsheet — he adopts on convenience, not features.
 - Buying signal: Owen self-selling on the hiring-risk angle without prompting.
 - Objection (soft, recurring): mild "is this overkill for us?" undertone again — countered by
   keeping the demo to three screens and skipping the analyst-grade features. Note: Owen mentioned
-  the founder had once "looked at one of those big dashboard tools" (Clearwater-style BI) and found
-  it far too heavy — useful contrast; we win on lightness, not depth.
+  the founder had once "looked at one of those big dashboard things, all charts, and just went nope"
+  (Clearwater-style BI) and found it far too heavy — useful contrast; rep read is we win on
+  lightness, not depth.
 - Gap: no economic case on the table, so nothing yet compels a timeline.
 
 ## Commitments & next steps

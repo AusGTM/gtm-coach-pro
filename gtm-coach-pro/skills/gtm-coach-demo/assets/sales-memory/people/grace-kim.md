@@ -13,9 +13,12 @@ sentiment: neutral
 **IT Security** at Employment Hero — role: **blocker**, sentiment: **neutral**.
 
 Owns the standard mid-market vendor security review that any data connection has to clear. Not
-hostile — professional and process-driven — but a hard gate: no data flows until she signs off.
-Her core question, *"what data leaves our environment and where does it sit?"*, was only
-partially answered live and she wants it documented, with data-residency spelled out. Cadence
+hostile — professional and process-driven — but a hard gate: no data flows until she signs off. As
+a payroll company sitting on tax file numbers and bank details, she runs it strict, and she's been
+burned before by a vendor quietly processing in a US region nobody had approved — so her line is
+"our stuff lives in Sydney and it stays in Sydney." Her core question, *"what data leaves our
+environment and where does it sit?"*, was only partially answered live and she wants it documented
+field by field, with data-residency and a SOC 2 report spelled out. Cadence
 owes her a **security overview + data-flow diagram that has been outstanding since 2026-05-27 and
 dropped two calls running** — a neutral blocker slowly turning into a risk through our own
 inaction.

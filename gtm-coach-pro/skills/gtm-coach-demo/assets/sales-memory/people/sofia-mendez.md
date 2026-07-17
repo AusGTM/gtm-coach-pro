@@ -13,16 +13,20 @@ sentiment: positive
 
 **Sales Ops Manager** at Culture Amp — role: **champion**, sentiment: **positive**.
 
-Owns the weekly forecast for a ~200-rep global revenue org and feels the Clearwater gap daily —
-she's the one manually reconciling which deals are slipping (~a day a week). The internal engine
-of this deal: she surfaced the pain, brought in Priya (CRO), and reframed Cadence internally as a
+Owns the weekly forecast for a ~200-rep global revenue org and feels the Clearwater gap every
+Friday — she's the one exporting Salesforce into a Google Sheet and hand-RAGing ~60 deals off gut
+and rep Slack replies, losing close to a day a week to it and still not trusting the number. The
+internal engine of this deal: she surfaced the pain, named the two slipped deals (Coles and
+Qantas), and brought in Priya (CRO). Rep read: she's the one who reframed Cadence internally as a
 complement to Clearwater rather than a rip-out, which is what kept the "we already pay for
 Clearwater" objection from hardening. Delivered the quote that defined the whole deal.
 
 ## What she cares about
-- Deal-level, forward risk signal she can act on — not more backward-looking dashboards.
-- Getting her week back from manual slip-reconciliation.
-- Not fighting an internal rip-out battle over Clearwater; positioning Cadence as complement-then-replace.
+- Not being the person who stands up a forecast number every Friday she doesn't actually believe —
+  right now she's "guessing which of sixty deals land" and gets caught out.
+- Getting her Fridays back from the export-and-eyeball spreadsheet ritual.
+- Not starting a fight with finance about paying for Clearwater twice — she needs this to look like
+  it sits alongside Clearwater, not replaces the thing they just bought.
 
 ## Notable quote
 - "Clearwater tells me what already happened. I need to know which deals are dying now." (discovery, 2026-02-10)

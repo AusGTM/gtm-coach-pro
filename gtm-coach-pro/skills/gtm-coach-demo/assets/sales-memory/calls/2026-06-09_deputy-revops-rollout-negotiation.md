@@ -30,13 +30,15 @@ legal, not value or fit.
 - **Critical Event:** Still the July raise — Nadia herself keeps the urgency real; she wants it
   live and trusted before the process opens, which caps how long the redline cycle can run.
 - **Impact:** Nadia doesn't want a 2-year liability sitting on the balance sheet while she's
-  pitching the raise; equally she doesn't want to re-procure mid-process. That tension is the
-  whole negotiation.
+  pitching the raise; equally she doesn't want to re-procure mid-process. Her words: "We open the
+  raise in July. My CFO Grant is not going to want me signing a two-year liability three weeks
+  before that lands in the data room." That tension is the whole negotiation.
 
 ## Signals
 - Objection (price/term): "Two years is a big commit pre-raise — what's the 1-year option?"
-  (Nadia). The one-year rate lands higher per year (~$115k) because it drops the multi-year
-  discount, so the ask is really "de-risk the term," not "cut the price."
+  (Nadia). She was concrete about why — Grant and the July raise deck — not the sticker. The
+  one-year rate lands higher per year (~$115k) because it drops the multi-year discount, so the
+  ask is really "de-risk the term," not "cut the price."
 - Objection (legal): redlines outstanding on data-processing terms and a termination-for-
   convenience clause — standard for their stage, not a red flag.
 - Buying signal: Nadia is negotiating term structure, not whether to buy — she's already treating

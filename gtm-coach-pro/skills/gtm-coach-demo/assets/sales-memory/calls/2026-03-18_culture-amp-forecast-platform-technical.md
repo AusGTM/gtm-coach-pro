@@ -17,39 +17,48 @@ talk_ratio_rep: 0.38
 
 ## Summary
 Security and integration deep-dive with Ken Arai (Data Engineering Lead), the gate Priya named
-on the demo. Because Culture Amp's revenue data sits next to employee PII, Ken's bar was
-higher than a typical connector review — he wanted to know exactly how their data stays
-segregated, where it's stored, and what contractual protection sits behind it. jordan-rep ran a
-low talk-ratio call (0.38) and let Ken drive the agenda through his own checklist: data
-residency, SOC2, DPA, SSO. Each item was answered concretely rather than deflected to
-"we'll get back to you," and by the end Ken said Cadence's deal-level signal is genuinely
-different from what Clearwater produces — the first time the technical owner voiced a
-preference, not just a clearance.
+on the demo. Ken opened wary and stayed wary for most of the hour — Culture Amp's Salesforce org
+sits in the same AWS account as the engagement and performance data they hold for their own
+customers, and he was clear that a bad answer here is not a Sofia problem, it's a "your logo ends
+up in someone else's incident writeup" problem. He mentioned a connector they trialled two years
+back that "asked for read-only and then showed up in the audit log touching objects it had no
+business in," so he wanted the actual OAuth scopes, not a marketing answer. jordan-rep ran a low
+talk-ratio call (0.38) and let Ken push through his own list — segregation, where it's stored,
+what's contractual — rather than presenting. Each item got a concrete answer instead of a
+"we'll get back to you." By the end he'd thawed; almost grudgingly he said "okay, this is at
+least doing something Clearwater doesn't — Clearwater's just a rear-view mirror," the first time
+the technical owner voiced a preference rather than a clearance (rep read: Cadence's forward,
+deal-level signal displacing Clearwater's reporting, now coming from the technical owner himself).
 
-## Discovery / technical questions Ken raised
-- *"How does our employee-PII data stay segregated from other tenants?"*
-- *"Where is the data physically stored, and can we keep it in-region?"*
-- *"What's your SOC2 status, and can I see the current report?"*
-- *"Does this go through our SSO, or is it a separate set of credentials?"*
-- *"What does the integration actually touch in our CRM — read scope?"*
+## Technical questions Ken raised
+- *"How does our employee-PII data stay segregated?"* — his opener, and the one he kept circling
+  back to. He wanted to hear the tenancy model, not "it's secure."
+- *"Our customer data can't leave Sydney — some of our contracts literally say AU-only. Where does
+  this actually sit, and don't tell me 'the cloud.'"*
+- *"Send me the real SOC2, the current Type II, not a summary PDF — and I want to see the exception
+  list, everyone has one."*
+- *"This goes through Okta or it doesn't happen. I'm not creating another standing credential
+  someone forgets to deprovision."*
+- *"What scopes does the connector actually ask for? Because the last one said read-only and then
+  I found it poking at objects it had no reason to touch."*
 
 ## SPICED captured this call
 - **Decision:** Ken satisfied on security — integration via the standard connector plus SSO;
   employee-PII segregation, data residency, SOC2, and DPA all cleared his checklist. Ken moves
   from a hard gate to a supporter, clearing Priya's one blocker.
-- **Situation (technical):** standard CRM connector, read-scoped; SSO via their existing IdP;
-  in-region data residency confirmed for their tenant.
+- **Situation (technical):** standard Salesforce connector, read-scoped; SSO via their existing
+  Okta; AU/Sydney in-region data residency confirmed for their tenant.
 
 ## Signals
-- **Objection — "How does our employee-PII data stay segregated?"** answered with tenant
-  data-residency + SOC2 controls, and backed by a DPA to make the handling contractual rather
-  than verbal.
-- **Competitor — Clearwater raised again:** this time by Ken, who noted that Cadence's forward,
-  deal-level signal is genuinely different from Clearwater's reporting — not a duplicate spend.
-  That reframing coming from the technical owner (not the rep) is a strong internal signal.
-- **Buying signal:** Ken asked scope-of-integration questions (what it reads, via which
-  credentials) — the questions of someone planning to deploy, not someone looking for a reason
-  to say no.
+- **Objection — "How does our employee-PII data stay segregated?"** answered with the tenancy
+  model + AU/Sydney data residency + the current SOC2 Type II (exception list and all), and backed
+  by a DPA so the handling is contractual rather than verbal. His scope worry (the trust-then-audit
+  story about the old connector) was answered by walking the actual read-only Okta scopes.
+- **Competitor — Clearwater raised again:** this time by Ken, grudgingly — "this is at least doing
+  something Clearwater doesn't." Rep read: that's the forward, deal-level signal displacing
+  Clearwater's rear-view reporting, and it's landing with the technical owner, not just the rep.
+- **Buying signal:** Ken asked deployment-shaped questions — exact scopes, which credential, where
+  it's stored — the questions of someone planning to turn it on, not someone hunting for a no.
 
 ## Commitments & next steps
 - Cadence (jordan-rep): send the SOC2 report and the DPA to Ken.

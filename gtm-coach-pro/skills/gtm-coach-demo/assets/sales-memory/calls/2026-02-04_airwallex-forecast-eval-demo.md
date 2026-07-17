@@ -23,14 +23,17 @@ and the talk ratio (0.58) tells the story — we presented at his objection inst
 felt the pain the way Rebecca does, and the next step came out soft.
 
 ## SPICED captured this call
-- **Situation:** Confirmed live — David restated that the ~6-person analyst team already produces the
-  forecast monthly and that Clearwater covers exec reporting. "We're not flying blind today — the
-  analysts give me a number every month." (David)
+- **Situation:** Confirmed live — David restated that Deepa's analyst team already produces the
+  forecast monthly out of Salesforce and that Clearwater covers exec and board reporting. "We're not
+  flying blind here. Deepa's team hands me a number the first week of every month, the board's already
+  got their Clearwater dashboards. And look — we bought Anaplan, what, two years ago? Nobody logged in
+  after the onboarding. So forgive me if I'm not rushing to sign up for another one." (David)
 - **Pain:** Never landed with David the way it did with Rebecca. Rebecca reinforced the ~15–20%
   forecast miss and the manual roll-up burden; David treated those as an execution issue for his team,
   not a tooling gap. The pain stayed at the champion's level.
-- **Impact:** Still not quantified to David's satisfaction. When ROI came up he reframed it as cost:
-  "So I'd be paying software to do what I already pay analysts to do." We showed capability
+- **Impact:** Still not quantified to David's satisfaction. When ROI came up he reframed it straight
+  back to cost: "So I'm paying a piece of software to do the thing I already pay six people to do.
+  Someone walk me through why that's not just a second invoice." (David) We showed capability
   (real-time pipeline health, forecast-vs-actual variance, rep-level hygiene) but never converted it
   into a dollar figure he accepted against the ~$80k.
 - **Critical Event:** None — and David said so plainly: "This isn't a this-quarter decision for me."

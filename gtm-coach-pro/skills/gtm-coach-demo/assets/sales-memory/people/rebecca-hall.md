@@ -15,10 +15,12 @@ sentiment: neutral
 
 Owns the revenue forecast for a ~45-rep sales org at a regulated cross-border payments fintech, but
 does not own the forecasting tooling or its budget — both sit inside the CFO's finance org. Felt the
-forecast pain acutely and championed Cadence throughout: quarterly forecasts landing ~15–20% off
-actuals, multi-day manual roll-ups, and slippage she only finds after the quarter closes. Her framing
-of the whole deal: "I feel the forecast pain, but here forecasting is seen as an analyst's job, not
-software."
+forecast pain acutely and championed Cadence throughout: the Marlin renewal she'd called at 90% that
+Deepa's month-end reconciliation showed had slipped a quarter, a December board meeting where she put
+up ~$14M and closed nearer $11M, and the last week of every month lost to chasing reps for updates in
+Salesforce. Nets to ~15–20% off actuals with slippage she only finds after the quarter closes. Her
+framing of the whole deal: "I feel the forecast pain, but here forecasting is seen as an analyst's
+job, not software."
 
 A genuine, engaged champion who pushed back on the CFO in-room and repeatedly asked for an ROI case to
 carry to him — but structurally limited: she could open the door to the economic buyer and could not

@@ -17,18 +17,21 @@ talk_ratio_rep: 0.41
 
 ## Summary
 Integration and rollout planning with Sam. Confirmed the CRM connector and a phased rollout to
-three teams. This was a working session — Sam brought their Salesforce admin's field mapping,
-we walked the connector setup end to end, and agreed the sequence so nothing goes live before
-Nadia's data-quality bar is met. Sam's priority is that the first team to onboard sees clean,
-trustworthy scores immediately, because "if the first number they see is wrong, I'll never get
-the reps to trust it again."
+three teams. This was a working session — Sam brought their Salesforce admin Tash and her field
+mapping, we walked the connector setup end to end, and agreed the sequence so nothing goes live
+before Nadia's data-quality bar is met. Sam's priority is that the first team to onboard sees
+clean, trustworthy scores immediately, because "if the first number they see is wrong, I'll never
+get the reps to trust it again."
 
 ## SPICED captured this call
 - **Situation:** Deputy runs on Salesforce with a mostly-clean pipeline schema; the analyst
   spreadsheet and Clearwater dashboards stay in place during rollout as a parallel check, then
   retire once the reps trust the platform's forecast.
-- **Pain (operational):** Reps' stage hygiene is uneven across the three regional teams — the
-  scoring is only as good as the stage/close-date data feeding it, so onboarding order matters.
+- **Pain (operational):** Reps' stage hygiene is uneven across the three regional teams — the two
+  newer teams stood up during the doubling are the messy ones. Sam's example: one of his Sydney
+  reps had a deal sitting at "Negotiation" for nine weeks when the customer had actually gone dark
+  in week two. The scoring is only as good as the stage/close-date data feeding it, so onboarding
+  order matters.
 - **Decision:** Technical fit confirmed; rollout plan drafted — connector first, then a two-week
   parallel-run against the analyst roll-up per team before that team goes live.
 

@@ -20,14 +20,17 @@ Employment Hero deal now mirrors.
 ## SPICED
 - **Situation:** Enterprise cross-border payments fintech, heavily regulated (multi-jurisdiction
   AML/KYC, data-residency). Forecasting lives inside the CFO's org: a ~6-person finance analyst team
-  builds a monthly bottoms-up forecast in spreadsheets, reconciled by hand against CRM data, with a
-  **Clearwater** BI layer on top for exec/board reporting. Sales org is ~45 reps; VP Sales Rebecca
-  Hall owns the number but not the tooling or the budget.
-- **Pain:** Rebecca felt it acutely — quarterly forecast routinely off actuals by ~15–20%, manual
-  roll-ups eating days each month, and no rep-level pipeline hygiene view. But the pain lived at her
-  level only. CFO David Nguyen saw forecasting as an analyst job, not a software category, so the pain
-  never reached the person holding the budget. "I feel the forecast pain, but here forecasting is seen
-  as an analyst's job, not software." (Rebecca)
+  under Deepa builds a monthly bottoms-up forecast in spreadsheets, reconciled by hand against
+  Salesforce data in the last week of each month, with a **Clearwater** BI layer on top for exec/board
+  reporting. Sales org is ~45 reps; VP Sales Rebecca Hall owns the number but not the tooling or the
+  budget.
+- **Pain:** Rebecca felt it acutely — the concrete anchors she gave were the Marlin renewal she'd
+  called at 90% that Deepa's reconciliation showed had slipped a quarter, and a December board meeting
+  where she put up ~$14M and closed nearer $11M. Rep read: quarterly forecast routinely off actuals by
+  ~15–20%, manual roll-ups eating days each month, no rep-level pipeline hygiene view. But the pain
+  lived at her level only. CFO David Nguyen saw forecasting as an analyst job, not a software category,
+  so the pain never reached the person holding the budget. "I feel the forecast pain, but here
+  forecasting is seen as an analyst's job, not software." (Rebecca)
 - **Impact:** Never quantified to David's satisfaction and so stayed a "nice to have." We had the
   ingredients — forecast miss %, analyst hours, the board-surprise cost of a blown quarter — but never
   converted them into a dollar figure David accepted against the ~$80k spend. He read it as duplicating

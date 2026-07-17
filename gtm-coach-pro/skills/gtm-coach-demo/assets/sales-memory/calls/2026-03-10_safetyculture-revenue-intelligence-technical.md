@@ -17,10 +17,12 @@ talk_ratio_rep: 0.4
 
 ## Summary
 Integration walkthrough with Marcus. Short, low-drama call — the point was to confirm there were no
-technical blockers between here and signature. Cadence uses the standard CRM connector against
-SafetyCulture's existing instance; Marcus confirmed the data model maps cleanly (opportunities,
-stages, close dates, amounts) and settled on a daily refresh cadence, which is more than enough given
-they forecast weekly today. No custom objects, no data-warehouse detour, no separate security review
+technical blockers between here and signature. Cadence uses the standard connector against
+SafetyCulture's existing Salesforce instance; Marcus confirmed the standard opportunity fields map
+cleanly (stage, close date, amount) and settled on a daily refresh, which is plenty given they
+forecast weekly today. His one caveat was about their own data, not ours — "half our win-reasons are
+blank and stage hygiene is whatever the AE remembers to update" — which is, if anything, the root of
+the whole forecasting mess. No custom objects, no data-warehouse detour, no separate security review
 required at mid-market — Marcus has the authority to approve the integration himself.
 
 ## Discovery questions asked
@@ -28,8 +30,9 @@ required at mid-market — Marcus has the authority to approve the integration h
 - *"How fresh does the deal data need to be for the health scores to be trusted by your reps?"*
 
 ## SPICED captured this call
-- **Situation (technical):** existing CRM instance, standard fields; the weekly CSV export gets
-  retired once the live connector is in. No middleware or warehouse in the path.
+- **Situation (technical):** existing Salesforce instance, standard fields; the Friday CSV export and
+  Marcus's hand-colored sheet get retired once the live connector is in. No middleware or warehouse
+  in the path.
 - **Decision:** no separate security gate; Marcus can approve the integration. "This is the easy part
   — I don't need to loop anyone else in for the connector." (Marcus) Confirms the light mid-market
   posture surfaced on the demo.

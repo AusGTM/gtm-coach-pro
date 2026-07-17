@@ -17,24 +17,26 @@ talk_ratio_rep: 0.53
 
 ## Summary
 Product demo to Tom and Luis using their own pipeline shape as the example. Strong reaction —
-both saw immediately how a rep-behaviour-adjusted forecast would beat their spreadsheet, and Luis
-liked that it reads Salesforce as-is rather than demanding a perfect CRM first. The important
+both saw immediately how a rep-behaviour-adjusted forecast would beat Tom's Friday spreadsheet, and
+Luis liked that it reads Salesforce as-is rather than demanding a perfect CRM first. The important
 moment wasn't the product, though: pushed on next steps, Tom named Ananya Iyer (CFO) as the
-person who actually controls budget and made clear she's skeptical of tools like this. She wasn't
-invited to the demo. That reframed the deal from "do they like it" to "can we get in front of a
-skeptical economic buyer who favours doing it in-house."
+person who actually controls budget and told a very specific story about how she kills tooling
+asks. She wasn't invited to the demo. That reframed the deal from "do they like it" to "can we get
+in front of a skeptical economic buyer who favours doing it in-house."
 
 ## SPICED captured this call
-- **Decision:** Ananya (CFO) is the economic buyer and *"will need a hard ROI case"* (Tom). She
-  hasn't been on a call and, per Tom, tends to see forecasting as an analyst's job, not a
-  platform purchase. Tom: *"She'll want to know why we can't just fix the CRM and hire someone
-  to own the number."*
+- **Decision:** Ananya (CFO) is the economic buyer and, per Tom, decides fast and hates software
+  line items. He relayed it secondhand: *"Last budget round I asked for a forecasting tool and she
+  killed it in about ten seconds — 'clean up Salesforce first, then we'll talk about another
+  head.' She already signed off Luis's analyst two years ago; in her mind that was the answer."*
+  She hasn't been on a single call. Rep interpretation: she'll want a hard ROI case in finance
+  terms, and she frames forecasting as headcount, not platform.
 - **Impact:** Tom and Luis aligned on the 25%→10% forecast-error framing as the headline; agreed
   the ROI one-pager has to translate that into dollars a CFO would defend, not a sales metric.
 
 ## Signals
 - **Risk (primary):** EB (Ananya) skeptical and absent — the deal's real gap is access, not fit.
-- **Objection (anticipated):** *"Ananya will ask why not just fix the CRM and hire an analyst."*
+- **Objection (anticipated, rep framing):** Ananya's instinct is "fix the CRM and hire an analyst."
   The in-house / analyst path is a cheaper-looking substitute we have to beat on total cost and
   time-to-trustworthy-forecast, not features.
 - **Competitor:** in-house / analyst build is the alternative Ananya favours; Clearwater stays

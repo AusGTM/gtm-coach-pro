@@ -16,20 +16,24 @@ talk_ratio_rep: 0.47
 **Attendees:** internal jordan-rep | external Priya Raman (CRO), Sofia Mendez (Sales Ops Manager)
 
 ## Summary
-Closing call with Priya, Sofia co-driving. With Ken's technical green light already in hand,
-this was a commercial conversation, not a re-litigation of value — the June planning deadline
-did most of the work. Priya wanted the platform live and trusted before the planning meeting,
-so the negotiation centred on term and rollout rather than on whether to proceed. She chose a
-2-year term (over a 1-year) to lock pricing and signal internal commitment, and asked for a
-phased rollout so go-live wouldn't collide with the June crunch. Landed at $145k, 2-year,
-signed. Clean multithreaded close: CRO signed, Ops championed, Data Eng had cleared the gate,
-and a real compelling event set the date.
+Closing call with Priya, Sofia co-driving. With Ken's green light already in hand, this was a
+commercial conversation, not a re-litigation of value — the June board meeting did most of the
+work. Priya opened with the deadline, not the price: "I need this actually running and me actually
+trusting it before June, not a login and a promise." So the back-and-forth was about term and
+rollout, not whether to do it. On term she talked herself into the 2-year — "give me the two-year
+rate, I don't want to be renegotiating this the same week I'm doing next year's plan, and frankly
+I want my team to know I've committed to it." On rollout she was wary of her own bandwidth: "my
+ops team is underwater until July, if this go-live lands on top of planning it'll get half-done
+and blamed on the tool," so she asked to start with two regions and stage the rest. Landed at
+$145k, 2-year, signed. Clean multithreaded close: CRO signed, Ops championed, Data Eng had cleared
+the gate, and a real compelling event set the date.
 
 ## SPICED captured this call
 - **Critical Event:** June annual planning forced the decision — Priya wanted board-ready
   forecast confidence operational before that room, which set the signing date.
-- **Impact (reinforced):** Priya reiterated the board-credibility stakes as the reason not to
-  wait a quarter — the cost of another slipped deal, not the platform price, framed her urgency.
+- **Impact (reinforced):** Priya circled back to the board again as the reason not to wait a
+  quarter — "another Coles-and-Qantas situation in front of the board and it's my credibility,
+  not a line item." The cost of another slipped deal, not the platform price, framed her urgency.
 - **Decision:** Priya signed a 2-year term. Sofia (champion) and Ken (technical, cleared)
   already aligned; no new stakeholders introduced late.
 
