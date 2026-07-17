@@ -51,10 +51,11 @@ specific call/quote — no generic best-practice filler:
 5. **Competitor positioning** — when competitors appeared in won deals, the positioning and
    counters that won (cross-reference `battlecards` if already built; don't duplicate it).
 
-## Step 3 — Confirm canon, then persist
+## Step 3 — Persist (always write the artifact), then confirm canon
 
-"You decide what becomes canon." Present the draft for review; let the user accept/edit/reject
-sections before saving. Then write to the memory bank:
+The playbook is a durable deliverable meant to be reviewed, onboarded from, and distributed
+outside Claude, so **always write it as actual files** — don't leave it as chat-only. Using your
+file-writing tools, create the memory-bank files now:
 
 ```
 sales-memory/playbook/
@@ -65,8 +66,13 @@ sales-memory/playbook/
   competitive-positioning.md
 ```
 
-Use dated entries and keep evidence citations inline so the playbook compounds as more wins
-land. Re-running this skill updates (append/merge), never blind-overwrites confirmed canon.
+Create the `playbook/` and `playbook/personas/` folders if they don't exist. Use dated entries
+and keep evidence citations inline so the playbook compounds as more wins land.
+
+**Then** hand the "what becomes canon" decision back to the user: point them at the files you
+wrote and invite edits or rejections. Re-running this skill updates (append/merge) rather than
+blind-overwriting, so their edits stick. Writing first means there's always a reviewable
+artifact; confirmation refines it rather than blocking it.
 
 ## Output
 

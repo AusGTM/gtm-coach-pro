@@ -73,17 +73,22 @@ Combine the two voices:
 Always close with the caveat: **you still test the message** — this surfaces candidate language,
 it doesn't confirm what converts.
 
-## Persist
+## Persist (always write the artifact)
 
-Write the brief to:
+Using your file-writing tools, **create the brief as an actual file** — do not just show it in
+chat. This is a durable deliverable meant to be reviewed, shared, or transported outside Claude,
+so always write it:
 
 ```
 sales-memory/voice-of-customer/
   <YYYY-MM-DD>_voc-brief.md
 ```
 
-Keep the source split (call quotes vs AEO queries) visible in the file so each claim is
-traceable. Cite call dates and AEO source.
+Write the full brief (the clearest finding, the call-language and AEO sides, the 3 content
+angles, hand-offs, and the "you still test the message" caveat) into that file. Keep the source
+split (call quotes vs AEO queries) visible so each claim is traceable, and cite call dates and
+the AEO source/rung. If `sales-memory/voice-of-customer/` doesn't exist, create it. Then tell
+the user the exact path you wrote so they can open it.
 
 ## Output
 

@@ -49,9 +49,11 @@ Emit polished, carryable cards (not a rollup dump):
 - Top objections, each with: the exact buyer phrasing, the best response (sourced from won
   deals), and what *not* to say. Grouped by theme (price, timing, status quo, security, etc.).
 
-## Step 3 — Persist
+## Step 3 — Persist (always write the artifacts)
 
-Write to:
+The cards ARE the deliverable. Using your file-writing tools, **create these as actual files** —
+don't just render them in chat. They're meant to be carried into calls, reviewed, and
+distributed outside Claude, so always write them:
 
 ```
 sales-memory/battlecards/
@@ -59,7 +61,10 @@ sales-memory/battlecards/
   objections.md
 ```
 
-Dated entries; append/merge on re-run so cards sharpen as volume grows (don't blind-overwrite).
+Write one file per recurring competitor and one objections file, each with its full card
+content. Create the `battlecards/` and `battlecards/competitors/` folders if they don't exist.
+Use dated entries and append/merge on re-run so cards sharpen as volume grows (don't
+blind-overwrite). Then tell the user the exact paths you wrote.
 
 ## Output
 

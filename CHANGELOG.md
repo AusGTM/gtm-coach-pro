@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-17
+
+Persisted output artifacts — the deeper plays now always write files.
+
+### Changed
+- **playbook-builder**, **battlecards**, and **voice-of-customer** now **always write their
+  output as actual files** under `sales-memory/` (`playbook/`, `battlecards/`,
+  `voice-of-customer/`) instead of leaving it chat-only, so the results can be reviewed,
+  onboarded from, or distributed outside Claude. playbook-builder writes first and then invites
+  the "what becomes canon" edits (append/merge on re-run), rather than blocking the write behind
+  confirmation. Each skill reports the exact path(s) written.
+- `call-prep` remains intentionally ephemeral (a pre-call brief is read before the meeting, not
+  persisted).
+
 ## [0.4.0] - 2026-07-17
 
 One-command demo — GTM Coach Pro runs with zero connected tools.
@@ -87,7 +101,8 @@ Initial release — the core coach.
   recording-consent reminders, optional PII redaction.
 - Apache-2.0 license, `NOTICE`.
 
-[Unreleased]: https://github.com/AusGTM/gtm-coach-pro/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/AusGTM/gtm-coach-pro/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.5.0
 [0.4.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.4.0
 [0.3.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.3.0
 [0.2.0]: https://github.com/AusGTM/gtm-coach-pro/releases/tag/v0.2.0
