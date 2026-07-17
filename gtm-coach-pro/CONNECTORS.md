@@ -54,7 +54,7 @@ GTM Coach adapts.
 
 ## Setup for a new user
 
-1. In Claude (Cowork / Desktop), open **Connectors** and connect at least one
+1. In Claude (Desktop / Code), open **Connectors** and connect at least one
    `~~meeting recording` tool. Optionally add `~~calendar`, `~~email`, and/or `~~crm`.
 2. Say **"set up GTM coach"**. It discovers your tools, confirms a privacy note, and ingests
    the last 90 days of calls.

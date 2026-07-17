@@ -1,10 +1,10 @@
 # 🎯 GTM Coach Pro
 
-> A conversational-intelligence sales coach for Claude Cowork / Claude Desktop.
+> A conversational-intelligence sales coach for Claude Desktop / Claude Code.
 
-[![Version](https://img.shields.io/badge/version-0.2.0-blue)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.5.0-blue)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Claude%20Cowork%20%2F%20Desktop-orange)](https://claude.ai)
+[![Platform](https://img.shields.io/badge/platform-Claude%20Desktop%20%2F%20Code-orange)](https://claude.ai)
 [![Skills](https://img.shields.io/badge/skills-11-purple)](#skills)
 [![Framework](https://img.shields.io/badge/methodology-SPICED-red)](https://winningbydesign.com/spiced-framework/)
 
@@ -15,7 +15,7 @@ strategy and execution — for sales leaders and individual sellers alike. It ru
 
 **Pro** adds four deeper plays on top of the core coach: CRM- and enrichment-grounded
 **pre-call briefs**, a **winning-call playbook builder**, objection & competitor **battlecards**,
-and two-way **voice of customer** (call language + HubSpot AEO). See [`LANDSCAPE.md`](./gtm-coach-pro/LANDSCAPE.md)
+and two-way **voice of customer** (call language + answer-engine demand, via an AEO tool or a web-search proxy). See [`LANDSCAPE.md`](./gtm-coach-pro/LANDSCAPE.md)
 for how every CI play maps to the plugin.
 
 ---
@@ -36,7 +36,7 @@ for how every CI play maps to the plugin.
 
 ## Quick start
 
-1. Install the plugin (`gtm-coach-pro.plugin`) in Claude Cowork / Claude Desktop.
+1. Install the plugin (`gtm-coach-pro.plugin`) in Claude Desktop / Claude Code.
 2. In Claude, connect at least one meeting-recording tool via Connectors
    (calendar, email, and CRM are optional but recommended).
 3. Say **"set up GTM coach"**. It will:
@@ -63,7 +63,7 @@ the real setup into a fresh directory.
 
 | What | Why |
 |------|-----|
-| Claude Cowork or Claude Desktop | Runtime for the plugin |
+| Claude Desktop or Claude Code | Runtime for the plugin |
 | One connected `~~meeting recording` MCP tool | **Required** — the source of call data |
 | `~~calendar`, `~~email`, `~~crm`, `~~enrichment`, `~~aeo`, `~~websearch` tools | Optional — unlock call prep, follow-ups, grounded briefs, voice of customer |
 | Local disk write access | The memory bank lives in `./sales-memory/` |
@@ -123,7 +123,9 @@ See [`CONNECTORS.md`](./gtm-coach-pro/CONNECTORS.md) for details.
 
 Human-readable markdown (accounts, deals, people, calls, pattern rollups, scorecards) **plus**
 an `index.json` for fast querying. Deals are structured around SPICED. Calls are deduped by ID,
-so syncs never create duplicates. See the bundled references for the full schema.
+so syncs never create duplicates. The **playbook-builder**, **battlecards**, and **voice-of-customer**
+skills write their output as durable files under `playbook/`, `battlecards/`, and `voice-of-customer/`
+so the results can be reviewed or shared outside Claude. See the bundled references for the full schema.
 
 ## Privacy
 
