@@ -26,6 +26,15 @@ Require `./sales-memory/`. If absent, route the user to setup (`gtm-coach`).
 exact quotes from the underlying call files. If those rollups are empty or stale, offer to run
 `gtm-patterns` first so the battlecards have signal.
 
+**Ground every "how we won" in a won deal.** The rollups carry the winning move inline, but a
+card's response is only as good as its evidence. For each objection and competitor, open the
+cited **won-deal** call and pull the *specific move + a verbatim buyer/rep quote + the call date*
+— never ship a card whose "how we won" is generic best-practice advice when a real won-deal
+moment exists (e.g. SafetyCulture's 1-year on-ramp closing the commitment-risk objection; Culture
+Amp reframing "we already pay for Clearwater" into a slipped-deal-cost question; Ken's PII gate
+cleared by walking the read-only Okta scopes). If **no won deal** covers an objection/competitor,
+say so on the card — label it a *recommended play, not a proven win* — rather than implying a win.
+
 ## Step 1 — Aggregate the raw signal
 
 - **Objections** — rank recurring objections by frequency and the stage they appear at. Capture
@@ -42,12 +51,16 @@ Emit polished, carryable cards (not a rollup dump):
 **Per-competitor card** (`battlecards/competitors/<competitor-slug>.md`):
 - Where they show up (segments/deals), their positioning and common claims/traps.
 - Where we win vs lose against them, with evidence.
-- **Counters that worked** — the framings/proof points from won deals, with quotes.
+- **Counters that worked** — the specific move from the won deal, with a verbatim quote and the
+  call date. Flag any counter not yet proven in a won deal.
 - Landmines to avoid and the trap-setting questions to ask.
 
 **Objections card** (`battlecards/objections.md`):
-- Top objections, each with: the exact buyer phrasing, the best response (sourced from won
-  deals), and what *not* to say. Grouped by theme (price, timing, status quo, security, etc.).
+- Top objections, each with: the exact buyer phrasing; the best response cited to **how it was
+  actually handled in a won deal** — the specific move, a verbatim quote, and the call date (not a
+  generic counter); and what *not* to say. Where no won deal covers the objection, mark the
+  response a *recommended play, not a proven win*. Grouped by theme (price, timing, status quo,
+  security, etc.).
 
 ## Step 3 — Persist (always write the artifacts)
 
