@@ -125,3 +125,7 @@ The `source_kind` + `recording_sources[]` v2 + capability-probe seam is now cohe
 ---
 *Phase: 01-discovery-config-schema-v2*
 *Completed: 2026-07-24*
+
+## Self-Check: PASSED
+
+All 4 modified files and the SUMMARY.md confirmed present on disk; task commit `2293260` confirmed in git log.

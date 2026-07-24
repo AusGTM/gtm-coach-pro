@@ -2,19 +2,18 @@
 gsd_state_version: 1.0
 milestone: v0.6.0
 milestone_name: Google Meet / Gemini Notes Source
-current_phase: 1
-current_phase_name: Discovery + Config Schema v2
+current_phase: 01
+current_phase_name: discovery-config-schema-v2
 status: executing
-stopped_at: ROADMAP.md written (5 phases, 18/18 requirements mapped); REQUIREMENTS.md traceability filled.
-last_updated: "2026-07-24T01:55:49.035Z"
+stopped_at: Completed 01-01-PLAN.md (Discovery + Config Schema v2 tracer)
+last_updated: "2026-07-24T02:02:33.105Z"
 last_activity: 2026-07-24
-last_activity_desc: ROADMAP.md created; 18/18 v0.6.0 requirements mapped across 5 phases
+last_activity_desc: Phase 01 execution started
 progress:
-  total_phases: 5
+  total_phases: 1
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  total_plans: 3
+  completed_plans: 1
 ---
 
 # Project State
@@ -24,16 +23,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-24)
 
 **Core value:** Coaching grounded in the seller's own calls — evidence-first, from the local memory bank.
-**Current focus:** v0.6.0 — Google Meet / Gemini Notes Source (roadmap ready, entering phase planning)
+**Current focus:** Phase 01 — discovery-config-schema-v2
 
 ## Current Position
 
-Phase: 1 of 5 (Discovery + Config Schema v2)
-Plan: — (not yet planned)
+Phase: 01 (discovery-config-schema-v2) — EXECUTING
+Plan: 2 of 3
 Status: Ready to execute
-Last activity: 2026-07-24 — ROADMAP.md created; 18/18 v0.6.0 requirements mapped across 5 phases
+Last activity: 2026-07-24 — Phase 01 execution started
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [███░░░░░░░] 33%
 
 ## Accumulated Context
 
@@ -45,6 +44,8 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent:
 - v0.6.0: treat Google Drive / Gemini notes as a first-class `~~meeting recording` source (not a separate category).
 - Roadmap: dedup keys on the notes-doc Drive file ID (never synthesized title+date) — locked in Phase 3, before Phase 4 writes the first call.
 - Roadmap: 5 phases — research's Phase 6 "scheduling note" folded into Phase 5 (no new mechanism, same phase as the sync loop it documents).
+- [Phase ?]: source_kind discriminator inserted as mcp-discovery.md new §3 (renumbering §3-6 to §4-7) so it's determined before the probe step that persists it
+- [Phase ?]: config.json v2 example kept to one drive_folder recording_sources[] entry per tracer scope; api-source parity described in prose, full multi-entry/migration example deferred to Plan 02
 
 ### Pending Todos
 
@@ -66,6 +67,12 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-24
-Stopped at: ROADMAP.md written (5 phases, 18/18 requirements mapped); REQUIREMENTS.md traceability filled.
+Last session: 2026-07-24T02:02:33.099Z
+Stopped at: Completed 01-01-PLAN.md (Discovery + Config Schema v2 tracer)
 Resume file: None
+
+## Performance Metrics
+
+| Plan | Duration | Tasks | Files |
+|------|----------|-------|-------|
+| Phase 01 P01 | 20min | 1 tasks | 4 files |

@@ -9,10 +9,10 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 
 ### Discovery & Config (DISC)
 
-- [ ] **DISC-01**: User's connected Google Drive tool is discovered and bound to `~~meeting recording` via capability probe — no hardcoded tool name
+- [x] **DISC-01**: User's connected Google Drive tool is discovered and bound to `~~meeting recording` via capability probe — no hardcoded tool name
 - [ ] **DISC-02**: Setup resolves the Meet-notes folder across migration states (`Google Meet/<subfolder>/` → `Legacy Meet Recordings/` → `Meet Recordings/` → user-provided fallback), never a single hardcoded name
 - [ ] **DISC-03**: `config.json` migrates from singular `recording_source` to `recording_sources[]` (schema v2) non-breakingly on read
-- [ ] **DISC-04**: Each recording source records a `source_kind` (`api` | `drive_folder`) so skills branch cleanly at one point
+- [x] **DISC-04**: Each recording source records a `source_kind` (`api` | `drive_folder`) so skills branch cleanly at one point
 
 ### Parsing & Pairing (PARSE)
 
@@ -67,10 +67,10 @@ Which phases cover which requirements. Filled during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DISC-01 | Phase 1 | Pending |
+| DISC-01 | Phase 1 | Complete |
 | DISC-02 | Phase 1 | Pending |
 | DISC-03 | Phase 1 | Pending |
-| DISC-04 | Phase 1 | Pending |
+| DISC-04 | Phase 1 | Complete |
 | PARSE-01 | Phase 2 | Pending |
 | PARSE-02 | Phase 2 | Pending |
 | PARSE-03 | Phase 2 | Pending |
@@ -87,6 +87,7 @@ Which phases cover which requirements. Filled during roadmap creation.
 | SYNC-04 | Phase 5 | Pending |
 
 **Coverage:**
+
 - Milestone requirements: 18 total
 - Mapped to phases: 18 (5 phases)
 - Unmapped: 0 ✓
