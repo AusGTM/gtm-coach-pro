@@ -96,7 +96,10 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
   2. Run against a bank that already has an API source (e.g. tl;dv) bound, the same setup procedure adds Drive-sourced calls alongside the existing ones through the identical write/dedup/rollup path, with no schema drift between the two sources' records.
   3. Notes docs dated older than 90 days in the same Drive folder are not ingested during this initial pass.
 
-**Plans**: TBD
+**Plans**: 1 plan
+**Wave 1**
+
+- [ ] 04-01-PLAN.md — Wire the Drive `source_kind` branch into `gtm-coach` Step 4 (calls `drive-source.md`, 90-day window, shared write/dedup/rollup path), loop over `recording_sources[]` for Drive-only + Drive+API, and an add-source-to-an-existing-bank entry (INGEST-01, INGEST-02)
 
 ### Phase 5: Sync Parity — Incremental, Backfill, Scheduling
 
@@ -122,5 +125,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Discovery + Config Schema v2 | 3/3 | Complete    | 2026-07-24 |
 | 2. Drive Source — Pairing + Parsing Contract | 3/3 | Complete    | 2026-07-24 |
 | 3. Memory Bank Schema Additions | 1/1 | Complete    | 2026-07-24 |
-| 4. Initial Ingest — gtm-coach Setup | 0/TBD | Not started | - |
+| 4. Initial Ingest — gtm-coach Setup | 0/1 | Not started | - |
 | 5. Sync Parity — Incremental, Backfill, Scheduling | 0/TBD | Not started | - |
