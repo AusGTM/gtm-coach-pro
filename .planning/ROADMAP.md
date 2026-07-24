@@ -55,11 +55,11 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
   4. Given a notes doc with one unambiguous transcript-doc candidate, the procedure pairs them automatically; given more than one plausible candidate, it flags the ambiguity to the user instead of guessing.
   5. The resulting call record marks transcript-sourced text as verbatim and notes-doc content as paraphrase, so no downstream skill can present Gemini's AI summary as an exact buyer quote.
 
-**Plans**: 3 plans (single new file `references/drive-source.md`; waves are linear since all plans edit the one file)
+**Plans**: 1/3 plans executed
 
 **Wave 1**
 
-- [ ] 02-01-PLAN.md — Tracer: detect → export → parse-by-role → pair → provenance → one SPICED call record, end to end for one worked-example meeting (PARSE-01/02/04, TRUST-01)
+- [x] 02-01-PLAN.md — Tracer: detect → export → parse-by-role → pair → provenance → one SPICED call record, end to end for one worked-example meeting (PARSE-01/02/04, TRUST-01)
 
 **Wave 2** *(blocked on Wave 1)*
 
@@ -117,7 +117,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|-----------------|--------|-----------|
 | 1. Discovery + Config Schema v2 | 3/3 | Complete    | 2026-07-24 |
-| 2. Drive Source — Pairing + Parsing Contract | 0/3 | Planned | - |
+| 2. Drive Source — Pairing + Parsing Contract | 1/3 | In Progress|  |
 | 3. Memory Bank Schema Additions | 0/TBD | Not started | - |
 | 4. Initial Ingest — gtm-coach Setup | 0/TBD | Not started | - |
 | 5. Sync Parity — Incremental, Backfill, Scheduling | 0/TBD | Not started | - |

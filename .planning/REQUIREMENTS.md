@@ -16,14 +16,14 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 
 ### Parsing & Pairing (PARSE)
 
-- [ ] **PARSE-01**: System detects Gemini notes docs by title pattern (`… Notes by Gemini`) and exports their text via the Drive tool (text/plain or text/markdown)
-- [ ] **PARSE-02**: System parses Summary / Details / Next-steps into the SPICED call schema by semantic role matching (not exact heading strings), degrading gracefully to a whole-body summary when a section is absent
+- [x] **PARSE-01**: System detects Gemini notes docs by title pattern (`… Notes by Gemini`) and exports their text via the Drive tool (text/plain or text/markdown)
+- [x] **PARSE-02**: System parses Summary / Details / Next-steps into the SPICED call schema by semantic role matching (not exact heading strings), degrading gracefully to a whole-body summary when a section is absent
 - [ ] **PARSE-03**: The Gemini "Decisions" section is disambiguated from SPICED's "Decision" field (mapped to meeting-outcome signals/risks, never auto-filed as buying-process signal)
-- [ ] **PARSE-04**: Each transcript doc is paired to its notes doc (shared subfolder in the new model; filename + date-window proximity in the legacy model), flagging ambiguous candidate sets to the user instead of guessing
+- [x] **PARSE-04**: Each transcript doc is paired to its notes doc (shared subfolder in the new model; filename + date-window proximity in the legacy model), flagging ambiguous candidate sets to the user instead of guessing
 
 ### Trust & Provenance (TRUST)
 
-- [ ] **TRUST-01**: Ingested content is tagged by provenance (transcript-verbatim vs. notes-AI-paraphrase) so battlecards / playbook-builder / voice-of-customer never present paraphrase as "exact buyer language"
+- [x] **TRUST-01**: Ingested content is tagged by provenance (transcript-verbatim vs. notes-AI-paraphrase) so battlecards / playbook-builder / voice-of-customer never present paraphrase as "exact buyer language"
 - [x] **TRUST-02**: The privacy/consent gate re-surfaces, scoped to Drive, when a Drive source is first bound to a bank that already passed the gate for another tool
 
 ### Memory Schema (SCHEMA)
@@ -71,11 +71,11 @@ Which phases cover which requirements. Filled during roadmap creation.
 | DISC-02 | Phase 1 | Complete |
 | DISC-03 | Phase 1 | Complete |
 | DISC-04 | Phase 1 | Complete |
-| PARSE-01 | Phase 2 | Pending |
-| PARSE-02 | Phase 2 | Pending |
+| PARSE-01 | Phase 2 | Complete |
+| PARSE-02 | Phase 2 | Complete |
 | PARSE-03 | Phase 2 | Pending |
-| PARSE-04 | Phase 2 | Pending |
-| TRUST-01 | Phase 2 | Pending |
+| PARSE-04 | Phase 2 | Complete |
+| TRUST-01 | Phase 2 | Complete |
 | TRUST-02 | Phase 1 | Complete |
 | SCHEMA-01 | Phase 3 | Pending |
 | SCHEMA-02 | Phase 3 | Pending |
