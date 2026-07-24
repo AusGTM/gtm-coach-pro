@@ -36,6 +36,17 @@ Look for `./sales-memory/index.json`.
   `true`, i.e. it's the synthetic demo bank) and ask what the user wants to do, pointing to the
   available capabilities (sync, prep, debrief, pipeline review, GTM patterns, coaching
   scorecard). Do not re-initialize.
+
+  **Adding a recording source to an existing bank.** Also check whether a connected
+  `~~meeting recording` tool is not already in `config.json.recording_sources[]` — or the user
+  asks to add one (e.g. "add my Google Drive / Gemini notes"). If so, offer to add it as an
+  additional source. This is an add-a-source flow, explicitly not a re-initialization: it runs
+  Step 2 to bind only the newly bound source (appending one `recording_sources[]` entry with its
+  own `source_kind`, per `mcp-discovery.md` §2/§5), Step 3 to re-surface the privacy gate scoped
+  to that new source, then Step 4 to ingest only that new source's last 90 days into the existing
+  bank through the shared write/dedup/rollup path. Existing sources are not re-ingested — their
+  calls are already in `index.json`, and dedup would skip them anyway — so this adds calls
+  alongside the existing ones with no schema drift.
 - **If it does not exist:** run first-time initialization (Steps 2–5). *(If the user just wants
   to try or demo GTM Coach without connecting tools, route to the `gtm-coach-demo` skill
   instead — it seeds a rich synthetic bank so everything works immediately.)*
