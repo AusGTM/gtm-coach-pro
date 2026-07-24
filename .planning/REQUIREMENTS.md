@@ -18,7 +18,7 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 
 - [x] **PARSE-01**: System detects Gemini notes docs by title pattern (`… Notes by Gemini`) and exports their text via the Drive tool (text/plain or text/markdown)
 - [x] **PARSE-02**: System parses Summary / Details / Next-steps into the SPICED call schema by semantic role matching (not exact heading strings), degrading gracefully to a whole-body summary when a section is absent
-- [ ] **PARSE-03**: The Gemini "Decisions" section is disambiguated from SPICED's "Decision" field (mapped to meeting-outcome signals/risks, never auto-filed as buying-process signal)
+- [x] **PARSE-03**: The Gemini "Decisions" section is disambiguated from SPICED's "Decision" field (mapped to meeting-outcome signals/risks, never auto-filed as buying-process signal)
 - [x] **PARSE-04**: Each transcript doc is paired to its notes doc (shared subfolder in the new model; filename + date-window proximity in the legacy model), flagging ambiguous candidate sets to the user instead of guessing
 
 ### Trust & Provenance (TRUST)
@@ -73,7 +73,7 @@ Which phases cover which requirements. Filled during roadmap creation.
 | DISC-04 | Phase 1 | Complete |
 | PARSE-01 | Phase 2 | Complete |
 | PARSE-02 | Phase 2 | Complete |
-| PARSE-03 | Phase 2 | Pending |
+| PARSE-03 | Phase 2 | Complete |
 | PARSE-04 | Phase 2 | Complete |
 | TRUST-01 | Phase 2 | Complete |
 | TRUST-02 | Phase 1 | Complete |
