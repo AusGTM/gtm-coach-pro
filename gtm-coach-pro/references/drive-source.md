@@ -149,15 +149,41 @@ The dedup identity stays the **notes-doc file id** (see Dedup key below); the tr
 is a secondary paired artifact and is never used as the call id, even when pairing resolves
 cleanly.
 
-## Provenance tag — core (TRUST-01)
+## Provenance write-time contract (TRUST-01)
 
-Text pulled from the **transcript doc** is verbatim, speaker-attributed buyer language — eligible
-to be written as a direct quote. Text pulled from the **notes doc's** Summary/Next-steps content
-is Gemini's AI paraphrase — narrative only, never presentable as an exact buyer quote. Tag every
-piece of extracted text with its source at write time so no downstream skill can conflate the
-two. The full write-time contract — `has_transcript` gating and the specific downstream skills
-(`battlecards`, `playbook-builder`, `voice-of-customer`) that must respect the tag — is Plan 03's
-expansion of this section.
+Gemini's notes doc is itself an **AI-generated interpretation** of the meeting, not the buyer's
+actual words. The eligibility rule is precise: text pulled from the **transcript doc** is
+verbatim, speaker-attributed buyer language — the **only** text eligible to be written as a
+quoted buyer statement (a `"…"` quote with attribution) in the call file's `## Signals`, and thus
+the only text downstream skills may later consume as "exact buyer language." Text pulled from the
+**notes doc** is Gemini's AI paraphrase — eligible only as narrative/summary in `## Summary` and
+`## SPICED captured this call`, and **never** presented as a direct quote. Tag every piece of
+extracted text with its source at write time so no downstream skill can conflate the two.
+
+**Missing-transcript case.** When the transcript is absent or unpaired (the pairing heuristic's
+`unresolved` case or an unresolved ambiguous set), mark the call record `has_transcript: false`. Downstream
+skills that promise verbatim language must respect that flag rather than treating all `##
+Signals` text as equally quotable — the three consuming skills are:
+
+- **`battlecards`** — must skip a `has_transcript: false` call as an evidence source for a
+  verbatim quote, or clearly caveat it as summary-derived.
+- **`playbook-builder`** — same: skip or caveat, never quote notes-doc paraphrase as a buyer's
+  own words.
+- **`voice-of-customer`** — same: a call without a transcript cannot supply "exact buyer language"
+  for this brief; skip or caveat it.
+
+(This phase's deliverable is the contract stated here in `drive-source.md`. It does not modify
+`battlecards`, `playbook-builder`, or `voice-of-customer` — wiring those skills to honor this flag
+is downstream work.)
+
+**Gemini's own inferred structure** (the Decisions section's Aligned/Needs Further
+Discussion/Disagreed/Shelved labels, see the Decisions-vs-Decision disambiguation above) is kept
+labeled as **Gemini's inference**, never presented as the rep's or the buyer's own assessment.
+
+This is the plugin's evidence-first core value made concrete for a source without a guaranteed
+transcript: a Drive notes-only call is legitimately weaker evidence than a transcript-backed one,
+and this contract makes that visible at write time rather than laundering an AI paraphrase as a
+buyer's exact quote.
 
 ## Worked example
 
