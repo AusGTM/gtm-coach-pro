@@ -32,6 +32,13 @@ GTM Coach adapts.
   recording API — Google Drive / Gemini `Notes by Gemini` binds as `source_kind: drive_folder`
   (list/search files, export doc content) instead of `source_kind: api`; see
   `references/mcp-discovery.md`.
+  - **What Google Drive unlocks specifically:** Google Meet's "Notes by Gemini" writes a notes
+    doc (and, when available, a paired transcript doc) into a Drive folder instead of exposing a
+    purpose-built recording API — so setup first resolves which Drive folder holds them, then
+    lists it and exports each notes doc (and its paired transcript when present) as text. Same
+    capability buckets as any other source (`list_calls`/`get_summary`/`get_transcript`/
+    `get_call_detail`), discovered by capability, not by tool name — see
+    `references/mcp-discovery.md` for the folder-resolution ladder and capability remap.
 - **`~~calendar` (optional)** — lets `call-prep` find your upcoming meetings automatically and
   match attendees to the memory bank.
 - **`~~email` (optional)** — lets `call-debrief` save follow-up drafts (never sends without

@@ -67,6 +67,27 @@ table above. A `drive_folder` source resolves its recordings folder by searching
 known candidate folder names (never a single hardcoded name) and records the resolved
 `root_folder_id` alongside its `tool_map` (the full candidate ladder is §4, below).
 
+### Capability-bucket remap for `drive_folder` sources
+
+A `drive_folder` source fills the SAME four buckets from §1's table — `list_calls`, `get_summary`,
+`get_transcript`, `get_call_detail` — with a document-store equivalent, so `sync-memory` and every
+downstream skill stay unaware the source is Drive rather than tl;dv/Gong/etc.:
+
+| Bucket | Drive equivalent | Notes |
+|--------|------------------|-------|
+| `list_calls` | List/search files scoped to the resolved `root_folder_id`, recursed one level for per-meeting subfolders | Each qualifying notes file (or subfolder) = one candidate meeting |
+| `get_summary` | Export the notes doc as text | The Gemini "Notes by Gemini" doc |
+| `get_transcript` | Export the paired transcript doc as text | May be absent — never block ingest on a missing transcript |
+| `get_call_detail` | Drive file metadata: `createdTime`, `modifiedTime`, `parents`, `owners` | Attendees and duration are **NOT** in this metadata — they're parsed from the doc body later (`drive-source.md`, Phase 2), never expected from metadata |
+
+Example Drive tool-name fragments to probe for — non-exhaustive hints of the shape, same as the
+vendor fragments in §1's table, not a whitelist: `list_files`, `search_files`, `export_doc`,
+`get_file_metadata`. The actual bound tool names are probed at runtime (§5) and persisted to
+`tool_map`, exactly like every other source — no single Drive tool name is a required binding key.
+
+If a connected Drive tool genuinely can't fill one of the four buckets, extend the bucket
+vocabulary in this doc as a source-agnostic addition — never as an if-Drive branch in skill logic.
+
 ## 4. Resolve the `drive_folder` recordings folder
 
 A `drive_folder` source must resolve which Drive folder holds the Meet notes before it can list
