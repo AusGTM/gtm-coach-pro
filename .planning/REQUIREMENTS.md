@@ -38,10 +38,10 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 
 ### Sync Parity (SYNC)
 
-- [ ] **SYNC-01**: Incremental sync ingests only notes docs new or modified since the per-source `last_sync`, deduped
-- [ ] **SYNC-02**: User can backfill an arbitrary older date window on demand
-- [ ] **SYNC-03**: Large syncs use batch + backoff + resumable cursor to respect Drive 403/429 rate limits
-- [ ] **SYNC-04**: Scheduled-refresh guidance covers the Drive tool's reachability in a headless / scheduled-agent context
+- [x] **SYNC-01**: Incremental sync ingests only notes docs new or modified since the per-source `last_sync`, deduped
+- [x] **SYNC-02**: User can backfill an arbitrary older date window on demand
+- [x] **SYNC-03**: Large syncs use batch + backoff + resumable cursor to respect Drive 403/429 rate limits
+- [x] **SYNC-04**: Scheduled-refresh guidance covers the Drive tool's reachability in a headless / scheduled-agent context
 
 ## v2 Requirements (Deferred)
 
@@ -81,10 +81,10 @@ Which phases cover which requirements. Filled during roadmap creation.
 | SCHEMA-02 | Phase 3 | Complete |
 | INGEST-01 | Phase 4 | Complete |
 | INGEST-02 | Phase 4 | Complete |
-| SYNC-01 | Phase 5 | Pending |
-| SYNC-02 | Phase 5 | Pending |
-| SYNC-03 | Phase 5 | Pending |
-| SYNC-04 | Phase 5 | Pending |
+| SYNC-01 | Phase 5 | Complete |
+| SYNC-02 | Phase 5 | Complete |
+| SYNC-03 | Phase 5 | Complete |
+| SYNC-04 | Phase 5 | Complete |
 
 **Coverage:**
 
