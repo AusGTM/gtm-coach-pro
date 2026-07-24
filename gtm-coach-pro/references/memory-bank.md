@@ -202,12 +202,12 @@ date: 2026-02-09
 account: acme
 deal: acme-platform-expansion
 type: discovery
-source: <vendor>
+source: <vendor>              # e.g. tldv, otter, gong … or google-drive for a Drive-sourced call
 has_transcript: true
 talk_ratio_rep: 0.58
-# The block below is additive and optional — present only when source is google-drive,
-# absent for every other source.
-source: google-drive          # gating value for the fields below
+# The block below is additive and optional — present ONLY when source is google-drive,
+# absent for every other source (do not add a second `source:` key; the field above just
+# takes the value google-drive).
 notes_doc_id: "<drive file id>"   # == call_id for a Drive-sourced call (see ## Dedup rule)
 transcript_doc_id: "<drive file id or null>"   # paired transcript, or null if unresolved
 drive_folder_id: "<parent folder id at time of ingest>"
