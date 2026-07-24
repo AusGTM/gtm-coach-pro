@@ -134,7 +134,8 @@ doc. Note: transcript_doc_id is never the call/dedup id; it is a secondary paire
       "has_transcript": true, "content_hash": "<hash>",
       "talk_ratio_rep": 0.58, "next_step_set": true,
       "spiced_coverage": ["situation","pain"], "file": "calls/2026-02-09_acme-discovery.md",
-      "notes_doc_id": "<drive file id>"
+      "notes_doc_id": "<drive file id>",
+      "transcript_doc_id": "<drive file id or null>", "drive_folder_id": "<parent folder id>"
     }
   ],
   "metrics": {
@@ -147,9 +148,12 @@ doc. Note: transcript_doc_id is never the call/dedup id; it is a secondary paire
 }
 ```
 
-`notes_doc_id` is additive and optional, present only when a `calls[]` entry's `source ==
-"google-drive"`; for such an entry the entry's `id` equals `notes_doc_id` (see `## Dedup rule`).
-Absent for every other source.
+`notes_doc_id`, `transcript_doc_id`, and `drive_folder_id` are additive and optional, present
+only when a `calls[]` entry's `source == "google-drive"`; for such an entry the entry's `id`
+equals `notes_doc_id` (see `## Dedup rule`). Absent for every other source. No structural change
+to `index.json`'s top-level shape (`deals`, `contacts`, `calls`, `metrics`, `timeline`) — these
+are additive fields on existing `calls[]` entries, the same way `source: "<vendor>"` already
+varies per call today.
 
 Keep `index.json` authoritative for numbers and querying. Keep markdown authoritative for
 narrative and nuance. When they disagree, regenerate the index from the markdown.
@@ -205,6 +209,8 @@ talk_ratio_rep: 0.58
 # absent for every other source.
 source: google-drive          # gating value for the fields below
 notes_doc_id: "<drive file id>"   # == call_id for a Drive-sourced call (see ## Dedup rule)
+transcript_doc_id: "<drive file id or null>"   # paired transcript, or null if unresolved
+drive_folder_id: "<parent folder id at time of ingest>"
 ---
 # Acme Discovery — 2026-02-09
 
