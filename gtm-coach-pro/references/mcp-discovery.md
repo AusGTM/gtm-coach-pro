@@ -41,7 +41,7 @@ whitelist.
 - If exactly one recording source is found, use it.
 - If several are found, ask the user once which one to use (or whether to merge across all),
   then remember the choice in `sales-memory/config.json` under `recording_sources[]` (schema v2
-  — see §4).
+  — see §5).
 - If none is found, tell the user plainly: "I don't see a meeting-recording tool connected.
   Connect one (tl;dv, Otter, Fireflies, Fathom, Zoom, Gong, etc.) in your Connectors
   settings, then run setup again." Do not fabricate data.
@@ -58,16 +58,56 @@ today:
   than a purpose-built call API (e.g. Google Drive holding Google Meet's Gemini `Notes by
   Gemini` docs).
 
-A `drive_folder` source is discovered by the SAME capability probe as every other source (§4
+A `drive_folder` source is discovered by the SAME capability probe as every other source (§5
 below): bind it by its probed capability shape (list/search files, export doc content, read file
 metadata), and persist its *actual* tool names into `tool_map`. Do not hardcode any single Drive
 tool name as a required binding key — any Drive tool name mentioned in this doc is a
 non-exhaustive example of the shape to map, exactly like the vendor tool-name fragments in the
 table above. A `drive_folder` source resolves its recordings folder by searching a short list of
 known candidate folder names (never a single hardcoded name) and records the resolved
-`root_folder_id` alongside its `tool_map` (the full candidate ladder is specified separately).
+`root_folder_id` alongside its `tool_map` (the full candidate ladder is §4, below).
 
-## 4. Probe the chosen tool's shape before bulk use
+## 4. Resolve the `drive_folder` recordings folder
+
+A `drive_folder` source must resolve which Drive folder holds the Meet notes before it can list
+anything. Google's July-2026 Meet-notes folder restructure means **both** the old and new layouts
+are live across different accounts/tenants at once — resolution must never commit to a single
+hardcoded folder name.
+
+Search for a folder matching each of these candidate names, **in this order**, stopping at the
+first match:
+
+1. **`Google Meet/`** — the new root folder (2026 model). Meeting notes since the rollout live in
+   a **per-meeting subfolder** under this root, not as flat files directly inside it.
+2. **`Legacy Meet Recordings/`** — the pre-2026 `Meet Recordings` folder, renamed and moved under
+   `Google Meet/` once an account migrates.
+3. **`Meet Recordings/`** — the original flat folder name, for accounts the rollout hasn't reached
+   yet.
+
+If none of the three is found, **do not assume zero calls means "up to date."** Prompt the user
+once for the folder name/path — same posture as the "I don't see a meeting-recording tool
+connected" message in §2 — then resolve and record whatever they provide.
+
+Once a candidate resolves, persist the result to `config.json` and reuse it thereafter — **never
+re-search by name on every run**:
+
+- `root_folder_id` — the resolved Drive folder ID for whichever candidate matched (or the
+  user-provided fallback).
+- `root_folder_name` — the actual name found, so a later folder-structure change on Google's side
+  shows up as a diff in `config.json`, not a silent coverage gap.
+- `legacy_folder_id` (when an account has both a `Google Meet/` root *and* a
+  `Legacy Meet Recordings/` folder side by side — old and new-model calls coexisting) — the
+  second resolved folder ID, so both are listed.
+
+**Not-shared / not-visible folder:** if the connected account can see Drive but the recordings
+folder itself isn't shared with it — common when a sales leader is syncing a rep's own Drive
+rather than a shared team Drive — say so plainly, the same "not connected / can't find it"
+posture as §2, rather than erroring or silently ingesting nothing.
+
+This section only resolves and persists the folder. Listing its contents, pairing notes with
+transcripts, and parsing the Gemini doc body are `drive-source.md`'s job (Phase 2).
+
+## 5. Probe the chosen tool's shape before bulk use
 
 MCP tools vary in pagination, date filtering, and field names. Before ingesting at scale:
 
@@ -120,7 +160,7 @@ and signals; if none is connected, `call-prep` still enriches via Claude's built
 user-pasted export, or runs CI-only. `~~websearch` (Parallel, Exa, Tavily, Perplexity) is the
 preferred proxy engine — it can reach sources built-in search is blocked from (e.g. Reddit).
 
-## 5. Pagination & rate discipline
+## 6. Pagination & rate discipline
 
 - Always paginate to completion when ingesting a window; never assume the first page is all.
 - Pull in batches. After each batch, write results to the memory bank before fetching the
@@ -128,7 +168,7 @@ preferred proxy engine — it can reach sources built-in search is blocked from 
 - If a tool errors or rate-limits, back off, report how far you got, and record progress in
   `config.json` (`last_sync` / a `cursor`) so the next run resumes.
 
-## 6. Scope filtering
+## 7. Scope filtering
 
 - Only ingest calls that look like external sales conversations when possible (has external
   attendees, or title/summary signals a prospect/customer). Skip internal standups, 1:1s,
@@ -136,7 +176,7 @@ preferred proxy engine — it can reach sources built-in search is blocked from 
 - For leader use, ingest team members' calls if the connected tool exposes them; otherwise
   ingest the calls the tool grants access to and note the limitation.
 
-## 7. Privacy gate
+## 8. Privacy gate
 
 Before the first ingest, surface the privacy note from `memory-bank.md` (recording-consent /
 two-party-consent reminder, local storage, gitignore). Proceed only after the user
