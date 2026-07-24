@@ -43,10 +43,19 @@ Follow `mcp-discovery.md`: enumerate connected MCP tools, bucket them, and bind 
 categories — `~~meeting recording` (required), and `~~calendar` / `~~email` / `~~crm` /
 `~~enrichment` / `~~aeo` / `~~websearch` if present (see `CONNECTORS.md`). If no `~~meeting recording` tool is connected, stop and tell the
 user to connect one (name examples: tl;dv, Otter, Fireflies, Fathom, Zoom, Gong). If several,
-ask which to use. Probe the chosen tool's shape (pagination, date filter, ID field,
-transcript availability). A bound source may be `source_kind: drive_folder` (a Google Drive /
-Gemini notes folder) rather than a purpose-built recording API — follow `mcp-discovery.md` for
-its discovery and folder resolution.
+ask which to use.
+
+Once the `~~meeting recording` tool is bound, determine its `source_kind` per
+`mcp-discovery.md` §3 — this is the ONE place setup consults `source_kind`; everything after
+this point (ingest, dedup, patterns, every other skill) stays source-unaware:
+
+- **`source_kind: "api"`** — the existing behavior, unchanged: probe the chosen tool's shape
+  (pagination, date filter, ID field, transcript availability) directly.
+- **`source_kind: "drive_folder"`** — a Google Drive / Gemini notes folder rather than a
+  purpose-built recording API. Follow `mcp-discovery.md` end to end for this branch: bind the
+  Drive tool by probed capability (§3's capability-bucket remap — never a hardcoded Drive tool
+  name as the binding key), resolve the recordings folder via the candidate-name ladder (§4),
+  and persist the resolved `root_folder_id` and probed `tool_map` (§5).
 
 ## Step 3 — Privacy gate
 
