@@ -113,7 +113,10 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
   3. The documented sync procedure batches Drive requests and backs off/resumes on a 403/429 response rather than failing the whole sync.
   4. `sync-memory.md`'s scheduled-refresh guidance names the Drive tool's reachability requirement for headless/scheduled-agent runs, matching the caveat already given for other recording tools.
 
-**Plans**: TBD
+**Plans**: 1 plan
+**Wave 1**
+
+- [ ] 05-01-PLAN.md — Extend `sync-memory` with a `source_kind: drive_folder` branch: per-source-`last_sync` incremental sync (deduped on `notes_doc_id`), on-demand backfill of an older window, Drive 403/429 batch+backoff+resumable-cursor discipline (reused from `mcp-discovery.md` §6), and a Drive headless-reachability scheduling caveat (SYNC-01, SYNC-02, SYNC-03, SYNC-04)
 
 ## Progress
 
@@ -126,4 +129,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Drive Source — Pairing + Parsing Contract | 3/3 | Complete    | 2026-07-24 |
 | 3. Memory Bank Schema Additions | 1/1 | Complete    | 2026-07-24 |
 | 4. Initial Ingest — gtm-coach Setup | 1/1 | Complete    | 2026-07-24 |
-| 5. Sync Parity — Incremental, Backfill, Scheduling | 0/TBD | Not started | - |
+| 5. Sync Parity — Incremental, Backfill, Scheduling | 0/1 | Planned | - |
