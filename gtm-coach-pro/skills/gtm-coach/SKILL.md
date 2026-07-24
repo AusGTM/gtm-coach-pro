@@ -24,6 +24,9 @@ Read these bundled docs (relative to this skill: `../../references/`):
 - `../../references/mcp-discovery.md` — how to detect and map the connected recording tool.
 - `../../references/memory-bank.md` — `sales-memory/` layout, `index.json` schema, dedup, privacy.
 - `../../references/spiced-framework.md` — SPICED + coaching rubrics.
+- `../../references/drive-source.md` — for a `source_kind: drive_folder` source, the
+  detect→export→parse→pair→provenance procedure that turns one Gemini notes doc into a SPICED
+  call record. Read this when Step 4 ingests a Drive source.
 
 ## Step 1 — Check for an existing memory bank
 
@@ -81,14 +84,37 @@ bank's `PRIVACY.md` reflects every source it has ever ingested from.
    POSIX `sh`/sandboxed shells. Use one explicit `mkdir -p <path>` per directory, or just write
    each file (e.g. `calls/<id>.md`) and let the parent folder auto-create. See
    `memory-bank.md` → "Creating the layout (portability)".
-2. Ingest the **last 90 days** of calls:
-   - Page through `list_calls` for the window. Filter to external sales conversations where
-     detectable (skip internal/standup/personal unless the user says otherwise).
-   - For each call: pull transcript if available, else summary. Extract SPICED elements,
-     attendees/roles, signals, objections, competitor mentions, commitments/next steps, and
-     (if transcript) talk ratio.
-   - Write the call file, upsert the deal/account/people files, and update `index.json`.
-     Dedup by call ID. Write after each batch so the run is resumable.
+2. Ingest the **last 90 days** of calls. The ingest differs only in how calls are **listed and
+   fetched** — parsing, writing, dedup, and rollups are one shared path regardless of source.
+   Branch by the bound source's `source_kind`:
+
+   - **`source_kind: "api"`** (existing behavior, unchanged):
+     - Page through `list_calls` for the window. Filter to external sales conversations where
+       detectable (skip internal/standup/personal unless the user says otherwise).
+     - For each call: pull transcript if available, else summary. Extract SPICED elements,
+       attendees/roles, signals, objections, competitor mentions, commitments/next steps, and
+       (if transcript) talk ratio.
+
+   - **`source_kind: "drive_folder"`**: follow `references/drive-source.md`. List Gemini notes
+     docs (title pattern `… Notes by Gemini`) scoped to the resolved `root_folder_id` (and
+     `legacy_folder_id` if present, per `mcp-discovery.md` §4), bounded to the last 90 days by
+     the doc's `createdTime`/`modifiedTime` — a notes doc dated older than 90 days is **not**
+     ingested in this initial pass. For each in-window notes doc, run `drive-source.md`'s
+     procedure: detect → export (by capability bucket / `root_folder_id`, never a hardcoded
+     Drive tool name) → semantic-role parse to SPICED (graceful degradation to a whole-body
+     `## Summary` when a section is missing/renamed) → pair the transcript (or
+     `has_transcript: false` when unresolved) → tag provenance. This yields the SAME SPICED
+     call-record shape the `api` branch produces.
+
+   - **Shared write/dedup/rollup (both branches converge here — stated once, never
+     duplicated per branch):** write the call file, upsert the deal/account/people files, and
+     update `index.json`. Dedup by call ID — for a `drive_folder` source the call ID is the
+     notes-doc file id (`notes_doc_id`) per `memory-bank.md`'s dedup rule, never a synthesized title+date.
+     Carry provenance into the written record: transcript-verbatim buyer quotes go
+     to `## Signals` (eligible as exact buyer language), notes-doc paraphrase stays in
+     `## Summary`/`## SPICED captured this call` (never quoted), and `has_transcript` reflects
+     whether a transcript paired. Write after each batch so the run is resumable. There is no
+     separate Drive write/dedup/rollup path — the Drive branch reuses this one.
 3. Build/refresh `patterns/*.md` rollups (win-loss, ICP, messaging, competitive, objections)
    from the ingested set.
 4. Set `config.json.last_sync` to now.
