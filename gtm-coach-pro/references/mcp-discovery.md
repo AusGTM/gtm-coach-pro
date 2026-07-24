@@ -152,6 +152,37 @@ carrying `source_kind`. An `api` source keeps the same fields v1 had (`vendor`, 
 }
 ```
 
+### Migrating a v1 config on read
+
+An older `config.json` may still have the v1 singular shape: `recording_source` (a single vendor
+string), `tool_map`, `id_field`, `supports_transcripts`, `last_sync` — with no
+`recording_sources` array and no `config_schema_version`. This includes existing installs and the
+demo bank (`config.json.demo_mode`); both must survive this untouched.
+
+On read, if `recording_sources` is absent but the singular `recording_source`/`tool_map` fields
+are present, migrate **once**, in place:
+
+1. Wrap the singular fields into a single `recording_sources[]` entry:
+   ```json
+   {
+     "source_kind": "api",
+     "vendor": "<old recording_source value>",
+     "tool_map": "<old tool_map, unchanged>",
+     "id_field": "<old id_field, unchanged>",
+     "supports_transcripts": "<old supports_transcripts, unchanged>",
+     "last_sync": "<old last_sync, unchanged>"
+   }
+   ```
+2. Set `config_schema_version: 2` at the top level.
+3. Persist the migrated shape back to `config.json` immediately, so the wrap happens exactly
+   once — the next read sees `recording_sources` already present and skips migration (idempotent;
+   a config already at v2 is left unchanged).
+
+The migration is **additive and non-breaking**: the user re-enters nothing, and every top-level
+optional tool field (`calendar_tool`, `email_tool`, `crm_tool`, `enrichment_tool`, `aeo_tool`,
+`websearch_tool`, top-level `last_sync`) carries over unchanged. This mirrors the existing
+`index.json` `schema_version` precedent as the versioning seam for future schema changes.
+
 `~~enrichment` (e.g. Bitscale, Clay, ZoomInfo, Apollo) grounds `call-prep` with firmographics
 and signals; if none is connected, `call-prep` still enriches via Claude's built-in web search
 (OSINT) — no connector required. `~~aeo` (HubSpot AEO) supplies the answer-engine query side of
