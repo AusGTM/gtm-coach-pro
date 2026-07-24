@@ -77,6 +77,17 @@ Every call has a stable **call ID** (see `mcp-discovery.md` §5). Maintain
 
 Never create duplicate call files for the same ID.
 
+**File-ID sources (e.g. `source: google-drive`).** For a call whose source has a stable file
+identifier, the call ID **is** `notes_doc_id` — the notes-doc's Drive file id (per
+`mcp-discovery.md` §5 `id_field: file_id`) — never a synthesized title+date. The
+`slug(title)+ISO_date+duration` fallback in `mcp-discovery.md` §5 applies only to sources that
+lack a stable id; Drive provides one, so that fallback never applies to a `google-drive` call.
+Re-ingest follows the same rule above keyed on that id: an unchanged `modifiedTime`/content hash
+yields one call record (skip); a changed `modifiedTime`/content hash re-ingests into the **same**
+call record — update in place, bump `updated_at` — never a second call file for the same notes
+doc. Note: transcript_doc_id is never the call/dedup id; it is a secondary paired artifact only (see
+`drive-source.md` `## Dedup key`).
+
 ## index.json schema
 
 ```json
@@ -122,7 +133,8 @@ Never create duplicate call files for the same ID.
       "duration_min": 42, "source": "<vendor>",
       "has_transcript": true, "content_hash": "<hash>",
       "talk_ratio_rep": 0.58, "next_step_set": true,
-      "spiced_coverage": ["situation","pain"], "file": "calls/2026-02-09_acme-discovery.md"
+      "spiced_coverage": ["situation","pain"], "file": "calls/2026-02-09_acme-discovery.md",
+      "notes_doc_id": "<drive file id>"
     }
   ],
   "metrics": {
@@ -134,6 +146,10 @@ Never create duplicate call files for the same ID.
   ]
 }
 ```
+
+`notes_doc_id` is additive and optional, present only when a `calls[]` entry's `source ==
+"google-drive"`; for such an entry the entry's `id` equals `notes_doc_id` (see `## Dedup rule`).
+Absent for every other source.
 
 Keep `index.json` authoritative for numbers and querying. Keep markdown authoritative for
 narrative and nuance. When they disagree, regenerate the index from the markdown.
@@ -185,6 +201,10 @@ type: discovery
 source: <vendor>
 has_transcript: true
 talk_ratio_rep: 0.58
+# The block below is additive and optional — present only when source is google-drive,
+# absent for every other source.
+source: google-drive          # gating value for the fields below
+notes_doc_id: "<drive file id>"   # == call_id for a Drive-sourced call (see ## Dedup rule)
 ---
 # Acme Discovery — 2026-02-09
 
