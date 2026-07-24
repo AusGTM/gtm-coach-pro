@@ -62,6 +62,17 @@ this point (ingest, dedup, patterns, every other skill) stays source-unaware:
 Show the privacy/consent summary from `memory-bank.md` (local storage, recording-consent
 reminder, gitignore, optional redaction). Get explicit acknowledgement before ingesting.
 
+**Re-surface, scoped to Drive, when a new source is bound to an already-consented bank.** The
+gate above runs once per bank on first init. If a Drive `~~meeting recording` source is newly
+bound to a bank that already passed this gate for a different source (e.g. tl;dv), that prior
+acknowledgement does not cover Google Drive — re-show a short, scoped note before any Drive
+data is ingested: "This bank now also reads from Google Drive" plus the Drive-specific privacy
+terms from `memory-bank.md` (read scope limited to the resolved recordings folder, Google's own
+data-handling terms govern the source, GTM Coach's local-only guarantee governs everything
+after ingestion). This is not a full re-onboarding — only the Drive-scoped note, requiring
+acknowledgement before Step 4 touches Drive. Record the added source in `PRIVACY.md` so a
+bank's `PRIVACY.md` reflects every source it has ever ingested from.
+
 ## Step 4 — Initialize the bank and ingest 90 days
 
 1. Create `sales-memory/` with `config.json`, `index.json` (empty skeleton), `.gitignore`,

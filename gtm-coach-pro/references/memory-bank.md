@@ -69,7 +69,7 @@ they are the `call_ids` of deals with `stage: closed-won` in `index.json`.
 
 ## Dedup rule
 
-Every call has a stable **call ID** (see `mcp-discovery.md` §3). Maintain
+Every call has a stable **call ID** (see `mcp-discovery.md` §5). Maintain
 `index.json.calls[]` keyed by that ID. Before writing a call, check the index:
 - If the ID exists and content hash is unchanged → skip.
 - If the ID exists but the summary/transcript changed → update in place, bump `updated_at`.
@@ -235,5 +235,20 @@ On first init, write `PRIVACY.md` and `.gitignore` into `sales-memory/`.
   already connected.
 - **Redaction option:** offer to redact personal data (emails, phone numbers, personal
   names of non-buying-committee individuals) from stored files on request; store a
-  `redaction: on` flag in `config.json` and apply it during writes when enabled.
+  `redaction: on` flag in `config.json` and apply it during writes when enabled. When the
+  bound source is `source_kind: drive_folder`, redaction also scrubs inline Google Doc
+  comment/suggestion text and non-buying-committee speaker names captured in the Gemini
+  notes/transcript body — not only emails and phone numbers, since Doc comments and
+  auto-transcribed speaker labels are new surface a purpose-built recording API never exposed.
+- **Re-surfaces per newly added source, not just once per bank:** the consent gate above runs
+  on first init. If a source is added to a bank that already passed the gate for a different
+  source (e.g. Drive added to a bank consented for tl;dv), the gate re-shows scoped to the new
+  source before that source's data is ingested — see `gtm-coach/SKILL.md` Step 3.
+- **Drive read scope:** for a `source_kind: drive_folder` source, reads are scoped strictly to
+  the resolved recordings folder (`config.json`'s `root_folder_id`) — never broadened to search
+  all of Drive.
+- **Google's terms vs. GTM Coach's guarantee:** Google's own data-handling terms govern the
+  Drive source itself (what Google does with the Doc before GTM Coach reads it); GTM Coach's
+  local-only guarantee governs everything after ingestion. The two are separate — read scope
+  and redaction control the latter, not the former.
 - Deleting the `sales-memory/` folder removes all stored memory.
