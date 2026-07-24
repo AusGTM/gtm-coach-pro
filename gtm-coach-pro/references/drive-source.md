@@ -104,19 +104,50 @@ Mapping rule:
 - Gemini's Aligned/Needs Further Discussion/Disagreed/Shelved labels are kept labeled as
   **Gemini's own inference layer**, never presented as the rep's or the buyer's own assessment.
 
-## Transcript pairing — happy path (PARSE-04)
+## Transcript pairing — full heuristic (PARSE-04)
 
-The transcript is a **separate Google Doc** from the notes doc. In the current (2026) folder
-model, both live in the same **per-meeting subfolder**, so the transcript pairs by shared-parent
-**subfolder** co-location: list the notes doc's parent folder, and a sibling file whose name or
-content indicates a transcript is the pair.
+The transcript is a **separate Google Doc** from the notes doc, related only by Drive metadata —
+there is no explicit "transcript for this call" foreign key. Try the following cases **in order,
+stopping at the first match**:
+
+1. **Single-doc / embedded case.** The notes doc itself contains an embedded transcript section
+   (some workspace configs produce one Doc with both). If found, `transcript_doc_id =
+   notes_doc_id` — no separate file to pair.
+2. **New-model subfolder case (current default going forward).** If the notes doc's parent is a
+   per-meeting subfolder, list siblings in that subfolder. A sibling file whose name or MIME type
+   indicates a transcript (contains "Transcript", or is a plain-text/caption file) pairs by
+   shared-parent **subfolder co-location alone** — no filename guessing needed.
+3. **Legacy flat-folder case.** Older content lives in a flat folder where notes and transcript
+   files are siblings distinguished only by filename. Search the same parent folder for a file
+   whose title shares the **longest common prefix** with the notes doc's title (after **stripping
+   the ` - Notes by Gemini` suffix**) and whose `createdTime` falls **within ~24h** of the notes
+   doc's `createdTime`.
+4. **Unresolved.** None of the above found a candidate — proceed with `transcript_doc_id: null`,
+   `has_transcript: false`. Never block ingest of the notes-only call on a missing transcript.
+
+Pair on the **strongest structured signal** the connected Drive tool actually returns — shared
+parent folder first (case 2) — never on filename text alone as a first resort. Case 3 is the weak-
+signal fallback, used only when no subfolder co-location is available.
+
+### Ambiguity rule
+
+When only weak signals are available (case 3: title + same-day date), require **both** a title
+match **and** a date match before considering a candidate plausible. If, after applying that
+rule, **more than one plausible candidate** remains in the window — recurring meetings with
+identical titles, a renamed doc that still shares a prefix, same-day back-to-backs — do **not**
+auto-pair. Flag the ambiguous candidate set to the user and let them choose; never guess between
+multiple plausible transcripts.
 
 The notes doc is the **primary record** — it defines whether a call exists at all. The transcript
-is optional enrichment: a call ingests correctly even with no transcript paired
-(`has_transcript: false`). Never block ingest on a missing or unpaired transcript. The legacy
-flat-folder fallback (filename+date-window matching, no subfolder available) and ambiguous
--candidate flagging (more than one plausible transcript in scope) are Plan 03's expansion of this
-section.
+is optional enrichment: a call must ingest correctly with **zero, one, or an ambiguous set** of
+transcript candidates, and pairing must **never block** the whole call. Record which transcript
+file id (if any) paired to which call id — in the call's frontmatter and `index.json` — so a
+mispairing (or an unresolved/ambiguous case) is auditable and correctable later rather than
+silently baked in.
+
+The dedup identity stays the **notes-doc file id** (see Dedup key below); the transcript file id
+is a secondary paired artifact and is never used as the call id, even when pairing resolves
+cleanly.
 
 ## Provenance tag — core (TRUST-01)
 
