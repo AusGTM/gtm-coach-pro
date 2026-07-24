@@ -5,15 +5,15 @@ milestone_name: Google Meet / Gemini Notes Source
 current_phase: 01
 current_phase_name: discovery-config-schema-v2
 status: executing
-stopped_at: Completed 01-01-PLAN.md (Discovery + Config Schema v2 tracer)
-last_updated: "2026-07-24T02:02:33.105Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-07-24T02:08:46.000Z"
 last_activity: 2026-07-24
 last_activity_desc: Phase 01 execution started
 progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # Project State
@@ -28,11 +28,11 @@ See: .planning/PROJECT.md (updated 2026-07-24)
 ## Current Position
 
 Phase: 01 (discovery-config-schema-v2) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 Status: Ready to execute
 Last activity: 2026-07-24 — Phase 01 execution started
 
-Progress: [███░░░░░░░] 33%
+Progress: [███████░░░] 67%
 
 ## Accumulated Context
 
@@ -46,6 +46,9 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent:
 - Roadmap: 5 phases — research's Phase 6 "scheduling note" folded into Phase 5 (no new mechanism, same phase as the sync loop it documents).
 - [Phase ?]: source_kind discriminator inserted as mcp-discovery.md new §3 (renumbering §3-6 to §4-7) so it's determined before the probe step that persists it
 - [Phase ?]: config.json v2 example kept to one drive_folder recording_sources[] entry per tracer scope; api-source parity described in prose, full multi-entry/migration example deferred to Plan 02
+- [Phase ?]: 01-02: Folder-resolution ladder placed as new mcp-discovery.md §4 immediately after §3's discriminator, renumbering §4-7 to §5-8
+- [Phase ?]: 01-02: Drive capability-bucket remap table placed inside §3 (source_kind) rather than merged into §1's baseline api-source buckets table
+- [Phase ?]: 01-02: Migration-on-read rule placed directly after the v2 JSON schema block it migrates into, in the renumbered §5 (Probe)
 
 ### Pending Todos
 
@@ -67,8 +70,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-24T02:02:33.099Z
-Stopped at: Completed 01-01-PLAN.md (Discovery + Config Schema v2 tracer)
+Last session: 2026-07-24T02:08:34.358Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
 
 ## Performance Metrics
@@ -76,3 +79,4 @@ Resume file: None
 | Plan | Duration | Tasks | Files |
 |------|----------|-------|-------|
 | Phase 01 P01 | 20min | 1 tasks | 4 files |
+| Phase 01 P02 | 25min | 3 tasks | 2 files |
