@@ -33,8 +33,8 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 
 ### Initial Ingest (INGEST)
 
-- [ ] **INGEST-01**: First-time setup ingests the last 90 days of Gemini notes from Drive into `sales-memory/`, at parity with API sources
-- [ ] **INGEST-02**: Ingest works for a Drive-only bank and for a Drive + existing API-source bank, sharing the same write / dedup / rollup path
+- [x] **INGEST-01**: First-time setup ingests the last 90 days of Gemini notes from Drive into `sales-memory/`, at parity with API sources
+- [x] **INGEST-02**: Ingest works for a Drive-only bank and for a Drive + existing API-source bank, sharing the same write / dedup / rollup path
 
 ### Sync Parity (SYNC)
 
@@ -79,8 +79,8 @@ Which phases cover which requirements. Filled during roadmap creation.
 | TRUST-02 | Phase 1 | Complete |
 | SCHEMA-01 | Phase 3 | Complete |
 | SCHEMA-02 | Phase 3 | Complete |
-| INGEST-01 | Phase 4 | Pending |
-| INGEST-02 | Phase 4 | Pending |
+| INGEST-01 | Phase 4 | Complete |
+| INGEST-02 | Phase 4 | Complete |
 | SYNC-01 | Phase 5 | Pending |
 | SYNC-02 | Phase 5 | Pending |
 | SYNC-03 | Phase 5 | Pending |

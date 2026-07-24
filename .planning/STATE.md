@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v0.6.0
 milestone_name: Google Meet / Gemini Notes Source
-current_phase: 4
+current_phase: 04
 current_phase_name: Initial Ingest — gtm-coach Setup
-status: executing
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-07-24T03:15:56.305Z"
+status: verifying
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-07-24T03:21:06.733Z"
 last_activity: 2026-07-24
-last_activity_desc: Phase 3 complete, transitioned to Phase 4
+last_activity_desc: Phase 04 execution started
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
+  total_phases: 4
+  completed_phases: 4
+  total_plans: 8
+  completed_plans: 8
 ---
 
 # Project State
@@ -23,14 +23,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-24)
 
 **Core value:** Coaching grounded in the seller's own calls — evidence-first, from the local memory bank.
-**Current focus:** Phase 03 — Memory Bank Schema Additions
+**Current focus:** Phase 04 — Initial Ingest — gtm-coach Setup
 
 ## Current Position
 
-Phase: 4 — Initial Ingest — gtm-coach Setup
-Plan: Not started
-Status: Ready to execute
-Last activity: 2026-07-24 — Phase 3 complete, transitioned to Phase 4
+Phase: 04 (Initial Ingest — gtm-coach Setup) — EXECUTING
+Plan: 1 of 1
+Status: Phase complete — ready for verification
+Last activity: 2026-07-24 — Phase 04 execution started
 
 Progress: [██████████] 100%
 
@@ -56,6 +56,7 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent:
 - [Phase ?]: Decisions disambiguation nested as a subsection under the semantic-role parse section, not a standalone top-level heading, since it refines one row of the parse table
 - [Phase ?]: drive-source.md pairing/provenance section headings renamed from tracer's happy-path/core framing to the full-heuristic/write-time-contract framing (Plan 03) — no external file referenced the old heading text
 - [Phase ?]: Drive call dedup keys on notes_doc_id (never synthesized title+date); transcript_doc_id is never the dedup id
+- [Phase ?]: gtm-coach Step 4 branches ingest by source_kind (api unchanged, drive_folder via drive-source.md), loops recording_sources[], and Step 1 gains an add-a-source entry point — Drive-only and Drive+API banks share one write/dedup/rollup path (INGEST-01/02)
 
 ### Pending Todos
 
@@ -77,8 +78,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-24T02:58:14.069Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-07-24T03:21:06.726Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None
 
 ## Performance Metrics
@@ -92,3 +93,4 @@ Resume file: None
 | Phase 02-drive-source-pairing-parsing-contract P02 | 6min | 2 tasks | 1 files |
 | Phase 02 P03 | 6min | 2 tasks | 1 files |
 | Phase 03 P01 | 3min | 2 tasks | 1 files |
+| Phase 04-initial-ingest-gtm-coach-setup P01 | 20min | 3 tasks | 1 files |

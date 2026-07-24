@@ -99,7 +99,7 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
 **Plans**: 1 plan
 **Wave 1**
 
-- [ ] 04-01-PLAN.md — Wire the Drive `source_kind` branch into `gtm-coach` Step 4 (calls `drive-source.md`, 90-day window, shared write/dedup/rollup path), loop over `recording_sources[]` for Drive-only + Drive+API, and an add-source-to-an-existing-bank entry (INGEST-01, INGEST-02)
+- [x] 04-01-PLAN.md — Wire the Drive `source_kind` branch into `gtm-coach` Step 4 (calls `drive-source.md`, 90-day window, shared write/dedup/rollup path), loop over `recording_sources[]` for Drive-only + Drive+API, and an add-source-to-an-existing-bank entry (INGEST-01, INGEST-02)
 
 ### Phase 5: Sync Parity — Incremental, Backfill, Scheduling
 
