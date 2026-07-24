@@ -40,12 +40,34 @@ whitelist.
 
 - If exactly one recording source is found, use it.
 - If several are found, ask the user once which one to use (or whether to merge across all),
-  then remember the choice in `sales-memory/config.json` under `recording_source`.
+  then remember the choice in `sales-memory/config.json` under `recording_sources[]` (schema v2
+  — see §4).
 - If none is found, tell the user plainly: "I don't see a meeting-recording tool connected.
   Connect one (tl;dv, Otter, Fireflies, Fathom, Zoom, Gong, etc.) in your Connectors
   settings, then run setup again." Do not fabricate data.
 
-## 3. Probe the chosen tool's shape before bulk use
+## 3. Determine `source_kind`
+
+Every bound `~~meeting recording` source carries a `source_kind` so downstream skills (gtm-coach,
+sync-memory) branch at one point instead of special-casing by vendor. Exactly two values exist
+today:
+
+- `"api"` — the source exposes purpose-built `list_calls`/`get_summary`/`get_transcript`/
+  `get_call_detail` tools (tl;dv, Otter, Fireflies, Gong, and the other vendors listed above).
+- `"drive_folder"` — the source is a generic document store you list/search and export rather
+  than a purpose-built call API (e.g. Google Drive holding Google Meet's Gemini `Notes by
+  Gemini` docs).
+
+A `drive_folder` source is discovered by the SAME capability probe as every other source (§4
+below): bind it by its probed capability shape (list/search files, export doc content, read file
+metadata), and persist its *actual* tool names into `tool_map`. Do not hardcode any single Drive
+tool name as a required binding key — any Drive tool name mentioned in this doc is a
+non-exhaustive example of the shape to map, exactly like the vendor tool-name fragments in the
+table above. A `drive_folder` source resolves its recordings folder by searching a short list of
+known candidate folder names (never a single hardcoded name) and records the resolved
+`root_folder_id` alongside its `tool_map` (the full candidate ladder is specified separately).
+
+## 4. Probe the chosen tool's shape before bulk use
 
 MCP tools vary in pagination, date filtering, and field names. Before ingesting at scale:
 
@@ -56,27 +78,37 @@ MCP tools vary in pagination, date filtering, and field names. Before ingesting 
    dedup. If no stable ID exists, synthesize one: `slug(title)+"_"+ISO_date+"_"+duration`.
 4. Note whether transcripts are available. Prefer transcripts; fall back to summaries.
 
-Record the resolved field mapping in `sales-memory/config.json` so later runs skip
-re-probing:
+Record the resolved field mapping in `sales-memory/config.json` (schema v2) so later runs skip
+re-probing. `recording_sources` is an array — one entry per bound recording source, each
+carrying `source_kind`. An `api` source keeps the same fields v1 had (`vendor`, `tool_map`,
+`id_field`, `supports_transcripts`, `last_sync`), now nested as an array entry with
+`source_kind: "api"`. Below is the schema showing `config_schema_version: 2` and one
+`drive_folder` entry:
 
 ```json
 {
-  "recording_source": "<vendor or tool prefix>",
-  "tool_map": {
-    "list_calls": "<exact tool name>",
-    "get_summary": "<exact tool name>",
-    "get_transcript": "<exact tool name or null>",
-    "get_call_detail": "<exact tool name or null>"
-  },
-  "id_field": "<field name used as call ID>",
-  "supports_transcripts": true,
+  "config_schema_version": 2,
+  "recording_sources": [
+    {
+      "source_kind": "drive_folder",
+      "vendor": "google-drive",
+      "tool_map": {
+        "list_files": "<exact tool name>",
+        "export_doc": "<exact tool name>",
+        "get_file_metadata": "<exact tool name or null>"
+      },
+      "id_field": "file_id",
+      "root_folder_id": "<resolved Drive folder ID>",
+      "supports_transcripts": true,
+      "last_sync": null
+    }
+  ],
   "calendar_tool": "<name or null>",
   "email_tool": "<name or null>",
   "crm_tool": "<name or null>",
   "enrichment_tool": "<name or null>",
   "aeo_tool": "<name or null>",
-  "websearch_tool": "<name or null>",
-  "last_sync": null
+  "websearch_tool": "<name or null>"
 }
 ```
 
@@ -88,7 +120,7 @@ and signals; if none is connected, `call-prep` still enriches via Claude's built
 user-pasted export, or runs CI-only. `~~websearch` (Parallel, Exa, Tavily, Perplexity) is the
 preferred proxy engine — it can reach sources built-in search is blocked from (e.g. Reddit).
 
-## 4. Pagination & rate discipline
+## 5. Pagination & rate discipline
 
 - Always paginate to completion when ingesting a window; never assume the first page is all.
 - Pull in batches. After each batch, write results to the memory bank before fetching the
@@ -96,7 +128,7 @@ preferred proxy engine — it can reach sources built-in search is blocked from 
 - If a tool errors or rate-limits, back off, report how far you got, and record progress in
   `config.json` (`last_sync` / a `cursor`) so the next run resumes.
 
-## 5. Scope filtering
+## 6. Scope filtering
 
 - Only ingest calls that look like external sales conversations when possible (has external
   attendees, or title/summary signals a prospect/customer). Skip internal standups, 1:1s,
@@ -104,7 +136,7 @@ preferred proxy engine — it can reach sources built-in search is blocked from 
 - For leader use, ingest team members' calls if the connected tool exposes them; otherwise
   ingest the calls the tool grants access to and note the limitation.
 
-## 6. Privacy gate
+## 7. Privacy gate
 
 Before the first ingest, surface the privacy note from `memory-bank.md` (recording-consent /
 two-party-consent reminder, local storage, gitignore). Proceed only after the user

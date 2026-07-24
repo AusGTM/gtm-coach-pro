@@ -8,7 +8,7 @@ writes to. It is **human-readable markdown for narrative + a JSON index for fast
 
 ```
 sales-memory/
-  config.json                 # tool mapping, recording source, last_sync (see mcp-discovery.md)
+  config.json                 # config_schema_version, recording_sources[], last_sync (see mcp-discovery.md)
   index.json                  # the queryable index — deals, contacts, calls, metrics, timeline
   accounts/
     <account-slug>.md         # one file per company/account

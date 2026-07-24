@@ -15,7 +15,7 @@ GTM Coach adapts.
 
 | Category | Placeholder | Required? | Options (examples — not a whitelist) |
 |----------|-------------|-----------|--------------------------------------|
-| Meeting recording / conversation intelligence | `~~meeting recording` | **Required** | tl;dv, Otter, Fireflies, Fathom, Gong, Chorus, Avoma, Grain, Zoom (IQ / cloud recordings), Microsoft Teams, Google Meet, Read.ai, Sembly, Circleback |
+| Meeting recording / conversation intelligence | `~~meeting recording` | **Required** | tl;dv, Otter, Fireflies, Fathom, Gong, Chorus, Avoma, Grain, Zoom (IQ / cloud recordings), Microsoft Teams, Google Meet, Read.ai, Sembly, Circleback, Google Drive / Gemini `Notes by Gemini` (document store) |
 | Calendar | `~~calendar` | Optional | Google Calendar, Microsoft 365 / Outlook |
 | Email | `~~email` | Optional | Gmail, Microsoft 365 / Outlook |
 | CRM | `~~crm` | Optional | Salesforce, HubSpot, Close, Pipedrive |
@@ -28,7 +28,10 @@ GTM Coach adapts.
 - **`~~meeting recording` (required)** — the source of all call data. Without it GTM Coach has
   nothing to ingest. GTM Coach reads call lists, summaries, and full transcripts when
   available (falling back to summaries). It never assumes vendor-specific tool names; it maps
-  them on setup.
+  them on setup. One shape of this connector is a document store rather than a purpose-built
+  recording API — Google Drive / Gemini `Notes by Gemini` binds as `source_kind: drive_folder`
+  (list/search files, export doc content) instead of `source_kind: api`; see
+  `references/mcp-discovery.md`.
 - **`~~calendar` (optional)** — lets `call-prep` find your upcoming meetings automatically and
   match attendees to the memory bank.
 - **`~~email` (optional)** — lets `call-debrief` save follow-up drafts (never sends without

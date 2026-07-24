@@ -44,7 +44,9 @@ categories — `~~meeting recording` (required), and `~~calendar` / `~~email` / 
 `~~enrichment` / `~~aeo` / `~~websearch` if present (see `CONNECTORS.md`). If no `~~meeting recording` tool is connected, stop and tell the
 user to connect one (name examples: tl;dv, Otter, Fireflies, Fathom, Zoom, Gong). If several,
 ask which to use. Probe the chosen tool's shape (pagination, date filter, ID field,
-transcript availability).
+transcript availability). A bound source may be `source_kind: drive_folder` (a Google Drive /
+Gemini notes folder) rather than a purpose-built recording API — follow `mcp-discovery.md` for
+its discovery and folder resolution.
 
 ## Step 3 — Privacy gate
 
