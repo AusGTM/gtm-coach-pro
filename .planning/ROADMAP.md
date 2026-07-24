@@ -55,7 +55,7 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
   4. Given a notes doc with one unambiguous transcript-doc candidate, the procedure pairs them automatically; given more than one plausible candidate, it flags the ambiguity to the user instead of guessing.
   5. The resulting call record marks transcript-sourced text as verbatim and notes-doc content as paraphrase, so no downstream skill can present Gemini's AI summary as an exact buyer quote.
 
-**Plans**: 2/3 plans executed
+**Plans**: 3/3 plans executed
 
 **Wave 1**
 
@@ -67,7 +67,7 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
 
 **Wave 3** *(blocked on Wave 2)*
 
-- [ ] 02-03-PLAN.md — Full transcript-pairing heuristic + ambiguity flagging; full provenance write-time contract binding battlecards/playbook-builder/voice-of-customer (PARSE-04, TRUST-01)
+- [x] 02-03-PLAN.md — Full transcript-pairing heuristic + ambiguity flagging; full provenance write-time contract binding battlecards/playbook-builder/voice-of-customer (PARSE-04, TRUST-01)
 
 ### Phase 3: Memory Bank Schema Additions
 
@@ -117,7 +117,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|-----------------|--------|-----------|
 | 1. Discovery + Config Schema v2 | 3/3 | Complete    | 2026-07-24 |
-| 2. Drive Source — Pairing + Parsing Contract | 2/3 | In Progress|  |
+| 2. Drive Source — Pairing + Parsing Contract | 3/3 | In Progress|  |
 | 3. Memory Bank Schema Additions | 0/TBD | Not started | - |
 | 4. Initial Ingest — gtm-coach Setup | 0/TBD | Not started | - |
 | 5. Sync Parity — Incremental, Backfill, Scheduling | 0/TBD | Not started | - |
