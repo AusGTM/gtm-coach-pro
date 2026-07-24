@@ -32,7 +32,7 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
   3. A `config.json` written under the old singular `recording_source` shape is read and migrated in place to `recording_sources[]` (schema v2) without the user re-entering existing tool config.
   4. When a Drive source is first bound to a bank that already passed the privacy/consent gate for another tool, Drive-scoped consent language re-surfaces before any Drive data is ingested.
 
-**Plans**: 2/3 plans executed
+**Plans**: 3/3 plans executed
 **Wave 1**
 
 - [x] 01-01-PLAN.md — Tracer: end-to-end `source_kind: drive_folder` binding + `recording_sources[]` v2 seam across all four docs
@@ -40,7 +40,7 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
 **Wave 2** *(blocked on Wave 1 completion)*
 
 - [x] 01-02-PLAN.md — Discovery contract hardening: folder-resolution candidate ladder, non-breaking v1→v2 config migration, Drive capability-bucket remap
-- [ ] 01-03-PLAN.md — gtm-coach Step 2 `source_kind` branch + Drive-scoped privacy-gate re-surface and redaction extension
+- [x] 01-03-PLAN.md — gtm-coach Step 2 `source_kind` branch + Drive-scoped privacy-gate re-surface and redaction extension
 
 ### Phase 2: Drive Source — Pairing + Parsing Contract
 
@@ -104,7 +104,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|-----------------|--------|-----------|
-| 1. Discovery + Config Schema v2 | 2/3 | In Progress|  |
+| 1. Discovery + Config Schema v2 | 3/3 | In Progress|  |
 | 2. Drive Source — Pairing + Parsing Contract | 0/TBD | Not started | - |
 | 3. Memory Bank Schema Additions | 0/TBD | Not started | - |
 | 4. Initial Ingest — gtm-coach Setup | 0/TBD | Not started | - |

@@ -24,7 +24,7 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 ### Trust & Provenance (TRUST)
 
 - [ ] **TRUST-01**: Ingested content is tagged by provenance (transcript-verbatim vs. notes-AI-paraphrase) so battlecards / playbook-builder / voice-of-customer never present paraphrase as "exact buyer language"
-- [ ] **TRUST-02**: The privacy/consent gate re-surfaces, scoped to Drive, when a Drive source is first bound to a bank that already passed the gate for another tool
+- [x] **TRUST-02**: The privacy/consent gate re-surfaces, scoped to Drive, when a Drive source is first bound to a bank that already passed the gate for another tool
 
 ### Memory Schema (SCHEMA)
 
@@ -76,7 +76,7 @@ Which phases cover which requirements. Filled during roadmap creation.
 | PARSE-03 | Phase 2 | Pending |
 | PARSE-04 | Phase 2 | Pending |
 | TRUST-01 | Phase 2 | Pending |
-| TRUST-02 | Phase 1 | Pending |
+| TRUST-02 | Phase 1 | Complete |
 | SCHEMA-01 | Phase 3 | Pending |
 | SCHEMA-02 | Phase 3 | Pending |
 | INGEST-01 | Phase 4 | Pending |
