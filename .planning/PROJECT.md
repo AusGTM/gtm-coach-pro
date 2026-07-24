@@ -45,7 +45,7 @@ Coaching grounded in the seller's own calls: every brief, playbook, battlecard, 
 
 **Milestone v0.6.0 — Google Meet / Gemini Notes Source**
 
-- [ ] Discover Google Drive as a `~~meeting recording` source; detect the `Meet Recordings/` folder at setup
+- [x] Discover Google Drive as a `~~meeting recording` source; detect the `Meet Recordings/` folder at setup — validated in Phase 1
 - [ ] Parse the "Notes by Gemini" Google Doc (summary, details, action items, next steps, attendees) into the SPICED call schema
 - [ ] Pair and ingest the separate transcript doc/file per meeting for verbatim buyer language
 - [ ] Full sync parity: 90-day initial ingest, incremental dedup (by Doc/meeting ID), backfill windows, scheduled refresh
@@ -104,4 +104,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-07-24 after bootstrapping .planning/ and starting milestone v0.6.0*
+*Last updated: 2026-07-24 after Phase 1 (Discovery + Config Schema v2) complete*
