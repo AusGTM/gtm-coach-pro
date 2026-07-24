@@ -69,9 +69,24 @@ branch):
    Report: N new, M updated, K skipped per source, and any new risk flags raised.
 
 ### Backfill (`backfill` / "go further back")
+
 Same pipeline, but for an explicit older window the user names (e.g. "last 12 months", a
-date range). Walk backward in batches, writing after each batch so it's resumable. Respect
-dedup so overlapping windows don't duplicate. Report the new earliest date in memory.
+date range). Branch by `source_kind`, same as Incremental:
+
+- **`source_kind: "api"`** (existing behavior, unchanged): walk backward in batches for the
+  named window, dedup by call ID.
+
+- **`source_kind: "drive_folder"`**: run the SAME Drive listing as the Incremental branch above,
+  but bounded by the explicit older date window the user names (`createdTime` within the
+  requested `[start, end]` range) instead of by `last_sync`, ingesting into the existing bank
+  through the shared write/dedup/rollup path so overlapping windows never duplicate. Over a
+  long backfill window, recurring meetings with identical titles can produce multiple candidate
+  transcripts for the same notes doc — pairing MUST route through `references/drive-source.md`'s
+  Ambiguity rule, which flags the ambiguous candidate set to the user instead of
+  guessing/cross-pairing.
+
+Walk backward in batches, writing after each batch so it's resumable. Respect dedup so
+overlapping windows don't duplicate. Report the new earliest date in memory, per source.
 
 ## After syncing
 
@@ -99,3 +114,14 @@ Pick the scheduled-agent path unless the user specifically wants OS-level cron.
 - Always paginate to completion. Never assume page one is the whole window.
 - Save progress to `config.json` if interrupted so the next run resumes, not restarts.
 - Never duplicate a call already in the index.
+
+### Rate limits & resumability (Drive)
+
+The `drive_folder` branch REUSES the generic batch-write + resume-from-cursor discipline
+already specified in `references/mcp-discovery.md` §6 — paginate to completion, pull in
+batches, write after each batch, and record progress (that source's `last_sync` / a cursor) in
+`config.json` so the next run resumes rather than restarts — applied to Drive `list`/`export`
+calls. On a Drive `403` or `429` rate-limit response specifically, apply exponential backoff and
+resume from the saved cursor / that source's `last_sync` rather than failing the whole sync.
+This is the same discipline the `api` branch already follows, pointed at Drive's per-user
+quota — not a new code path.
