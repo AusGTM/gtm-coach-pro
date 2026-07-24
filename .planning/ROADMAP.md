@@ -12,7 +12,7 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Discovery + Config Schema v2** - Bind a Drive-capable tool to `~~meeting recording`, resolve the Meet-notes folder across all migration states, migrate config to `recording_sources[]`, re-surface the privacy gate for Drive
+- [x] **Phase 1: Discovery + Config Schema v2** - Bind a Drive-capable tool to `~~meeting recording`, resolve the Meet-notes folder across all migration states, migrate config to `recording_sources[]`, re-surface the privacy gate for Drive (completed 2026-07-24)
 - [ ] **Phase 2: Drive Source — Pairing + Parsing Contract** - Detect and export a Gemini notes doc, parse it into SPICED by semantic role, pair it to its transcript, and tag provenance (verbatim vs. paraphrase)
 - [ ] **Phase 3: Memory Bank Schema Additions** - Add optional Drive fields to the call schema and lock the file-ID dedup rule before any ingest code depends on it
 - [ ] **Phase 4: Initial Ingest — gtm-coach Setup** - First-time 90-day ingest from Drive, alone or alongside an existing API source, proven end to end against a real/sample Gemini notes doc
@@ -104,7 +104,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|-----------------|--------|-----------|
-| 1. Discovery + Config Schema v2 | 3/3 | In Progress|  |
+| 1. Discovery + Config Schema v2 | 3/3 | Complete    | 2026-07-24 |
 | 2. Drive Source — Pairing + Parsing Contract | 0/TBD | Not started | - |
 | 3. Memory Bank Schema Additions | 0/TBD | Not started | - |
 | 4. Initial Ingest — gtm-coach Setup | 0/TBD | Not started | - |
