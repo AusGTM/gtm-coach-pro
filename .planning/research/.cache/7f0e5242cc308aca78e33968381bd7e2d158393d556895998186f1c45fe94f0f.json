@@ -1,0 +1,1 @@
+{"content":"Drive API v3 quota: ~1M units/min per project, 325,000 units/min per user, ~12,000 queries/60s per user; exceeding returns 403 User rate limit exceeded or 429 Too many requests (developers.google.com/workspace/drive/api/guides/limits).","source":"web","provider":"websearch","confidence":"MEDIUM","fetched_at":"2026-07-24T01:28:32.909Z","ttl":86400000,"kind":"web"}
