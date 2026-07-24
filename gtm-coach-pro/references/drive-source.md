@@ -32,20 +32,51 @@ never by a literal tool name. No single Drive method is a required binding key h
 tool name is a non-exhaustive shape hint, the same posture `mcp-discovery.md` §1/§3 takes toward
 every vendor's tool-name fragments.
 
-## Semantic-role parse — happy path (PARSE-02)
+## Semantic-role parse — full table (PARSE-02)
 
-Extract the exported text by **semantic role, not exact heading string**. For this tracer's
-happy path, two roles matter:
+Extract the exported text by **semantic role, not exact heading string**. The matching rule:
+match loosely on synonyms of the heading text (not a fixed vocabulary) and on the list/paragraph
+structure that follows a heading, tolerating reordered sections, added sections not in this table,
+and localized (non-English) headings. Nothing here depends on an exact heading string ever
+existing in the doc.
 
-- The **Summary / Overview** block → the call file's `## Summary`.
-- The **Next steps / Action items** block → `## Commitments & next steps` in the call file, plus
-  `next_step` in `index.json`.
+| Section role (synonyms) | Target field(s) | Coverage grade |
+|---|---|---|
+| Summary / Overview / Recap | `## Summary` (narrative recap) | HIGH — strongest, most reliably-present section |
+| Details / Discussion / Notes | SPICED `Situation` (current-state/tech-stack context, if discussed) | SPARSE–MEDIUM — inferred from prose, not a tagged field |
+| Details / Discussion / Notes | SPICED `Pain` (problem language, if discussed) | SPARSE — inferred from prose; transcript is the fallback for verbatim pain quotes |
+| Details / Discussion / Notes | SPICED `Impact` (quantified $/time/risk, if spoken plainly) | SPARSE — do not expect structured quant data here |
+| Next steps / Action items / Follow-ups | `## Commitments & next steps` + `next_step` in `index.json` | HIGH — best-structured section, includes assignees |
+| Next steps (dated item) / Decisions (dated outcome) | SPICED `Critical Event` (only when tied to a date/deadline/renewal) | SPARSE–MEDIUM — never a dedicated field, always derived |
+| Attendees / Participants | `attendees_internal` / `attendees_external` — split by matching each participant's email domain against the user's own domain (internal) vs. any other domain (external) | MEDIUM, format unverified — flag as an assumption to confirm against a real sample doc |
+| Decisions (Aligned/Disagreed/etc.) | See dedicated disambiguation below — never SPICED `Decision` | SPARSE (SPICED `Decision`) — see disambiguation |
 
-Matching is loose (a heading whose text loosely reads as "summary" or "next steps", not a fixed
-string), because the doc is a UI feature, not a versioned schema. The full SPICED role/synonym
-table — covering Situation, Pain, Impact, Critical Event, Decision — plus coverage grading and
-the graceful-degradation fallback (missing section → whole-body summary, narrower
-`spiced_coverage`, never a failed ingest) is Plan 02's expansion of this section.
+SPICED `Decision` (buying process: economic buyer, criteria, paper/legal/security) is **not
+natively captured** by any Gemini section — it must be inferred from Details prose or attendee
+roles, same as any source without a dedicated buying-process field, and is SPARSE.
+
+**This sparse Situation/Pain/Impact/Decision coverage is expected source variance, not a parse
+defect.** A `Notes by Gemini` doc has no sales-domain awareness — it summarizes whatever a
+general-purpose meeting assistant chose to surface, not what a sales-specific recorder is tuned to
+extract. Downstream SPICED-gap detection (`call-prep`, `pipeline-review`) should read a narrower
+`spiced_coverage` on a Drive-sourced call as expected-by-source, the same way a source without a
+dedicated field is already treated, not flag every Drive call as under-qualified.
+
+### Graceful degradation
+
+If **no heading in the exported doc matches any known synonym set** (Google changed the template,
+it's an unusual meeting type, or the tenant's locale renders unrecognized headings), the ingest
+does not fail:
+
+1. Dump the whole doc body (the entire exported text) into the call file's `## Summary`.
+2. Extract whatever SPICED elements can still be inferred from the prose (best-effort, no
+   structure to rely on).
+3. Record a **narrower `spiced_coverage`** list reflecting only what was actually found — the gap
+   is visible in the data, not silently assumed complete.
+
+A call must ingest with partial SPICED coverage rather than error, matching the plugin's existing
+"prefer transcripts; fall back to summaries" fallback posture. What wasn't found is noted, never
+silently dropped.
 
 ## Transcript pairing — happy path (PARSE-04)
 
