@@ -45,8 +45,10 @@ Look for `./sales-memory/index.json`.
 Follow `mcp-discovery.md`: enumerate connected MCP tools, bucket them, and bind the connector
 categories — `~~meeting recording` (required), and `~~calendar` / `~~email` / `~~crm` /
 `~~enrichment` / `~~aeo` / `~~websearch` if present (see `CONNECTORS.md`). If no `~~meeting recording` tool is connected, stop and tell the
-user to connect one (name examples: tl;dv, Otter, Fireflies, Fathom, Zoom, Gong). If several,
-ask which to use.
+user to connect one (name examples: tl;dv, Otter, Fireflies, Fathom, Zoom, Gong). If several are
+found, ask once which to use, OR whether to bind more than one (e.g. an API recorder AND Google
+Drive / Gemini notes, or merge across all) — each chosen source is persisted as its own
+`recording_sources[]` entry with its own `source_kind`, per `mcp-discovery.md` §2/§5.
 
 Once the `~~meeting recording` tool is bound, determine its `source_kind` per
 `mcp-discovery.md` §3 — this is the ONE place setup consults `source_kind`; everything after
@@ -84,9 +86,11 @@ bank's `PRIVACY.md` reflects every source it has ever ingested from.
    POSIX `sh`/sandboxed shells. Use one explicit `mkdir -p <path>` per directory, or just write
    each file (e.g. `calls/<id>.md`) and let the parent folder auto-create. See
    `memory-bank.md` → "Creating the layout (portability)".
-2. Ingest the **last 90 days** of calls. The ingest differs only in how calls are **listed and
-   fetched** — parsing, writing, dedup, and rollups are one shared path regardless of source.
-   Branch by the bound source's `source_kind`:
+2. Ingest the **last 90 days** of calls. For each source in `config.json.recording_sources[]`,
+   branch by its `source_kind` (`mcp-discovery.md` §3). The ingest differs only in how calls are
+   **listed and fetched** — parsing, writing, dedup, and rollups are one shared path regardless
+   of source. Ingest each source independently so one source's rate limit or failure doesn't
+   block another:
 
    - **`source_kind: "api"`** (existing behavior, unchanged):
      - Page through `list_calls` for the window. Filter to external sales conversations where
@@ -115,9 +119,17 @@ bank's `PRIVACY.md` reflects every source it has ever ingested from.
      `## Summary`/`## SPICED captured this call` (never quoted), and `has_transcript` reflects
      whether a transcript paired. Write after each batch so the run is resumable. There is no
      separate Drive write/dedup/rollup path — the Drive branch reuses this one.
+
+   All sources' calls converge on this ONE shared write/dedup/rollup path with no schema drift
+   between records — the same `index.json.calls[]` shape carries both, differing only by the
+   additive `source`/`notes_doc_id`/`transcript_doc_id`/`drive_folder_id` fields (present only
+   when `source == "google-drive"`) — and no separate Drive index or Drive-only downstream code
+   path.
 3. Build/refresh `patterns/*.md` rollups (win-loss, ICP, messaging, competitive, objections)
    from the ingested set.
-4. Set `config.json.last_sync` to now.
+4. Set each source's `last_sync` in `recording_sources[]` to now, and the top-level
+   `config.json.last_sync` to the most recent overall. This per-source last_sync is what
+   Phase 5's incremental sync will window on.
 
 Report progress as you go (e.g. "ingested 34/112 calls…"). If the tool rate-limits or errors,
 back off, save progress, and report how far you got.
