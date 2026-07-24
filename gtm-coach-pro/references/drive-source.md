@@ -78,6 +78,32 @@ A call must ingest with partial SPICED coverage rather than error, matching the 
 "prefer transcripts; fall back to summaries" fallback posture. What wasn't found is noted, never
 silently dropped.
 
+### Decisions-vs-Decision disambiguation (PARSE-03)
+
+Gemini's notes doc can carry a **"Decisions"** section (Aligned / Needs Further Discussion /
+Disagreed / Shelved). This is a real, structured signal — and a naming collision that would
+corrupt SPICED data if auto-mapped by name. The two concepts are not the same thing and must never
+be treated as interchangeable:
+
+- **Gemini "Decisions"** = MEETING-OUTCOME alignment reached in this call — did the room agree on
+  something, and what's its status (Aligned/Needs Further Discussion/Disagreed/Shelved)?
+- **SPICED "Decision"** = the BUYING PROCESS — economic buyer, decision criteria, competing
+  options, paper/legal/security/procurement steps and timing. See `spiced-framework.md`.
+
+Mapping rule:
+
+- Every item in Gemini's "Decisions" section routes to the call file's `## Signals` as a
+  meeting-outcome signal or risk: an "Aligned" item is a positive signal, a
+  "Disagreed"/"Shelved" item is a risk.
+- A Decisions item routes to `critical_event` **only** when it is explicitly tied to a
+  date/deadline/renewal — otherwise it stays in `## Signals` alone.
+- It is **never** auto-filed into the SPICED `decision` field. SPICED `Decision` is populated only
+  from an actual text match on procurement/buying-process language (economic buyer, criteria,
+  legal/security/paper) — the same rule any source without a dedicated buying-process field
+  already follows.
+- Gemini's Aligned/Needs Further Discussion/Disagreed/Shelved labels are kept labeled as
+  **Gemini's own inference layer**, never presented as the rep's or the buyer's own assessment.
+
 ## Transcript pairing — happy path (PARSE-04)
 
 The transcript is a **separate Google Doc** from the notes doc. In the current (2026) folder
