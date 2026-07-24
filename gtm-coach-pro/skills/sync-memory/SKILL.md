@@ -17,9 +17,13 @@ Bring the GTM Coach memory bank up to date, or extend it further back in time.
 Read `../../references/mcp-discovery.md` and `../../references/memory-bank.md`.
 
 Require `./sales-memory/index.json` and `config.json` to exist. If they don't, tell the user
-to run setup first (the `gtm-coach` skill). Load `config.json` for the saved `tool_map`,
-`id_field`, and `last_sync`. If the tool map is missing, re-run discovery from
-`mcp-discovery.md` and save it.
+to run setup first (the `gtm-coach` skill). Load `config.json`. If it is still the v1 singular
+shape (`recording_source`/`tool_map`/`id_field`/`last_sync`, no `recording_sources[]` array),
+migrate it once to the `recording_sources[]` shape per `mcp-discovery.md` §5 "Migrating a v1
+config on read" (idempotent — persist the wrapped shape back so the next read sees v2 already).
+Then iterate `config.json.recording_sources[]` — each entry carries its own `source_kind`,
+`tool_map`, `id_field`, and `last_sync`. If a source's `tool_map` is missing, re-run discovery
+from `mcp-discovery.md` for that source and save it.
 
 **Demo bank guard:** if `config.json.demo_mode` is `true`, do **not** sync — there is no live
 recording source. Tell the user this is the synthetic demo bank (loaded by `gtm-coach-demo`) and
@@ -29,16 +33,40 @@ real `gtm-coach` setup into a fresh directory. Stop there.
 ## Modes
 
 ### Incremental sync (default)
-1. Determine the window: from `last_sync` (minus a small overlap buffer, e.g. 2 days, to
-   catch late-processed recordings) to now.
-2. Page through `list_calls` for that window.
-3. For each call, dedup by call ID against `index.json.calls`:
-   - new → ingest fully; existing+unchanged (same content hash) → skip; existing+changed →
-     update in place and bump `updated_at`.
-4. Ingest = pull transcript (or summary), extract SPICED/signals/next-steps/talk-ratio, write
+
+For each source in `config.json.recording_sources[]`, branch by `source_kind`
+(`mcp-discovery.md` §3), windowing on THAT source's own `last_sync` (not the top-level
+`last_sync`), and ingest sources independently so one source's rate limit or failure never
+blocks another:
+
+- **`source_kind: "api"`** (existing behavior, unchanged): determine the window — from that
+  source's `last_sync` (minus a small overlap buffer, e.g. 2 days, to catch late-processed
+  recordings) to now — and page through `list_calls` for that window, dedup by call ID.
+
+- **`source_kind: "drive_folder"`**: window from that source's `last_sync` (minus the same
+  overlap buffer). List Gemini notes docs (title pattern `… Notes by Gemini`) scoped to
+  `root_folder_id` and `legacy_folder_id` if present (`mcp-discovery.md` §4), bounded to the
+  window by the doc's `createdTime`/`modifiedTime` via the tool's date-filter query — NOT a
+  full folder scan, so per-source `last_sync` is load-bearing at scale. For each in-window
+  notes doc, run `references/drive-source.md`'s detect→export→parse→pair→provenance procedure
+  (the same one `gtm-coach` Step 4 calls) to produce the identical SPICED call-record shape.
+  Name nothing by a literal Drive tool method — go through `drive-source.md` and the
+  `tool_map` capability buckets.
+
+**Shared write/dedup/rollup** (both branches converge here — stated once, never duplicated per
+branch):
+1. For each call, dedup by call ID against `index.json.calls` — for a `drive_folder` source the
+   call ID is the notes-doc file id (`notes_doc_id`) per `memory-bank.md`'s dedup rule, never a
+   synthesized title+date:
+   - new → ingest fully; existing+unchanged (same content hash / unchanged `modifiedTime`) →
+     skip; existing+changed (`modifiedTime` changed) → update in place, bump `updated_at` —
+     never a second call file for the same notes doc.
+2. Ingest = pull transcript (or summary), extract SPICED/signals/next-steps/talk-ratio, write
    the call file, upsert deal/account/people, update `index.json`.
-5. Refresh affected `patterns/*.md` rollups.
-6. Set `last_sync = now`. Report: N new, M updated, K skipped, and any new risk flags raised.
+3. Refresh affected `patterns/*.md` rollups.
+4. Set THAT source's `last_sync = now` in its `recording_sources[]` entry, and the top-level
+   `config.json.last_sync` to the most recent overall (used only for the orientation summary).
+   Report: N new, M updated, K skipped per source, and any new risk flags raised.
 
 ### Backfill (`backfill` / "go further back")
 Same pipeline, but for an explicit older window the user names (e.g. "last 12 months", a
