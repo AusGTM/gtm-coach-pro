@@ -102,10 +102,15 @@ silently — confirm first):
   skill (e.g. each morning before the workday). In Claude Code this is the `/schedule`
   capability; in Cowork, a scheduled task. Suggested prompt for the routine: *"Run the GTM
   Coach sync-memory skill: incremental sync since last run, then summarize new at-risk deals."*
+  For a `drive_folder` source, the bound Drive MCP tool (whatever was mapped at discovery) must
+  ALSO be reachable in that scheduled-agent context — the same reachability requirement already
+  given for an `api` recording tool; if it isn't, the scheduled incremental sync silently reads
+  nothing from that source (no error, just no new calls).
 - **OS cron (advanced, headless):** a daily `cron`/`launchd` job that invokes the assistant
   in headless mode with the same instruction, run from the directory containing
   `sales-memory/`. Note this requires the recording tool's MCP to be available in that
-  headless context.
+  headless context — including a bound `drive_folder` source's Drive MCP tool, not just an
+  `api` source's.
 
 Pick the scheduled-agent path unless the user specifically wants OS-level cron.
 
