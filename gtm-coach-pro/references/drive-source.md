@@ -1,0 +1,107 @@
+# Drive Source — Gemini Meet-notes ingestion contract
+
+This reference owns **how** a Google Drive / Gemini `Notes by Gemini` doc becomes one SPICED
+call record: detect it, export it, role-map it, pair its transcript, tag its provenance. The
+calling skills (`gtm-coach` setup, `sync-memory`) own **when** to run it — first-time 90-day
+ingest, incremental sync, or backfill. This mirrors the `aeo-proxy.md` split: skills decide the
+schedule, this doc decides the procedure.
+
+## When to use this
+
+Applies only to a bound `~~meeting recording` source whose `source_kind` resolved to
+`drive_folder` in `mcp-discovery.md`. Before anything here runs, that discovery contract has
+already: probed the connected Drive tool's capability shape and persisted its actual tool names
+into `tool_map`; resolved the recordings root folder and persisted `root_folder_id`. This
+reference reads those two persisted facts — the resolved folder and the probed `tool_map` — and
+never re-discovers or re-binds either one itself. If no `drive_folder` source is bound yet, send
+the caller back to `mcp-discovery.md` §2–5 first.
+
+## Detection + export (PARSE-01)
+
+A Gemini notes doc is detected by its **title pattern**, not its location: a file named
+`<Meeting> - YYYY/MM/DD Notes by Gemini`, scoped to the resolved `root_folder_id` (and any
+`legacy_folder_id`, per `mcp-discovery.md` §4). The title suffix `Notes by Gemini` is the
+reliable anchor — folder structure varies by migration state, but Google's generated title
+format doesn't.
+
+Once a candidate notes doc is found, obtain its text through the bound export capability — the
+`get_summary` bucket (`export_doc` in `tool_map`, per `mcp-discovery.md` §3's capability-bucket
+remap) — requesting `text/plain` or `text/markdown`. The actual tool name backing `export_doc` is
+whatever was probed at discovery time and lives in `tool_map`; this procedure calls it by bucket,
+never by a literal tool name. No single Drive method is a required binding key here — any Drive
+tool name is a non-exhaustive shape hint, the same posture `mcp-discovery.md` §1/§3 takes toward
+every vendor's tool-name fragments.
+
+## Semantic-role parse — happy path (PARSE-02)
+
+Extract the exported text by **semantic role, not exact heading string**. For this tracer's
+happy path, two roles matter:
+
+- The **Summary / Overview** block → the call file's `## Summary`.
+- The **Next steps / Action items** block → `## Commitments & next steps` in the call file, plus
+  `next_step` in `index.json`.
+
+Matching is loose (a heading whose text loosely reads as "summary" or "next steps", not a fixed
+string), because the doc is a UI feature, not a versioned schema. The full SPICED role/synonym
+table — covering Situation, Pain, Impact, Critical Event, Decision — plus coverage grading and
+the graceful-degradation fallback (missing section → whole-body summary, narrower
+`spiced_coverage`, never a failed ingest) is Plan 02's expansion of this section.
+
+## Transcript pairing — happy path (PARSE-04)
+
+The transcript is a **separate Google Doc** from the notes doc. In the current (2026) folder
+model, both live in the same **per-meeting subfolder**, so the transcript pairs by shared-parent
+**subfolder** co-location: list the notes doc's parent folder, and a sibling file whose name or
+content indicates a transcript is the pair.
+
+The notes doc is the **primary record** — it defines whether a call exists at all. The transcript
+is optional enrichment: a call ingests correctly even with no transcript paired
+(`has_transcript: false`). Never block ingest on a missing or unpaired transcript. The legacy
+flat-folder fallback (filename+date-window matching, no subfolder available) and ambiguous
+-candidate flagging (more than one plausible transcript in scope) are Plan 03's expansion of this
+section.
+
+## Provenance tag — core (TRUST-01)
+
+Text pulled from the **transcript doc** is verbatim, speaker-attributed buyer language — eligible
+to be written as a direct quote. Text pulled from the **notes doc's** Summary/Next-steps content
+is Gemini's AI paraphrase — narrative only, never presentable as an exact buyer quote. Tag every
+piece of extracted text with its source at write time so no downstream skill can conflate the
+two. The full write-time contract — `has_transcript` gating and the specific downstream skills
+(`battlecards`, `playbook-builder`, `voice-of-customer`) that must respect the tag — is Plan 03's
+expansion of this section.
+
+## Worked example
+
+One meeting: a notes doc titled `Acme <> Vendor sync - 2026/07/18 Notes by Gemini`, and a
+transcript doc living in the same per-meeting subfolder.
+
+1. **Detect.** The title pattern `Notes by Gemini` matches this file, scoped to the resolved
+   recordings folder — it's a candidate meeting.
+2. **Export.** Call the bound `get_summary`/`export_doc` capability on the notes doc, requesting
+   `text/markdown`, and get back its Summary and Next-steps text.
+3. **Role-map.** The notes doc's Summary block becomes the call record's `## Summary`. Its Next
+   steps block becomes `## Commitments & next steps`, and each action item with an owner/date
+   becomes an entry in `index.json`'s `next_step`.
+4. **Pair.** Listing the notes doc's parent subfolder finds one sibling file that reads as a
+   transcript — it pairs by shared subfolder co-location alone, no filename guessing needed.
+5. **Export + tag the transcript.** The transcript's exported text is speaker-attributed and
+   tagged **verbatim** — any buyer quote pulled into `## Signals` carries that tag and is eligible
+   to be quoted downstream. The notes-doc Summary/Next-steps prose already written into
+   `## Summary` and `## SPICED captured this call` is tagged **paraphrase** — narrative only.
+6. **Emit one call record.** The result is a single `calls/2026-07-18_acme-vendor-sync.md`
+   record: `## Summary` and `## SPICED captured this call` prose sourced from the notes doc and
+   tagged paraphrase; `## Signals` buyer quotes sourced from the transcript and tagged verbatim;
+   `has_transcript: true` because pairing succeeded. The call's id is the **notes doc's Drive file
+   id** — see Dedup key below.
+
+(Prose only, above — no fenced call-file body is pasted here; the headers and provenance tags are
+what this contract fixes, not a literal example file.)
+
+## Dedup key
+
+The call id for a Drive-sourced call is the **notes doc's Google Doc file id** (per
+`mcp-discovery.md` §5 `id_field: file_id`) — never a synthesized title+date key. This reference
+only names the field the parse output must carry; Phase 3 wires `notes_doc_id` into the
+`memory-bank.md` call frontmatter and `index.json.calls[]` schema and confirms the existing dedup
+rule (`memory-bank.md` "Dedup rule") applies unchanged to a file-ID-keyed source.
