@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v0.6.0
 milestone_name: Google Meet / Gemini Notes Source
-current_phase: 3
+current_phase: 03
 current_phase_name: Memory Bank Schema Additions
-status: executing
-stopped_at: Completed 02-03-PLAN.md
-last_updated: "2026-07-24T02:54:37.463Z"
+status: verifying
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-07-24T02:58:14.074Z"
 last_activity: 2026-07-24
-last_activity_desc: Phase 2 complete, transitioned to Phase 3
+last_activity_desc: Phase 03 execution started
 progress:
-  total_phases: 2
-  completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_phases: 3
+  completed_phases: 3
+  total_plans: 7
+  completed_plans: 7
 ---
 
 # Project State
@@ -23,14 +23,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-07-24)
 
 **Core value:** Coaching grounded in the seller's own calls — evidence-first, from the local memory bank.
-**Current focus:** Phase 02 — Drive Source — Pairing + Parsing Contract
+**Current focus:** Phase 03 — Memory Bank Schema Additions
 
 ## Current Position
 
-Phase: 3 — Memory Bank Schema Additions
-Plan: Not started
-Status: Ready to execute
-Last activity: 2026-07-24 — Phase 2 complete, transitioned to Phase 3
+Phase: 03 (Memory Bank Schema Additions) — EXECUTING
+Plan: 1 of 1
+Status: Phase complete — ready for verification
+Last activity: 2026-07-24 — Phase 03 execution started
 
 Progress: [██████████] 100%
 
@@ -55,6 +55,7 @@ Decisions are logged in PROJECT.md Key Decisions table. Recent:
 - [Phase ?]: Coverage grades sourced verbatim in spirit from FEATURES.md's SPICED Field Mapping table (Summary/Next-steps HIGH; Situation/Pain/Impact/Decision SPARSE) for one consistent source of truth
 - [Phase ?]: Decisions disambiguation nested as a subsection under the semantic-role parse section, not a standalone top-level heading, since it refines one row of the parse table
 - [Phase ?]: drive-source.md pairing/provenance section headings renamed from tracer's happy-path/core framing to the full-heuristic/write-time-contract framing (Plan 03) — no external file referenced the old heading text
+- [Phase ?]: Drive call dedup keys on notes_doc_id (never synthesized title+date); transcript_doc_id is never the dedup id
 
 ### Pending Todos
 
@@ -76,8 +77,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-24T02:42:36.144Z
-Stopped at: Completed 02-03-PLAN.md
+Last session: 2026-07-24T02:58:14.069Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
 
 ## Performance Metrics
@@ -90,3 +91,4 @@ Resume file: None
 | Phase 02 P01 | 1min | 1 tasks | 1 files |
 | Phase 02-drive-source-pairing-parsing-contract P02 | 6min | 2 tasks | 1 files |
 | Phase 02 P03 | 6min | 2 tasks | 1 files |
+| Phase 03 P01 | 3min | 2 tasks | 1 files |

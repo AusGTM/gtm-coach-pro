@@ -80,10 +80,10 @@ v0.1.0–v0.5.0 shipped the full plugin pre-GSD (see MILESTONES.md). This roadma
   2. The dedup rule in `references/memory-bank.md` explicitly keys Drive-sourced calls on the notes-doc Drive file ID, never a synthesized title+date.
   3. Given the same notes doc ingested twice with an unchanged `modifiedTime`, the documented rule yields one call record; given a `modifiedTime` change (an edit), it re-ingests into the same call record rather than creating a duplicate.
 
-**Plans**: 1 plan
+**Plans**: 1/1 plans executed
 **Wave 1**
 
-- [ ] 03-01-PLAN.md — Additive Drive fields (`source: google-drive`, `notes_doc_id`, `transcript_doc_id`, `drive_folder_id`) in the call frontmatter + `index.json.calls[]` schema, and the LOCKED file-ID dedup rule (SCHEMA-01, SCHEMA-02)
+- [x] 03-01-PLAN.md — Additive Drive fields (`source: google-drive`, `notes_doc_id`, `transcript_doc_id`, `drive_folder_id`) in the call frontmatter + `index.json.calls[]` schema, and the LOCKED file-ID dedup rule (SCHEMA-01, SCHEMA-02)
 
 ### Phase 4: Initial Ingest — gtm-coach Setup
 
@@ -121,6 +121,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|-----------------|--------|-----------|
 | 1. Discovery + Config Schema v2 | 3/3 | Complete    | 2026-07-24 |
 | 2. Drive Source — Pairing + Parsing Contract | 3/3 | Complete    | 2026-07-24 |
-| 3. Memory Bank Schema Additions | 0/1 | Not started | - |
+| 3. Memory Bank Schema Additions | 1/1 | In Progress|  |
 | 4. Initial Ingest — gtm-coach Setup | 0/TBD | Not started | - |
 | 5. Sync Parity — Incremental, Backfill, Scheduling | 0/TBD | Not started | - |

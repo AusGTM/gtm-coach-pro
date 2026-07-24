@@ -28,8 +28,8 @@ Add Google Drive / Gemini Meet-notes as a first-class `~~meeting recording` sour
 
 ### Memory Schema (SCHEMA)
 
-- [ ] **SCHEMA-01**: A Drive-sourced call record carries additive, optional fields (`source: google-drive`, `notes_doc_id`, `transcript_doc_id`, `drive_folder_id`) with no structural change to the existing schema
-- [ ] **SCHEMA-02**: Dedup keys on the notes-doc Drive file ID (never a synthesized title+date), and re-ingests on edit via `modifiedTime` / content hash without creating a duplicate call
+- [x] **SCHEMA-01**: A Drive-sourced call record carries additive, optional fields (`source: google-drive`, `notes_doc_id`, `transcript_doc_id`, `drive_folder_id`) with no structural change to the existing schema
+- [x] **SCHEMA-02**: Dedup keys on the notes-doc Drive file ID (never a synthesized title+date), and re-ingests on edit via `modifiedTime` / content hash without creating a duplicate call
 
 ### Initial Ingest (INGEST)
 
@@ -77,8 +77,8 @@ Which phases cover which requirements. Filled during roadmap creation.
 | PARSE-04 | Phase 2 | Complete |
 | TRUST-01 | Phase 2 | Complete |
 | TRUST-02 | Phase 1 | Complete |
-| SCHEMA-01 | Phase 3 | Pending |
-| SCHEMA-02 | Phase 3 | Pending |
+| SCHEMA-01 | Phase 3 | Complete |
+| SCHEMA-02 | Phase 3 | Complete |
 | INGEST-01 | Phase 4 | Pending |
 | INGEST-02 | Phase 4 | Pending |
 | SYNC-01 | Phase 5 | Pending |
