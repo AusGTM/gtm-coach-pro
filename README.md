@@ -2,9 +2,10 @@
 
 > A conversational-intelligence sales coach for Claude Desktop / Claude Code.
 
-[![Version](https://img.shields.io/badge/version-0.5.0-blue)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.6.0-blue)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Claude%20Desktop%20%2F%20Code-orange)](https://claude.ai)
+[![Marketplace](https://img.shields.io/badge/plugin-marketplace-teal)](#installation)
 [![Skills](https://img.shields.io/badge/skills-11-purple)](#skills)
 [![Framework](https://img.shields.io/badge/methodology-SPICED-red)](https://winningbydesign.com/spiced-framework/)
 
@@ -22,6 +23,7 @@ for how every CI play maps to the plugin.
 
 ## Contents
 
+- [Installation](#installation)
 - [Quick start](#quick-start)
 - [Requirements](#requirements)
 - [How it works anywhere](#how-it-works-anywhere)
@@ -34,9 +36,39 @@ for how every CI play maps to the plugin.
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
+## Installation
+
+### Claude Code (recommended)
+
+Install straight from this repo's plugin marketplace:
+
+```
+/plugin marketplace add AusGTM/gtm-coach-pro
+/plugin install gtm-coach-pro
+```
+
+### Claude Desktop
+
+1. Download [`gtm-coach-pro.plugin`](./gtm-coach-pro.plugin) from this repo.
+2. Double-click the file (or drag it onto the Claude Desktop window) and confirm the install
+   when Claude prompts you.
+3. Restart the conversation so the plugin's skills load.
+
+### From source
+
+Clone the repo and add your local checkout as a marketplace:
+
+```
+git clone https://github.com/AusGTM/gtm-coach-pro.git
+/plugin marketplace add ./gtm-coach-pro
+/plugin install gtm-coach-pro
+```
+
+To update later: `/plugin marketplace update gtm-coach-pro-marketplace`.
+
 ## Quick start
 
-1. Install the plugin (`gtm-coach-pro.plugin`) in Claude Desktop / Claude Code.
+1. [Install the plugin](#installation) in Claude Code or Claude Desktop.
 2. In Claude, connect at least one meeting-recording tool via Connectors
    (calendar, email, and CRM are optional but recommended).
 3. Say **"set up GTM coach"**. It will:
@@ -84,7 +116,7 @@ See [`CONNECTORS.md`](./gtm-coach-pro/CONNECTORS.md) for details.
 
 | Category | Required? | Examples |
 |----------|-----------|----------|
-| `~~meeting recording` | **Required** | tl;dv, Otter, Fireflies, Fathom, Gong, Chorus, Avoma, Grain, Zoom, Teams, Meet, Read.ai |
+| `~~meeting recording` | **Required** | tl;dv, Otter, Fireflies, Fathom, Gong, Chorus, Avoma, Grain, Zoom, Teams, Read.ai — or Google Meet + Gemini notes via the Google Drive connector |
 | `~~calendar` | Optional | Google Calendar, Microsoft 365 / Outlook |
 | `~~email` | Optional | Gmail, Microsoft 365 / Outlook |
 | `~~crm` | Optional | Salesforce, HubSpot, Close, Pipedrive |
