@@ -7,6 +7,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-08-20
+
+### Fixed
+
+- Setup now recognizes "Google Meet" / "Gemini" answers as the Google Drive
+  (`drive_folder`) recording source instead of reporting no such tool is
+  connected, and confirms which Drive account to bind before ingesting.
+
+### Added
+
+- Plugin marketplace manifest (`.claude-plugin/marketplace.json`) — installable
+  via `/plugin marketplace add AusGTM/gtm-coach-pro`.
+- README installation section covering Claude Code (marketplace), Claude
+  Desktop (`.plugin` file), and from-source installs.
+
+## [0.6.0] - 2026-07-24
+
+### Added
+
+- Google Meet / Gemini notes as a recording source via the Google Drive
+  connector (`source_kind: drive_folder`):
+  - Discovery contract for Drive-backed sources — capability-bucket remap,
+    recordings-folder resolution ladder, v2 multi-source `config.json` schema
+    (`mcp-discovery.md`).
+  - Gemini notes ingestion contract (`references/drive-source.md`) — title
+    detection, semantic-role parse to SPICED with graceful degradation,
+    Decisions-vs-Decision disambiguation, transcript pairing heuristic, and a
+    verbatim-vs-paraphrase provenance contract.
+  - Memory-bank schema: `source`, `notes_doc_id`, `transcript_doc_id`,
+    `drive_folder_id`, `has_transcript` fields on Drive-sourced calls.
+  - `gtm-coach` setup: Drive source binding, multi-source
+    `recording_sources[]`, add-a-source flow for existing banks, Drive-scoped
+    privacy gate.
+  - `sync-memory`: Drive sync parity — incremental sync, historical backfill,
+    403/429 backoff with resumable cursors, scheduling guidance.
+
 ## [0.5.0] - 2026-07-17
 
 Persisted output artifacts — the deeper plays now always write files.

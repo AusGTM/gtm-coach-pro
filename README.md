@@ -2,7 +2,7 @@
 
 > A conversational-intelligence sales coach for Claude Desktop / Claude Code.
 
-[![Version](https://img.shields.io/badge/version-0.6.0-blue)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.6.1-blue)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](./LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Claude%20Desktop%20%2F%20Code-orange)](https://claude.ai)
 [![Marketplace](https://img.shields.io/badge/plugin-marketplace-teal)](#installation)
