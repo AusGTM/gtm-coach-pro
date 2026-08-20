@@ -61,6 +61,17 @@ found, ask once which to use, OR whether to bind more than one (e.g. an API reco
 Drive / Gemini notes, or merge across all) — each chosen source is persisted as its own
 `recording_sources[]` entry with its own `source_kind`, per `mcp-discovery.md` §2/§5.
 
+**A "Google Meet" / "Gemini" answer means Google Drive.** Google Meet is not an MCP tool — its
+recordings and Gemini notes land as files in the user's Google Drive. If the user names Google
+Meet, Gemini, or Meet notes as their recording source (at this prompt or anywhere in setup),
+treat that as choosing the `drive_folder` source — never reply that "Google Meet isn't
+connected." Because a Drive connector is account-agnostic (it's just a document store, not
+necessarily the account hosting the Meet notes), confirm before binding: name the connected
+Drive tool/account and ask, e.g. "Google Meet recordings and Gemini notes live in Google Drive —
+I'll read them from your connected Google Drive (<account>). Is that the right account?" If no
+Google Drive tool is connected, say Google Meet ingestion needs the Google Drive connector and
+stop.
+
 Once the `~~meeting recording` tool is bound, determine its `source_kind` per
 `mcp-discovery.md` §3 — this is the ONE place setup consults `source_kind`; everything after
 this point (ingest, dedup, patterns, every other skill) stays source-unaware:
